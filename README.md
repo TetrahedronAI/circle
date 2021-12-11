@@ -4,7 +4,7 @@
 <div>
 	<img alt="Project status badge." src="https://img.shields.io/static/v1?label=status&message=planning&color=orange&style=for-the-badge">
 	<img alt="GitHub commit activity badge." src="https://img.shields.io/github/commit-activity/m/neuron-ai/easyNeuron?style=for-the-badge">
-	<img alt="Lines of code." src="https://img.shields.io/tokei/lines/github/neuron-ai/easyNeuron?style=for-the-badge"/>
+	<img alt="Lines of code." src="https://img.shields.io/tokei/lines/github/neuron-ai/easyNeuron?style=for-the-badge">
 </div>
 <br>
 </section>
