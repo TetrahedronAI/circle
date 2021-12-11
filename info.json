@@ -1,0 +1,32 @@
+{
+	"name": "easyNeuron",
+	"version": "0.0.1",
+
+	"author": "Neuron-AI",
+	"email": "user@example.com",
+
+	"description": "easyNeuron is the next, easy-to-use and learn machine learning framework.",
+	"long_description": "easyNeuron is a lightweight machine learning framework that is easy to use and simple to understand.",
+
+	"keywords": [
+		"python",
+		"neural",
+		"networks",
+		"AI",
+		"ML",
+		"machine learning",
+		"easy",
+		"neuron",
+		"easyneuron",
+		"easyNeuron"
+	],
+
+	"classifiers": [
+		"Development Status :: 1 - Planning",
+		"Intended Audience :: Developers",
+		"Programming Language :: Python :: 3",
+		"Operating System :: Unix",
+		"Operating System :: MacOS :: MacOS X",
+		"Operating System :: Microsoft :: Windows"
+	]
+}
