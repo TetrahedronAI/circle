@@ -1,1 +1,1 @@
-from easyneuron.types.types import List
+from easyneuron.types.types import NumpyFloat, NumpyInt, Distance, Numerical

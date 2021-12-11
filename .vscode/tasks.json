@@ -6,7 +6,14 @@
 		{
 			"label": "New User",
 			"type": "shell",
-			"command": "admin/scripts/new_here.py"
+			"command": "admin/scripts/new_here.py",
+			"problemMatcher": []
+		},
+		{
+			"label": "Clear Logs",
+			"type": "shell",
+			"command": "admin/scripts/clear_logs.py",
+			"problemMatcher": []
 		}
 	]
 }
