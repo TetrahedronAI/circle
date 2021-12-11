@@ -12,3 +12,33 @@ from easyneuron._testutils import log_errors
 ```
 
 Then, for every **unittest** test, simply decorate it with `@log_errors`.
+
+## Code Style
+
+<ol>
+<li>Ensure that code is documented according to the numpy style. This can be done with the <b>Python Auto Docstrings</b> vscode extension and setting your default style to Numpy in vscode settings. (This should be done automatically if you have the extension and the vscode settings that come with this repo.
+
+<br>
+Alternatively, use the template below...
+</li>
+
+	"""[summary]
+	Parameters
+	----------
+	<PARAM NAME> : <TYPE OF PARAM>
+		[description (what it is for)]
+
+	Returns
+	-------
+	<TYPE OF RETURN>
+		[description (what it is)]
+
+	Raises
+	------
+	<ERROR TYPE>
+		[description (why it's raised)]
+	"""
+<br>
+
+<li>If errors in the function are raised (on purpose - by guard clauses, not bugs), be sure to put a solution as stated in the [docs_errors.md], to specify a problem a user may have and a solution. You could instead have a 3-4 line explanation printed out with the error, but if it is too long for that, use the docs and leave a note in the error message saying something like `Check out our website and docs for more`</li>
+</ol>

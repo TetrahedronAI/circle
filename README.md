@@ -22,7 +22,8 @@ easyNeuron is the new, easy way to create, analyze and program machine learning 
 ## Table of Contents
 - [Table of Contents](#table-of-contents)
 - [Features](#features)
-- [More Coming Soon!](#more-coming-soon)
+- [History](#history)
+	- [Naming Conventions](#naming-conventions)
 
 ---
 
@@ -38,4 +39,9 @@ easyNeuron is the new, easy way to create, analyze and program machine learning 
 	- ❌ K-Means Clustering
 	- ❌ Neural Networks
 
-## More Coming Soon! <!-- Don't Delete this header, empty or not, since it is used with a Python Script (scripts/update_todo.py) -->
+## History <!-- Don't delete this header, empty or not, since it is used with a Python Script (scripts/update_todo.py) -->
+easyNeuron was created in 2021 by @Neuron-AI, aiming to create an easy experience for all ML engineers, with any and all of the newly developed algorithms from Neuron AI.
+
+### Naming Conventions
+
+Mostly, the names of modules are universal, but, there was some choice of the *maths* section of the module. In the end, the maths section is known as `easyneuron.math` rather than `easyneuron.maths` (as we are a British group), since there is such a large population who'll use this knowing American English, and it is quicker to type anyway.

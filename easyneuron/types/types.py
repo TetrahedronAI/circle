@@ -12,6 +12,7 @@ BuiltinNumbers = Union[int, float]  # Builtin number types
 
 # Any numerical, or numpy numerical types
 Numerical = Union[BuiltinNumbers, NumpyFloat, NumpyInt]
+Int = Union[NumpyInt, int]
 
 
 # External types for set-like objects
@@ -22,9 +23,7 @@ SequentialObject = Union[ExternalSets, BuiltinSets]  # All set-like objects
 
 # A Union of sequences that can be used alonside numerical values
 Data = Union[SequentialObject, Numerical]
-
-BuiltinSequenceOfTuples = Union[List[Tuple],
-                                Deque[Tuple], Tuple[Tuple], Set[Tuple], Sequence[Tuple]]
+X_Data = Sequence[Sequence[Numerical]]
 
 # Maths Types
 Distance = Literal["euclidean", "manhattan"]  # Distance function names
