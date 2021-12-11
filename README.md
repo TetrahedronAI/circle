@@ -44,4 +44,4 @@ easyNeuron was created in 2021 by @Neuron-AI, aiming to create an easy experienc
 
 ### Naming Conventions
 
-Mostly, the names of modules are universal, but, there was some choice of the *maths* section of the module. In the end, the maths section is known as `easyneuron.math` rather than `easyneuron.maths` (as we are a British group), since there is such a large population who'll use this knowing American English, and it is quicker to type anyway.
+Mostly, the names of modules are universal, but, there was some choice of the *maths* section of the module. In the end, the maths section is known as `easyneuron.math` rather than `easyneuron.maths` (as we are a British group), since there is such a large population who'll use this knowing American English, and it is quicker to type than the British version of  _maths_.
