@@ -14,7 +14,7 @@ class KNNClassifier(_KNN):
 
     """KNN Classifier is the K-Nearest Neighbours algorithm for classification, implemented in Python."""
 
-    def __init__(self, K: Optional[Int], distance: Distance[str] = "euclidean") -> None:
+    def __init__(self, K: Optional[Int], distance: Distance = "euclidean") -> None:
         """Create an instance of the K-Nearest-Neighbours classifier
 
         Parameters
@@ -30,7 +30,7 @@ class KNNClassifier(_KNN):
             warn(FutureWarning(
                 "setting K to 1 can result in bad quality predictions later."))
 
-        self.k = K
+        self.K = K
         self.distance = distance
 
     def fit(self, X: X_Data, y: Sequence[Any]) -> Model:

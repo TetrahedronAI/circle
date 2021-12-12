@@ -1,4 +1,4 @@
-from typing import Literal, Sequence, SupportsAbs, SupportsFloat, SupportsInt, Union
+from typing import Literal, Sequence, SupportsFloat, SupportsInt, Union
 
 from numpy import (float16, float32, float64, int0, int8, int16, int32, int64,
                    ndarray)
