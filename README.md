@@ -10,7 +10,7 @@
 	<img alt="Project status badge." src="https://img.shields.io/static/v1?label=status&message=planning&color=orange&style=for-the-badge">
 	<img alt="GitHub commit activity badge." src="https://img.shields.io/github/commit-activity/y/neuron-ai/easyNeuron?style=for-the-badge">
 	<img alt="Lines of code badge." src="https://img.shields.io/tokei/lines/github/neuron-ai/easyNeuron?style=for-the-badge">
-	<img alt="Visits to this repo badge." src="https://badges.pufler.dev/visits/Password-Classified/password-classified">
+	<img alt="Visits to this repo badge." src="https://badges.pufler.dev/visits/Password-Classified/password-classified?style=for-the-badge">
 </div>
 <br>
 
@@ -64,3 +64,10 @@ Mostly, the names of modules are universal, but, there was some choice of the *m
 Like 👍 this project? Want to contribute to it? Why not put up a pull request with your code changes on it.
 
 > Note: Please read the [Contributing Guidelines](CONTRIBUTING.md) and the appropriate code style document (linked to in `CONTRIBUTING.md`).
+
+
+## Project Stats 📈
+
+| Stat | Badge |
+|------|-------|
+| Codacy Quality Rating | <img src="https://app.codacy.com/project/badge/Grade/81d90174a73440b2910a64b2b4794535"/> |

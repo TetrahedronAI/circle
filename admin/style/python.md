@@ -59,10 +59,10 @@ or
 
 <br>
 
-**CapitalizedCamelCase** - class names
-**lower_case_with_underscores** - functions and methods
-**normalCamelCase** - variables
-**CAPITALIZED** - constants
+- **`CapitalizedCamelCase`** - class names
+- **`lower_case_with_underscores`** - functions and methods
+- **`normalCamelCase`** - variables
+- **`CAPITALIZED`** - constants
 
 </li>
 </ol>
