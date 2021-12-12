@@ -15,8 +15,7 @@ Before you continue, try running the VS Code task **"New Here"** to get your env
 		- [Important note about the website](#important-note-about-the-website)
 	- [Code Style](#code-style)
 - [Licensing](#licensing)
-		- [Python Message](#python-message)
-
+	- [Python Message](#python-message)
 
 <br>
 
@@ -59,7 +58,7 @@ Please refer to the following documents for code styles.
 
 As to ensure that it is clear that all files are covered under the correct license (Apache 2.0), please make sure that the files (any new ones you create) begin with the following message. Please fill in the sections marked with the `<>` tags. Use the template below that is appropriate for each language.
 
-### Python Message
+## Python Message
 Use for Python scripts.
 
 ```python

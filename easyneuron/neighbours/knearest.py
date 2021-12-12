@@ -11,9 +11,19 @@ from warnings import warn
 
 @dataclass(init=True, repr=True, unsafe_hash=True, eq=True)
 class KNNClassifier(_KNN):
+
     """KNN Classifier is the K-Nearest Neighbours algorithm for classification, implemented in Python."""
 
     def __init__(self, K: Optional[Int], distance: Distance[str] = "euclidean") -> None:
+        """Create an instance of the K-Nearest-Neighbours classifier
+
+        Parameters
+        ----------
+        K : Optional[Int]
+            The K-Value for the model
+        distance : Distance[str], optional
+            The distance function to use ("euclidean" or "manhattan"), by default "euclidean"
+        """
         if K is None:
             self.K = 7
         elif K == 1:
@@ -24,6 +34,7 @@ class KNNClassifier(_KNN):
         self.distance = distance
 
     def fit(self, X: X_Data, y: Sequence[Any]) -> Model:
+        
         """Train (fit the model) to the given data.
 
         Parameters

@@ -27,6 +27,7 @@ easyNeuron is the new, easy way to create, analyze and program machine learning 
 - [History ⌛](#history-)
 	- [Naming Conventions 🧾](#naming-conventions-)
 - [Contributing ➕](#contributing-)
+- [Project Stats 📈](#project-stats-)
 
 <br>
 
@@ -65,6 +66,7 @@ Like 👍 this project? Want to contribute to it? Why not put up a pull request 
 
 > Note: Please read the [Contributing Guidelines](CONTRIBUTING.md) and the appropriate code style document (linked to in `CONTRIBUTING.md`).
 
+<br>
 
 ## Project Stats 📈
 

@@ -1,4 +1,4 @@
-from typing import Literal, Sequence, Union
+from typing import Literal, Sequence, SupportsAbs, SupportsFloat, SupportsInt, Union
 
 from numpy import (float16, float32, float64, int0, int8, int16, int32, int64,
                    ndarray)
@@ -11,7 +11,7 @@ NumpyInt = Union[int0, int8, int16, int32,
 BuiltinNumbers = Union[int, float]  # Builtin number types
 
 # Any numerical, or numpy numerical types
-Numerical = Union[BuiltinNumbers, NumpyFloat, NumpyInt]
+Numerical = Union[BuiltinNumbers, NumpyFloat, NumpyInt, SupportsInt, SupportsFloat]
 Int = Union[NumpyInt, int]
 
 
