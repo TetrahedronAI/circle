@@ -49,7 +49,7 @@ easyNeuron is the new, easy way to create, analyze and program machine learning 
 
 <br> <!-- Don't delete this BR newline tag, since it is used with a Python Script (scripts/update_todo.py) -->
 
-## History ⌛ 
+## History ⌛
 easyNeuron was created in 2021 by @Neuron-AI, aiming to create an easy experience for all ML engineers, with any and all of the newly developed algorithms from Neuron AI.
 
 <br>
@@ -72,4 +72,9 @@ Like 👍 this project? Want to contribute to it? Why not put up a pull request 
 
 | Stat | Badge |
 |------|-------|
-| Codacy Quality Rating | <img src="https://app.codacy.com/project/badge/Grade/81d90174a73440b2910a64b2b4794535"/> |
+| Codacy Quality Rating | <img src="https://app.codacy.com/project/badge/Grade/81d90174a73440b2910a64b2b4794535"> |
+| License  | <img alt="GitHub" src="https://img.shields.io/github/license/neuron-ai/easyneuron?style=flat-square"> |
+| Activity  | <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/neuron-ai/easyneuron?style=flat-square"><br><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/neuron-ai/easyneuron?style=flat-square"> |
+| Issues | <img alt="GitHub issues" src="https://img.shields.io/github/issues/neuron-ai/easyneuron?style=flat-square"><br><img src="https://img.shields.io/github/issues/neuron-ai/easyneuron/feature-request.svg?style=flat-square"><br><img src="https://img.shields.io/github/issues/neuron-ai/easyneuron/bug-report.svg?style=flat-square"> |
+| Size | <img src="https://img.shields.io/github/languages/code-size/neuron-ai/easyneuron?style=flat-square"><br><img src="https://img.shields.io/github/repo-size/neuron-ai/easyneuron?style=flat-square"><br><img alt="Lines of code" src="https://img.shields.io/tokei/lines/github/neuron-ai/easyneuron?style=flat-square"><br> |
+| Releases | <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/neuron-ai/easyneuron?style=flat-square"><br><img alt="GitHub all releases" src="https://img.shields.io/github/downloads/neuron-ai/easyneuron/total?style=flat-square"><br><img alt="GitHub Release Date" src="https://img.shields.io/github/release-date/neuron-ai/easyneuron?style=flat-square"> |
