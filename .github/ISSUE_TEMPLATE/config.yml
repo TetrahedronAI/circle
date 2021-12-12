@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Query
+    url: https://github.com/neuron-ai/easyneuron/discussions/new?category=q-a
+    about: Please ask and answer questions here.
