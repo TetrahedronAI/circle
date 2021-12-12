@@ -40,5 +40,28 @@ Alternatively, use the template below...
 	"""
 <br>
 
-<li>If errors in the function are raised (on purpose - by guard clauses, not bugs), be sure to put a solution as stated in the [docs_errors.md], to specify a problem a user may have and a solution. You could instead have a 3-4 line explanation printed out with the error, but if it is too long for that, use the docs and leave a note in the error message saying something like `Check out our website and docs for more`</li>
+<li>If errors in the function are raised (on purpose - by guard clauses, not bugs), be sure to put a solution as stated in the [docs_errors.md], to specify a problem a user may have and a solution. You could instead have a 3-4 line explanation printed out with the error, but if it is too long for that, use the docs and leave a note in the error message saying something like <b><samp>Check out our website and docs for more</samp></b><br/><br></li>
+
+<li>Also, please comment unclear code for maintainability. Don't overcomment, but commenting too much is better than bad, confusing code.
+
+<br>
+
+<blockquote>Comment on code that may be misunderstood, but don't comment things like <samp><br># This is an if statement</samp>
+or
+<samp><br># This  is list comprehension</samp>
+</blockquote>
+</li>
+
+<br>
+
+<li>Also, for maintaiability's sake, please give variables meaningful names. Follow the following structure for variable naming.
+
+<br>
+
+**CapitalizedCamelCase** - class names
+**lower_case_with_underscores** - functions and methods
+**normalCamelCase** - variables
+**CAPITALIZED** - constants
+
+</li>
 </ol>
