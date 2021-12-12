@@ -1,4 +1,5 @@
-"""easyNeuron is the simplest way to design, build and test machine learnng models.
+"""
+easyNeuron is the simplest way to design, build and test machine learnng models.
 
 Submodules
 ----------

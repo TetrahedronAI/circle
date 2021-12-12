@@ -25,7 +25,7 @@ img {
 #nav {
   position: sticky;
   top: 0;
-  
+
   width: 100vw;
 
   background-color: white;
@@ -37,6 +37,7 @@ img {
 
   box-shadow: 0 0 1rem rgba(100, 100, 100, 0.329);
 }
+
 #nav div {
   width: 50%;
 
@@ -47,14 +48,17 @@ img {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
 #nav div a {
   color: black;
   padding: 3ch;
   transition: 200ms ease-in;
 }
+
 #nav div a:hover {
   color: gray;
 }
+
 #nav h1 {
   color: transparent;
 

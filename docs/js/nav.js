@@ -10,4 +10,4 @@ document.write(`
 		<a href="">Support Us</a>
 	</div>
 </nav>
-`)
+`);

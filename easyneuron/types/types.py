@@ -1,7 +1,7 @@
-from typing import (Deque, List, Literal, Optional, Sequence,
-                    Set, SupportsInt, Tuple, Union)
+from typing import Literal, Sequence, Union
 
-from numpy import float16, float32, float64, int0, int8, int16, int32, int64, ndarray
+from numpy import (float16, float32, float64, int0, int8, int16, int32, int64,
+                   ndarray)
 from pandas import DataFrame, Series
 
 # Numerical

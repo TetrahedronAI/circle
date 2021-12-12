@@ -1,4 +1,3 @@
-from typing import Optional
 from easyneuron._logging import get_logger
 
 def log_errors(func):

@@ -38,6 +38,7 @@ Alternatively, use the template below...
 	<ERROR TYPE>
 		[description (why it's raised)]
 	"""
+
 <br>
 
 <li>If errors in the function are raised (on purpose - by guard clauses, not bugs), be sure to put a solution as stated in the [docs_errors.md], to specify a problem a user may have and a solution. You could instead have a 3-4 line explanation printed out with the error, but if it is too long for that, use the docs and leave a note in the error message saying something like <b><samp>Check out our website and docs for more</samp></b><br/><br></li>
