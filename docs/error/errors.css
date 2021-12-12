@@ -1,0 +1,17 @@
+.grid-wrapper {
+  display: grid;
+  place-items: center;
+}
+
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 10rem;
+  padding: 3rem;
+
+  background-color: rgb(238, 238, 238);
+  border-radius: 1rem;
+}
