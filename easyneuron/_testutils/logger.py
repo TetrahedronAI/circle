@@ -7,9 +7,10 @@ def log_errors(func):
 
 		try:
 			func(*args, **kwargs)
+			logger.info(f"{func.__name__} - Test Success")
 		except Exception as e:
 			message = " ".join(str(i) for i in e.args)
-			logger.error(f"Function: {func.__name__}- {message}")
+			logger.error(f"\"{str(type(e))[8:-2]}\" @ {func.__name__} - {message}")
 			raise e
 
 	return wrapper

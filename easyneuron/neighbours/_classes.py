@@ -8,12 +8,11 @@ from easyneuron.types import Numerical, X_Data
 
 
 @dataclass
-class _KNNParams(object):
+@total_ordering
+class _KNN(Model, ABC):
 	k: int
 
-@total_ordering
-class _KNN(_KNNParams, Model, ABC):
-	def __lt__(self, other: _KNNParams) -> Any:
+	def __lt__(self, other) -> Any:
 		return self.K < other.K
 	
 	@abstractmethod

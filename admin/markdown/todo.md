@@ -1,12 +1,9 @@
-
-
-- ❌ Models
-	- ❌ Linear Regression
-	- ❌ Logistic Regression
-	- ❌ Decision Trees
-	- ❌ Random Forest
-	- ❌ Adaboost
-	- ❌ K-Nearest Neighbours
-	- ❌ K-Means Clustering
-	- ❌ Neural Networks
-
+- ❌ Models<!-- TODO:   Models -->
+	- ❌ Linear Regression<!-- TODO:   Linear Regression -->
+	- ❌ Logistic Regression<!-- TODO:   Logistic Regression -->
+	- ❌ Decision Trees<!-- TODO:   Decision Trees -->
+	- ❌ Random Forest<!-- TODO:   Random Forest -->
+	- ❌ Adaboost<!-- TODO:   Adaboost -->
+	- ❌ K-Nearest Neighbours<!-- TODO:   KNearest Neighbours -->
+	- ❌ K-Means Clustering<!-- TODO:   KMeans Clustering -->
+	- ❌ Neural Networks<!-- TODO:   Neural Networks -->

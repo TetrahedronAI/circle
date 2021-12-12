@@ -46,9 +46,9 @@ easyNeuron is the new, easy way to create, analyze and program machine learning 
 	- ❌ K-Means Clustering
 	- ❌ Neural Networks
 
-<br>
+<br> <!-- Don't delete this BR newline tag, since it is used with a Python Script (scripts/update_todo.py) -->
 
-## History ⌛ <!-- Don't delete this header, empty or not, since it is used with a Python Script (scripts/update_todo.py) -->
+## History ⌛ 
 easyNeuron was created in 2021 by @Neuron-AI, aiming to create an easy experience for all ML engineers, with any and all of the newly developed algorithms from Neuron AI.
 
 <br>
