@@ -1,13 +1,10 @@
 {
 	"name": "easyNeuron",
 	"version": "0.0.1",
-
 	"author": "Neuron-AI",
 	"email": "user@example.com",
-
 	"description": "easyNeuron is the next, easy-to-use and learn machine learning framework.",
 	"long_description": "easyNeuron is a lightweight machine learning framework that is easy to use and simple to understand.",
-
 	"keywords": [
 		"python",
 		"neural",
@@ -20,11 +17,16 @@
 		"easyneuron",
 		"easyNeuron"
 	],
-
+	"py_version": ">=3.8",
+	"project_urls": {
+		"Documentation": "https://neuron-ai.github.io/easyneuron/docs/",
+		"Source": "https://github.com/neuron-ai/easyneuron/",
+		"Tracker": "https://github.com/pypa/neuron-ai/issues",
+		"Changelog": "https://github.com/pypa/neuron-ai/commits"
+	},
 	"classifiers": [
 		"Development Status :: 1 - Planning",
 		"Intended Audience :: Developers",
-		"Programming Language :: Python :: 3.7",
 		"Programming Language :: Python :: 3.8",
 		"Programming Language :: Python :: 3.9",
 		"Programming Language :: Python :: 3.10",
