@@ -72,7 +72,6 @@ Like 👍 this project? Want to contribute to it? Why not put up a pull request 
 Thanks to all who have already contributed...
 ![contributors](https://contrib.rocks/image?repo=neuron-ai/easyneuron)
 
-
 <br>
 <hr>
 <br>
