@@ -1,1 +1,1 @@
-from easyneuron.math.random import secure_random
+from easyneuron.math.random.random import secure_random
