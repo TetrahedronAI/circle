@@ -3,7 +3,7 @@ from typing import Any, Callable, Dict, Optional, Sequence, Tuple
 from warnings import warn
 
 from easyneuron._classes import Model
-from easyneuron.math.distance import distance_functions, euclidean_distance, manhattan_distance
+from easyneuron.math.distance.distance import distance_functions, euclidean_distance, manhattan_distance
 from easyneuron.neighbours._classes import _KNN
 from easyneuron.types import X_Data
 from easyneuron.types.types import Distance, Int, Numerical

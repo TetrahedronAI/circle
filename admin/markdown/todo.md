@@ -1,5 +1,3 @@
-<!-- TODO:  -->
-<!-- TODO:  -->
 - ❌ Models<!-- TODO:   Models -->
 	- ❌ Linear Regression<!-- TODO:   Linear Regression -->
 	- ❌ Logistic Regression<!-- TODO:   Logistic Regression -->
@@ -14,5 +12,3 @@
     - ❌ Auto Analysis<!-- TODO:       Auto Analysis -->
     - ❌ Maths Tools<!-- TODO:       Maths Tools -->
     - ❌ Logging Tools<!-- TODO:       Logging Tools -->
-    - ✔ Types<!-- TODO:      ✔ Types -->
-<!-- TODO:  -->
