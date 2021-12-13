@@ -29,7 +29,7 @@ Aside from an editor (preferably VS Code), Git and Python, that is all you reall
 
 ## IDE Configuration
 
-> **First run the `admin/scripts/new_here.py` script to set up pre-commit hooks and dependencies. It would be helpful to rerun this from time to time as new pre-commit hooks are added.**
+> **First run the `admin/scripts/new_here.py` script to set up pre-commit hooks and dependencies. It would be helpful to rerun this from time to time as new pre-commit hooks are added.** 
 
 ### Concerning VS Code Users
 

@@ -7,9 +7,6 @@ ECHO
 ECHO - Updating To-Dos
 py "admin/scripts/update_todo.py"
 
-ECHO - Testing Code
-py -m unittest discover
-
 ECHO
 ECHO ======= FINISHED TASKS =======
 ECHO
