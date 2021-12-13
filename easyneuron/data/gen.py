@@ -1,4 +1,5 @@
-from random import normalvariate, randint
+from random import normalvariate
+from secrets import randbelow
 from typing import Tuple
 
 from easyneuron.types import Int
@@ -10,7 +11,7 @@ def gen_stairs(classes: int, features: int, samples: Int = 10000, sd: float = 0.
     y = []
 
     for _ in range(samples):
-        label = randint(1, classes)*factor
+        label = randbelow(classes)*factor
         to_append = [normalvariate(label, sd) for _ in range(features)]
 
         X.append(to_append)

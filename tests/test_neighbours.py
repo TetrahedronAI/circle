@@ -1,6 +1,5 @@
 import unittest
 from easyneuron.neighbours import KNNClassifier
-from easyneuron.neighbours._classes import _KNN
 from easyneuron._testutils import log_errors
 
 

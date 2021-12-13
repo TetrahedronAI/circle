@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from typing import Any, Callable, Dict, Optional, Sequence, Tuple
+from typing import Any, Callable, Dict, Sequence
 from warnings import warn
 
 from easyneuron._classes import Model
@@ -91,7 +91,7 @@ class KNNClassifier(_KNN):
             raise ValueError(
                 f"the parameter passed for X should have 2 or more dimensions, not {len(X.shape)} dimensions.\nUsing <arrayName>.reshape(-1, 1) on your X parameter may solve this.")
 
-        return [self._choose_label(X, sample) for sample in X]
+        return [self._choose_label(sample) for sample in X]
 
     def _choose_label(self, sample: Sequence[Any]) -> Any:
         """Choose the label from a sample.

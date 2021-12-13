@@ -9,7 +9,7 @@
 <div>
 	<a href="https://neuron-ai.github.io/easyneuron/">
 		<img alt="Testing Status." src="https://github.com/neuron-ai/easyneuron/actions/workflows/tests.yml/badge.svg?style=flat">
-		<img src="https://app.codacy.com/project/badge/Grade/81d90174a73440b2910a64b2b4794535">
+		<img alt="Codacy Code Quality" src="https://app.codacy.com/project/badge/Grade/81d90174a73440b2910a64b2b4794535">
 		<img alt="Coverage Status." src="./admin/social/coverage.svg">
 		<img alt="Project status badge." src="https://img.shields.io/static/v1?label=status&message=planning&color=orange&style=flat">
 		<img alt="GitHub commit activity badge." src="https://img.shields.io/github/commit-activity/m/neuron-ai/easyNeuron?style=flat">

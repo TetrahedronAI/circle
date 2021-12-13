@@ -4,3 +4,4 @@ To suggest more to be added, please add an issue on the GitHub repo.
 """
 
 from easyneuron.math.distance import euclidean_distance, manhattan_distance
+from easyneuron.math.random import secure_random
