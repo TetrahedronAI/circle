@@ -2,3 +2,7 @@ print("You are new here! Please see CONTRIBUTING.md for contribution guidelines.
 
 import subprocess
 subprocess.run("pip install -r requirements.txt")
+
+with open("admin/scripts/pre-commit", "r") as file:
+	with open(".git/hooks/pre-commit", "w") as hook:
+		hook.write(file.read())

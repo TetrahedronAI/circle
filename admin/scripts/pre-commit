@@ -1,0 +1,12 @@
+#!/usr/bin/bash bash
+
+ECHO
+ECHO ======= STARTING TASKS =======
+ECHO
+
+ECHO - Updating To-Dos
+py "admin/scripts/update_todo.py"
+
+ECHO
+ECHO ======= FINISHED TASKS =======
+ECHO
