@@ -9,7 +9,7 @@
 <div>
 	<img alt="Testing Status." src="https://github.com/neuron-ai/easyneuron/actions/workflows/tests.yml/badge.svg?style=flat">
 	<img alt="Project status badge." src="https://img.shields.io/static/v1?label=status&message=planning&color=orange&style=flat">
-	<img alt="Coverage Status." src="https://raw.githubusercontent.com/neuron-ai/easyneuron/master/admin/social/coverage.svg">
+	<img alt="Coverage Status." src="./admin/social/coverage.svg">
 	<img alt="GitHub commit activity badge." src="https://img.shields.io/github/commit-activity/m/neuron-ai/easyNeuron?style=flat">
 	<img alt="Lines of code badge." src="https://img.shields.io/tokei/lines/github/neuron-ai/easyNeuron?style=flat">
 	<img alt="Visits to this repo badge." src="https://badges.pufler.dev/visits/Password-Classified/password-classified?style=flat">

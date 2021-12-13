@@ -1,6 +1,8 @@
 import json
 import subprocess
 
+import requests
+
 print("Running coverage run...")
 subprocess.run("coverage run -m unittest discover")
 print("Running coverage report...")
@@ -11,7 +13,7 @@ subprocess.run("coverage json")
 with open("coverage.json", "r") as file:
 	cov = json.loads(file.read())["totals"]["percent_covered_display"] + "%"
 
-with open("admin/social/coverage.svg", "w") as file:
-	file.write(f"""<svg xmlns="http://www.w3.org/2000/svg" width="100" height="10">
-	<img src="https://img.shields.io/static/v1?label=status&message={cov}&color=green" />
-</svg>""")
+
+img_data = requests.get(f"https://img.shields.io/static/v1?label=coverage&message={cov}&color=green").content
+with open('admin/social/coverage.svg', 'wb') as handler:
+    handler.write(img_data)
