@@ -12,7 +12,7 @@ def log_errors(func):
                 func(*args, **kwargs)
                 logger.info(f"{func.__qualname__} - Test Success")
             except Exception as e:
-                message = " ".join(str(i) for i in e.args)
+                message = " ".join(str(i) for i in e.args).replace("\n", " ").replace("  ", "")
                 logger.error(
                     f"\"{str(type(e))[8:-2]}\" @ {func.__qualname__} - {message}")
                 raise e

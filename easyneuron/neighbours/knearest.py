@@ -16,21 +16,19 @@ class KNNClassifier(_KNN):
     KNN Classifier is the K-Nearest Neighbours algorithm for classification, implemented in Python.
     """
 
-    def __init__(self, K: Optional[Int], distance: Distance = "euclidean") -> None:
+    def __init__(self, K: Int =  7, distance: Distance = "euclidean") -> None:
         """Create an instance of the K-Nearest-Neighbours classifier
 
         Parameters
         ----------
-        K : Optional[Int]
-            The K-Value for the model
+        K : Int
+            The K-Value for the model, by default 7
         distance : Distance[str], optional
             The distance function to use ("euclidean" or "manhattan"), by default "euclidean"
         """
-        if K is None:
-            self.K = 7
-        elif K == 1:
+        if K == 1:
             warn(FutureWarning(
-                "setting K to 1 can result in bad quality predictions later."))
+                "setting K to 1 can result in bad quality predictions later.")) # This is since it'd only analyse the closest one
 
         self.K: Numerical = K
         self.distance: Callable = distance_functions[distance]
@@ -60,14 +58,14 @@ class KNNClassifier(_KNN):
         """
         if len(X) != len(y):
             raise ValueError(
-                f"parameters X and y should have the same length. Not\nX: {len(X)}\n\ty: {len(y)}.")
+                f"parameters X and y should have the same length.\nNot...\n\tX: {len(X)}\n\ty: {len(y)}.") # So that samples align with labels
 
         X = array(X)
         y = array(y)
 
         if len(X.shape) < 2:
             raise ValueError(
-                f"the parameter passed for X should have more than 2 dimensions, not {len(X.shape)} dimensions.\nUsing <arrayName>.reshape(-1, 1) on your X parameter may solve this.")
+                f"the parameter passed for X should have 2 or more dimensions, not {len(X.shape)} dimensions.\nUsing <arrayName>.reshape(-1, 1) on your X parameter may solve this.") # Ensuring that the following algorithms work
 
         self._samples = {s: X[sI] for sI, s in enumerate(y)}
 
@@ -91,7 +89,7 @@ class KNNClassifier(_KNN):
         """
         if len(X.shape) < 2:
             raise ValueError(
-                f"the parameter passed for X should have more than 2 dimensions, not {len(X.shape)} dimensions.\nUsing <arrayName>.reshape(-1, 1) on your X parameter may solve this.")
+                f"the parameter passed for X should have 2 or more dimensions, not {len(X.shape)} dimensions.\nUsing <arrayName>.reshape(-1, 1) on your X parameter may solve this.")
 
         return [self._choose_label(X, sample) for sample in X]
 
@@ -132,4 +130,5 @@ class KNNClassifier(_KNN):
         return self._choose_label(sample)
 
     def _get_k_distances(self, distances) -> Dict[Numerical, Any]:
+        # Returns items 0, 1 ... K values of a dictionary of the distances
         return dict(list(sorted(distances.items(), key=lambda x:x[1]))[:self.K])
