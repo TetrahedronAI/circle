@@ -12,7 +12,6 @@ with open("coverage.json", "r") as file:
 	cov = json.loads(file.read())["totals"]["percent_covered_display"] + "%"
 
 with open("admin/social/coverage.svg", "w") as file:
-	file.write(f"""<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="10" role="img"
-	aria-label="coverage: planning">
+	file.write(f"""<svg xmlns="http://www.w3.org/2000/svg" width="100" height="10">
 	<img src="https://img.shields.io/static/v1?label=status&message={cov}&color=green" />
 </svg>""")
