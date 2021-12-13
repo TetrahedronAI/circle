@@ -1,2 +1,6 @@
+# General Testing
 **/__pycache__/
+
+# Logs and coverage
+.coverage
 logs/

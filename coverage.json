@@ -1,0 +1,356 @@
+{
+	"meta": {
+		"version": "6.2",
+		"timestamp": "2021-12-12T19:29:22.185619",
+		"branch_coverage": false,
+		"show_contexts": false
+	},
+	"files": {
+		"easyneuron\\__init__.py": {
+			"executed_lines": [
+				1
+			],
+			"summary": {
+				"covered_lines": 0,
+				"num_statements": 0,
+				"percent_covered": 100.0,
+				"percent_covered_display": "100",
+				"missing_lines": 0,
+				"excluded_lines": 0
+			},
+			"missing_lines": [],
+			"excluded_lines": []
+		},
+		"easyneuron\\_classes\\__init__.py": {
+			"executed_lines": [
+				1
+			],
+			"summary": {
+				"covered_lines": 1,
+				"num_statements": 1,
+				"percent_covered": 100.0,
+				"percent_covered_display": "100",
+				"missing_lines": 0,
+				"excluded_lines": 0
+			},
+			"missing_lines": [],
+			"excluded_lines": []
+		},
+		"easyneuron\\_classes\\_models.py": {
+			"executed_lines": [
+				1,
+				2,
+				4,
+				5,
+				6,
+				8,
+				9
+			],
+			"summary": {
+				"covered_lines": 7,
+				"num_statements": 7,
+				"percent_covered": 100.0,
+				"percent_covered_display": "100",
+				"missing_lines": 0,
+				"excluded_lines": 0
+			},
+			"missing_lines": [],
+			"excluded_lines": []
+		},
+		"easyneuron\\_logging\\__init__.py": {
+			"executed_lines": [
+				1
+			],
+			"summary": {
+				"covered_lines": 1,
+				"num_statements": 1,
+				"percent_covered": 100.0,
+				"percent_covered_display": "100",
+				"missing_lines": 0,
+				"excluded_lines": 0
+			},
+			"missing_lines": [],
+			"excluded_lines": []
+		},
+		"easyneuron\\_logging\\logging.py": {
+			"executed_lines": [
+				1,
+				2,
+				4,
+				5,
+				6,
+				8,
+				13
+			],
+			"summary": {
+				"covered_lines": 7,
+				"num_statements": 7,
+				"percent_covered": 100.0,
+				"percent_covered_display": "100",
+				"missing_lines": 0,
+				"excluded_lines": 0
+			},
+			"missing_lines": [],
+			"excluded_lines": []
+		},
+		"easyneuron\\_testutils\\__init__.py": {
+			"executed_lines": [
+				1
+			],
+			"summary": {
+				"covered_lines": 1,
+				"num_statements": 1,
+				"percent_covered": 100.0,
+				"percent_covered_display": "100",
+				"missing_lines": 0,
+				"excluded_lines": 0
+			},
+			"missing_lines": [],
+			"excluded_lines": []
+		},
+		"easyneuron\\_testutils\\logger.py": {
+			"executed_lines": [
+				1,
+				4,
+				5,
+				6,
+				8,
+				9,
+				10,
+				17
+			],
+			"summary": {
+				"covered_lines": 8,
+				"num_statements": 12,
+				"percent_covered": 66.66666666666667,
+				"percent_covered_display": "67",
+				"missing_lines": 4,
+				"excluded_lines": 0
+			},
+			"missing_lines": [
+				11,
+				12,
+				13,
+				15
+			],
+			"excluded_lines": []
+		},
+		"easyneuron\\math\\__init__.py": {
+			"executed_lines": [
+				1,
+				6
+			],
+			"summary": {
+				"covered_lines": 1,
+				"num_statements": 1,
+				"percent_covered": 100.0,
+				"percent_covered_display": "100",
+				"missing_lines": 0,
+				"excluded_lines": 0
+			},
+			"missing_lines": [],
+			"excluded_lines": []
+		},
+		"easyneuron\\math\\distance.py": {
+			"executed_lines": [
+				1,
+				2,
+				4
+			],
+			"summary": {
+				"covered_lines": 3,
+				"num_statements": 8,
+				"percent_covered": 37.5,
+				"percent_covered_display": "38",
+				"missing_lines": 5,
+				"excluded_lines": 0
+			},
+			"missing_lines": [
+				5,
+				6,
+				8,
+				9,
+				11
+			],
+			"excluded_lines": []
+		},
+		"easyneuron\\neighbours\\__init__.py": {
+			"executed_lines": [
+				1,
+				8
+			],
+			"summary": {
+				"covered_lines": 1,
+				"num_statements": 1,
+				"percent_covered": 100.0,
+				"percent_covered_display": "100",
+				"missing_lines": 0,
+				"excluded_lines": 0
+			},
+			"missing_lines": [],
+			"excluded_lines": []
+		},
+		"easyneuron\\neighbours\\_classes.py": {
+			"executed_lines": [
+				1,
+				2,
+				3,
+				5,
+				6,
+				9,
+				10,
+				11,
+				14,
+				15,
+				17,
+				18
+			],
+			"summary": {
+				"covered_lines": 12,
+				"num_statements": 13,
+				"percent_covered": 92.3076923076923,
+				"percent_covered_display": "92",
+				"missing_lines": 1,
+				"excluded_lines": 0
+			},
+			"missing_lines": [
+				12
+			],
+			"excluded_lines": []
+		},
+		"easyneuron\\neighbours\\knearest.py": {
+			"executed_lines": [
+				1,
+				2,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				12,
+				13,
+				14,
+				18,
+				28,
+				30,
+				34,
+				35,
+				37,
+				73
+			],
+			"summary": {
+				"covered_lines": 17,
+				"num_statements": 27,
+				"percent_covered": 62.96296296296296,
+				"percent_covered_display": "63",
+				"missing_lines": 10,
+				"excluded_lines": 0
+			},
+			"missing_lines": [
+				29,
+				31,
+				60,
+				61,
+				64,
+				65,
+				67,
+				68,
+				71,
+				74
+			],
+			"excluded_lines": []
+		},
+		"easyneuron\\types\\__init__.py": {
+			"executed_lines": [
+				1,
+				11
+			],
+			"summary": {
+				"covered_lines": 1,
+				"num_statements": 1,
+				"percent_covered": 100.0,
+				"percent_covered_display": "100",
+				"missing_lines": 0,
+				"excluded_lines": 0
+			},
+			"missing_lines": [],
+			"excluded_lines": []
+		},
+		"easyneuron\\types\\types.py": {
+			"executed_lines": [
+				1,
+				3,
+				5,
+				8,
+				9,
+				11,
+				14,
+				15,
+				19,
+				20,
+				21,
+				25,
+				26,
+				29
+			],
+			"summary": {
+				"covered_lines": 14,
+				"num_statements": 14,
+				"percent_covered": 100.0,
+				"percent_covered_display": "100",
+				"missing_lines": 0,
+				"excluded_lines": 0
+			},
+			"missing_lines": [],
+			"excluded_lines": []
+		},
+		"tests\\__init__.py": {
+			"executed_lines": [
+				1,
+				2,
+				4
+			],
+			"summary": {
+				"covered_lines": 3,
+				"num_statements": 3,
+				"percent_covered": 100.0,
+				"percent_covered_display": "100",
+				"missing_lines": 0,
+				"excluded_lines": 0
+			},
+			"missing_lines": [],
+			"excluded_lines": []
+		},
+		"tests\\test_neighbours.py": {
+			"executed_lines": [
+				1,
+				2,
+				3,
+				6,
+				7,
+				8,
+				9,
+				11
+			],
+			"summary": {
+				"covered_lines": 8,
+				"num_statements": 8,
+				"percent_covered": 100.0,
+				"percent_covered_display": "100",
+				"missing_lines": 0,
+				"excluded_lines": 0
+			},
+			"missing_lines": [],
+			"excluded_lines": []
+		}
+	},
+	"totals": {
+		"covered_lines": 85,
+		"num_statements": 105,
+		"percent_covered": 80.95238095238095,
+		"percent_covered_display": "81",
+		"missing_lines": 20,
+		"excluded_lines": 0
+	}
+}
