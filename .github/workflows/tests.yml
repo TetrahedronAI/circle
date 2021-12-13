@@ -32,24 +32,3 @@ jobs:
 
       - name: Test with Unittest
         run: python -m unittest discover
-
-  coverage:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Set Up Python 3.9
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.9
-
-      - name: Install Dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-          pip install coverage
-
-      - name: Get Coverage
-        run: |
-          coverage run -m unittest discover
-          coverage report -m
-          coverage json

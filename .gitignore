@@ -3,4 +3,5 @@
 
 # Logs and coverage
 .coverage
+coverage.json
 logs/
