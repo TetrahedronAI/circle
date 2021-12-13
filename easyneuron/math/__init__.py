@@ -3,4 +3,4 @@
 To suggest more to be added, please add an issue on the GitHub repo.
 """
 
-from easyneuron.math.distance import euclidean_distance
+from easyneuron.math.distance import euclidean_distance, manhattan_distance

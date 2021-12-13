@@ -1,18 +1,21 @@
 <section align="center">
 <hr>
 <br>
-<img alt="Logo" src="admin/social/logo%20circle.png" width="300">
+<a href="https://neuron-ai.github.io/easyneuron/"><img alt="Logo" src="admin/social/logo%20circle.png" width="300"></a>
 
 <br>
 <hr>
 <h1>easyNeuron</h1>
 <div>
-	<img alt="Testing Status." src="https://github.com/neuron-ai/easyneuron/actions/workflows/tests.yml/badge.svg?style=flat">
-	<img alt="Project status badge." src="https://img.shields.io/static/v1?label=status&message=planning&color=orange&style=flat">
-	<img alt="Coverage Status." src="./admin/social/coverage.svg">
-	<img alt="GitHub commit activity badge." src="https://img.shields.io/github/commit-activity/m/neuron-ai/easyNeuron?style=flat">
-	<img alt="Lines of code badge." src="https://img.shields.io/tokei/lines/github/neuron-ai/easyNeuron?style=flat">
-	<img alt="Visits to this repo badge." src="https://badges.pufler.dev/visits/Password-Classified/password-classified?style=flat">
+	<a href="https://neuron-ai.github.io/easyneuron/">
+		<img alt="Testing Status." src="https://github.com/neuron-ai/easyneuron/actions/workflows/tests.yml/badge.svg?style=flat">
+		<img src="https://app.codacy.com/project/badge/Grade/81d90174a73440b2910a64b2b4794535">
+		<img alt="Coverage Status." src="./admin/social/coverage.svg">
+		<img alt="Project status badge." src="https://img.shields.io/static/v1?label=status&message=planning&color=orange&style=flat">
+		<img alt="GitHub commit activity badge." src="https://img.shields.io/github/commit-activity/m/neuron-ai/easyNeuron?style=flat">
+		<img alt="Lines of code badge." src="https://img.shields.io/tokei/lines/github/neuron-ai/easyNeuron?style=flat">
+		<img alt="Visits to this repo badge." src="https://badges.pufler.dev/visits/Password-Classified/password-classified?style=flat">
+	</a>
 </div>
 <br>
 
@@ -25,7 +28,7 @@ easyNeuron is the new, easy way to create, analyze and program machine learning 
 ## Table of Contents 📝
 
 - [Table of Contents 📝](#table-of-contents-)
-- [Features ✅](#features-)
+- [Features ✔](#features-)
 - [History ⌛](#history-)
 	- [Naming Conventions 🧾](#naming-conventions-)
 - [Contributing ➕](#contributing-)
@@ -37,7 +40,7 @@ easyNeuron is the new, easy way to create, analyze and program machine learning 
 
 <br>
 
-## Features ✅
+## Features ✔
 
 - ❌ Models
 	- ❌ Linear Regression
@@ -48,6 +51,12 @@ easyNeuron is the new, easy way to create, analyze and program machine learning 
 	- ❌ K-Nearest Neighbours
 	- ❌ K-Means Clustering
 	- ❌ Neural Networks
+- ❌ Submodules
+    - ❌ Genetic Algorithms
+    - ❌ Auto Analysis
+    - ❌ Maths Tools
+    - ❌ Logging Tools
+    - ✔ Types
 
 <br> <!-- Don't delete this BR newline tag, since it is used with a Python Script (scripts/update_todo.py) -->
 
@@ -79,11 +88,12 @@ Thanks to all who have already contributed...
 
 ## Project Stats 📈
 
-| Stat | Badge |
-|------|-------|
-| Codacy Quality Rating | <img src="https://app.codacy.com/project/badge/Grade/81d90174a73440b2910a64b2b4794535"> |
-| License  | <img alt="GitHub" src="https://img.shields.io/github/license/neuron-ai/easyneuron?style=flat"> |
-| Activity  | <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/neuron-ai/easyneuron?style=flat"><br><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/neuron-ai/easyneuron?style=flat"> |
-| Issues | <img alt="GitHub issues" src="https://img.shields.io/github/issues/neuron-ai/easyneuron?style=flat"><br><img src="https://img.shields.io/github/issues/neuron-ai/easyneuron/feature-request.svg?style=flat"><br><img src="https://img.shields.io/github/issues/neuron-ai/easyneuron/bug-report.svg?style=flat"> |
-| Size | <img src="https://img.shields.io/github/languages/code-size/neuron-ai/easyneuron?style=flat"><br><img src="https://img.shields.io/github/repo-size/neuron-ai/easyneuron?style=flat"><br><img alt="Lines of code" src="https://img.shields.io/tokei/lines/github/neuron-ai/easyneuron?style=flat"><br> |
-| Releases | <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/neuron-ai/easyneuron?style=flat"><br><img alt="GitHub all releases" src="https://img.shields.io/github/downloads/neuron-ai/easyneuron/total?style=flat"><br><img alt="GitHub Release Date" src="https://img.shields.io/github/release-date/neuron-ai/easyneuron?style=flat"> |
+| Stat                  | Badge                                                                                                                                                                                                                                                                                                                                                                |
+| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Codacy Quality Rating | <img src="https://app.codacy.com/project/badge/Grade/81d90174a73440b2910a64b2b4794535">                                                                                                                                                                                                                                                                              |
+| Project Status | <img alt="Testing Status." src="https://github.com/neuron-ai/easyneuron/actions/workflows/tests.yml/badge.svg?style=flat"> <img alt="Coverage Status." src="./admin/social/coverage.svg"> <img alt="Project status badge." src="https://img.shields.io/static/v1?label=status&message=planning&color=orange&style=flat"> |
+| License               | <img alt="GitHub" src="https://img.shields.io/github/license/neuron-ai/easyneuron?style=flat">                                                                                                                                                                                                                                                                       |
+| Activity              | <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/neuron-ai/easyneuron?style=flat"><br><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/neuron-ai/easyneuron?style=flat">                                                                                                                         |
+| Issues                | <img alt="GitHub issues" src="https://img.shields.io/github/issues/neuron-ai/easyneuron?style=flat"><br><img src="https://img.shields.io/github/issues/neuron-ai/easyneuron/feature-request.svg?style=flat"><br><img src="https://img.shields.io/github/issues/neuron-ai/easyneuron/bug-report.svg?style=flat">                                                      |
+| Size                  | <img src="https://img.shields.io/github/languages/code-size/neuron-ai/easyneuron?style=flat"><br><img src="https://img.shields.io/github/repo-size/neuron-ai/easyneuron?style=flat"><br><img alt="Lines of code" src="https://img.shields.io/tokei/lines/github/neuron-ai/easyneuron?style=flat"><br>                                                                |
+| Releases              | <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/neuron-ai/easyneuron?style=flat"><br><img alt="GitHub all releases" src="https://img.shields.io/github/downloads/neuron-ai/easyneuron/total?style=flat"><br><img alt="GitHub Release Date" src="https://img.shields.io/github/release-date/neuron-ai/easyneuron?style=flat"> |

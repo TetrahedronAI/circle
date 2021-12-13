@@ -61,7 +61,7 @@ or
 
 - **`CapitalizedCamelCase`** - class names
 - **`lower_case_with_underscores`** - functions and methods
-- **`normalCamelCase`** - variables
+- **`normalCamelCase`**  or **`lower_case_with_underscores`** - variables
 - **`CAPITALIZED`** - constants
 
 </li>

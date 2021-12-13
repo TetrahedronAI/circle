@@ -1,6 +1,6 @@
 import os
 
-from easyneuron._logging import get_logger
+from easyneuron.logging import get_logger
 
 
 def log_errors(func):
