@@ -131,5 +131,5 @@ class KNNClassifier(_KNN):
         self.K -= 1
         return self._choose_label(sample)
 
-    def _get_k_distances(self, distances) -> Dict[Tuple[Numerical, Any]]:
+    def _get_k_distances(self, distances) -> Dict[Numerical, Any]:
         return dict(list(sorted(distances.items(), key=lambda x:x[1]))[:self.K])

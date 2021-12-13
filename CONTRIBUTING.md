@@ -31,6 +31,8 @@ Aside from an editor (preferably VS Code), Git and Python, that is all you reall
 
 > **First run the `admin/scripts/new_here.py` script to set up pre-commit hooks and dependencies. It would be helpful to rerun this from time to time as new pre-commit hooks are added.** 
 
+*Also, please test before commit.*
+
 ### Concerning VS Code Users
 
 If you are a user of Visual Studio Code, you'll find a VS Code configuration with tasks for setup and testing. Please use these, and, if you don't, please do not delete or edit them directly.
