@@ -8,4 +8,5 @@ Numerical - any value that is or can be converted into a number
 
 Distance - the name of a distance function given by this module
 """
-from easyneuron.types.types import NumpyFloat, NumpyInt, Distance, Numerical, X_Data
+from easyneuron.types.types import (Distance, Int, Numerical, NumpyFloat,
+                                    NumpyInt, X_Data)

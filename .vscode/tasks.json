@@ -14,6 +14,12 @@
 			"type": "shell",
 			"command": "py \"admin/scripts/clear_logs.py\"",
 			"problemMatcher": []
+		},
+		{
+			"label": "Get Coverage",
+			"type": "shell",
+			"command": "py \"admin/scripts/coverage.py\"",
+			"problemMatcher": []
 		}
 	]
 }

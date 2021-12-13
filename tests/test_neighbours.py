@@ -16,3 +16,7 @@ class TestKNNClasses(unittest.TestCase):
 
 			self.assertEqual(test.K, i)
 			self.assertEqual(test.distance.__name__, j + "_distance")
+
+	@log_errors
+	def test_fit(self):
+		...
