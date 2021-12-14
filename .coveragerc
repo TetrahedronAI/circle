@@ -1,0 +1,5 @@
+# Coverage.py Config file
+
+[run]
+omit = # Ignore these files
+	easyneuron/_testutils/*
