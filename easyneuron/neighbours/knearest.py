@@ -1,3 +1,17 @@
+# Copyright 2021 Neuron-AI GitHub Authors. All Rights Reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# ==============================================================================
 from dataclasses import dataclass
 from typing import Any, Callable, Dict, Sequence
 from warnings import warn
@@ -69,6 +83,8 @@ class KNNClassifier(_KNN):
 
         self._samples = {s: X[sI] for sI, s in enumerate(y)}
 
+        return self
+
     def predict(self, X: X_Data) -> Sequence[Any]:
         """Generate predictions from the kNN model.
 
@@ -87,6 +103,7 @@ class KNNClassifier(_KNN):
         ValueError
             If the X shape has less than 2 dimensions.
         """
+        X = array(X)
         if len(X.shape) < 2:
             raise ValueError(
                 f"the parameter passed for X should have 2 or more dimensions, not {len(X.shape)} dimensions.\nUsing <arrayName>.reshape(-1, 1) on your X parameter may solve this.")
@@ -111,15 +128,7 @@ class KNNClassifier(_KNN):
         distances_k = self._get_k_distances(distances_k)
 
         # Vote on all of the choices (by how many of the K are of each)
-        votes = {}
-        for label in distances_k.keys():
-            if label not in list(votes.keys()):
-                votes[label] = 1
-            else:
-                votes[label] += 1
-
-        most_votes = max(list(votes.keys()))
-        choices = [j for i, j in votes.items() if i == most_votes] # Get all the voted choices (even if there are multiple with the same key)
+        choices = self._vote(distances_k)
 
         # No tie
         if len(choices) <= 1:
@@ -128,6 +137,17 @@ class KNNClassifier(_KNN):
         # Recursively search for ties
         self.K -= 1
         return self._choose_label(sample)
+
+    def _vote(self, distances_k):
+        votes = {}
+        for label in distances_k.keys():
+            if label not in list(votes.keys()):
+                votes[label] = 1
+            else:
+                votes[label] += 1
+
+        most_votes = max(list(votes.keys()))
+        return [j for i, j in votes.items() if i == most_votes]
 
     def _get_k_distances(self, distances) -> Dict[Numerical, Any]:
         # Returns items 0, 1 ... K values of a dictionary of the distances

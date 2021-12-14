@@ -12,16 +12,5 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
-import logging
-from typing import Optional
-
-def get_logger(filename: str, log_format: Optional[str] = None):
-	if log_format is None:
-		log_format = "%(asctime)s \t [%(levelname)s] \t %(message)s"
-
-	logging.basicConfig(
-		filename=filename,
-		level=logging.DEBUG,
-		format=log_format
-	)
-	return logging.getLogger()
+def mean_squared_error(x): ...
+def mean_absolute_error(x): ...
