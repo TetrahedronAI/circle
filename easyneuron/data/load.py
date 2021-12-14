@@ -23,7 +23,7 @@ def cloud_csv_to_np_array(url):
     )
 
 
-def get_random_humans(filename: Optional[str] = None) -> ndarray:
+def load_random_humans(filename: Optional[str] = None) -> ndarray:
     """Get the random_humans dataset (random numbers chosen by people).
 
     Parameters
