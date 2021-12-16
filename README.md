@@ -80,6 +80,7 @@ Like 👍 this project? Want to contribute to it? Why not put up a pull request 
 > Note: Please read the [Contributing Guidelines](CONTRIBUTING.md) and the appropriate code style document (linked to in `CONTRIBUTING.md`).
 
 Thanks to all who have already contributed...
+
 ![contributors](https://contrib.rocks/image?repo=neuron-ai/easyneuron)
 
 <br>
