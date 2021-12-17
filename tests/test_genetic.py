@@ -1,10 +1,8 @@
 import unittest
-from copy import deepcopy
-from numpy import array
 
 from easyneuron._testutils import log_errors
 from easyneuron.genetic.genomes import Genome
-from random import randint
+from numpy.random import randint
 
 
 class TestGenome(unittest.TestCase):

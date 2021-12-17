@@ -11,8 +11,8 @@ class TestKNNClassifier(unittest.TestCase):
 	def test_params(self):
 
 		for i, j in zip(
-				[2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-				["euclidean", "manhattan"] * 5
+				[2, 22],
+				["euclidean", "manhattan"] * 2
 		):
 			test = KNNClassifier(K=i, distance=j)
 
@@ -24,13 +24,13 @@ class TestKNNClassifier(unittest.TestCase):
 		test = KNNClassifier(K=3)
 
 		# Where items in X != items in Y
-		self.assertRaises(ValueError, test.fit, [[1, 2, 3] * 5], [5, 6, 7])
+		self.assertRaises(ValueError, test.fit, [[1, 2, 3] * 2], [5, 6, 7])
 		self.assertRaises(ValueError, test.fit, [[1, 2, 3]], [5, 6, 7])
 
 		# Where X has too few dimensions
 		self.assertRaises(ValueError, test.fit, [1, 2, 3], [5, 6, 7])
 		self.assertRaises(ValueError, test.predict, [1, 2, 3])
-	
+
 	@log_errors
 	def test_warns(self):
 		self.assertWarns(FutureWarning, KNNClassifier, K=1)
