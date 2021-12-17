@@ -1,7 +1,8 @@
 import unittest
 
 from easyneuron._testutils import log_errors
-from easyneuron.genetic.genomes import Genome
+from easyneuron.exceptions import DimensionsError
+from easyneuron.genetic.genomes import Genome, child_of
 from numpy.random import randint
 
 
@@ -27,3 +28,13 @@ class TestGenome(unittest.TestCase):
 			if (old_genome == new_genome).all(): noChanges += 1
 
 		self.assertLessEqual(noChanges, TESTS * 0.6)
+
+	@log_errors
+	def test_child(self):
+		test = child_of(
+			Genome([1, 2, 3]),
+			Genome([1.1, 4, 2.8])
+		)
+
+		self.assertIsInstance(test, Genome)
+		self.assertRaises(DimensionsError, child_of, Genome([1, 2, 3]), Genome([1, 2]))

@@ -12,5 +12,28 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
-def mean_squared_error(x): ...
-def mean_absolute_error(x): ...
+
+from numpy import array
+
+from easyneuron.exceptions.exceptions import DimensionsError
+
+
+def mean_squared_error(x, y) -> float:
+	x = array(x).reshape(1, -1)[0]
+	y = array(y).reshape(1, -1)[0]
+
+	if x.shape != y.shape:
+		raise DimensionsError(
+			"x and y must have the same number of items in it.")
+
+	return sum((i - j)**2 for i, j in zip(x, y)) / len(x)
+
+def mean_absolute_error(x, y) -> float:
+	x = array(x).reshape(1, -1)[0]
+	y = array(y).reshape(1, -1)[0]
+
+	if x.shape != y.shape:
+		raise DimensionsError(
+			"x and y must have the same number of items in it.")
+
+	return sum(abs(i - j) for i, j in zip(x, y)) / len(x)

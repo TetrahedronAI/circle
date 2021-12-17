@@ -53,6 +53,12 @@ easyNeuron is the new, easy way to create, analyze and program machine learning 
 	- ❌ Neural Networks
 - ❌ Submodules
     - ❌ Genetic Algorithms
+      - ✔ Genomes
+      - ❌ Optimisers
+    - ❌ Neural Networks
+      - ❌ Dense Layers
+      - ❌ LSTMs
+      - ❌ GRUs
     - ❌ Auto Analysis
     - ❌ Maths Tools
     - ❌ Logging Tools

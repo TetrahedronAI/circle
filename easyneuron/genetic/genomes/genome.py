@@ -13,20 +13,19 @@
 # limitations under the License.
 # ==============================================================================
 
-from copy import deepcopy
+from copy import copy
 from typing import SupportsIndex
 
 from easyneuron.exceptions import DimensionsError
-from numpy import array, ndarray
+from easyneuron.metrics import losses
+from easyneuron.types.types import Loss
+from numpy import array, mean, ndarray
 from numpy.random import randint
 
 
 class Genome(object):
 
     def __init__(self, genome: SupportsIndex) -> None:
-        if len(array(genome).shape) > 1:
-            raise DimensionsError(
-                f"the genome should be 1 dimensional, not {len(array(genome).shape)}.\nTry using <arrayName>.reshape(1, -1) on your genome data.")
         self.genome = genome
 
     def mutate(self, rate, magnitude: float = 0.1, **kwargs) -> ndarray:
@@ -34,12 +33,12 @@ class Genome(object):
         bounds = (kwargs.get("lower_bound") or -5,
                   kwargs.get("upper_bound") or 5)
 
-        shape = deepcopy(tuple(self.genome.shape))
+        shape = copy(tuple(self.genome.shape))
         self._genome.reshape(1, -1)
 
         for _ in range(num_changes):
             self._genome[randint(0, len(self._genome) - 1)
-                        ] += randint(bounds[0], bounds[1]) * magnitude
+                         ] += randint(bounds[0], bounds[1]) * magnitude
 
         self._genome.reshape(shape)
 
@@ -52,3 +51,22 @@ class Genome(object):
     @genome.setter
     def genome(self, value):
         self._genome = array(value, dtype=float)
+
+
+def child_of(g1: Genome, g2: Genome, method: Loss = "mse", max_loss: float = 0.1, **kwargs) -> Genome:
+    loss_fn = losses.get(method) or (lambda x: x)
+    fill_value = kwargs.get("fill_value") or 0
+
+    g1 = g1.genome.reshape(1, -1)
+    g2 = g2.genome.reshape(1, -1)
+
+    if len(g1) != len(g2):
+        raise DimensionsError(f"the 2 genomes must have the same number of items, not {len(g1)} and {len(g2)}.")
+
+    child = [
+        mean(i, j) if loss_fn([i], [j]) < max_loss
+        else fill_value
+        for i, j in zip(g1, g2)
+    ]
+
+    return Genome(child)

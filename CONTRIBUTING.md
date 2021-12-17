@@ -13,6 +13,7 @@ Before you continue, try running the VS Code task **"New Here"** to get your env
 		- [Concerning VS Code Users](#concerning-vs-code-users)
 		- [Terminal Locations](#terminal-locations)
 		- [Important note about the website](#important-note-about-the-website)
+		- [Repo Branching](#repo-branching)
 	- [Code Style](#code-style)
 - [Licensing](#licensing)
 	- [Python Message](#python-message)
@@ -46,13 +47,22 @@ Just a practical note, it helps to have the terminal navigated to the root of th
 ### Important note about the website
 If working on the website in the docs folder, please <kbd>CTRL</kbd> + <kbd>K</kbd>, <kbd>CTRL</kbd> + <kbd>O</kbd> (vscode open folder shortcut) into the docs folder.
 
+### Repo Branching
+Whether you're working on the main repo or a personal fork, please ensure that you branch it, rather than directly using the master branch, to prevent issues with breaking production. Please name branches all in lower case with dashes with verbose, descriptive names following the following conventions.
+
+| Prefix | Use Case | Example |
+| ------ | -------- | ------- |
+| `add` | Adding something new | `add-genetic-algorithm-genomes` |
+| `improve` | Improving efficiency or design / refactoring | `improve-knn-fit-efficiency` |
+| `fix` | Fixing bugs or issues | `fix-security-issue-14` |
+
 ## Code Style
 
 Please refer to the following documents for code styles.
 
-| Language    | Style File                               |
-| ----------- | ---------------------------------------- |
-| Python      | [admin/python.md](admin/style/python.md) |
+| Language | Style File                               |
+| -------- | ---------------------------------------- |
+| Python   | [admin/python.md](admin/style/python.md) |
 
 <br>
 
