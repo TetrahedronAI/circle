@@ -13,24 +13,26 @@
 # limitations under the License.
 # ==============================================================================
 
+from __future__ import annotations
+
 from abc import ABC, abstractmethod
 from functools import total_ordering
 from typing import Any, Sequence
 
 from easyneuron._classes import Model
 from easyneuron.types import X_Data
-from easyneuron.types.types import Int
 
 
 @total_ordering
 class _KNN(Model, ABC):
-	K: Int
+	__slots__ = "K"
+	K: int
 
-	def __lt__(self, other) -> Any:
+	def __lt__(self, other: _KNN) -> Any:
 		return self.K < other.K
 
 	@abstractmethod
-	def fit(self, X: X_Data, y: Sequence[Any], *args, **kwargs) -> Model: ...
+	def fit(self, X: X_Data, y: Sequence, *args, **kwargs) -> Model: ...
 
 	@abstractmethod
-	def predict(self, X: X_Data, *args, **kwargs) -> Sequence[Any]: ...
+	def predict(self, X: X_Data, *args, **kwargs) -> Sequence: ...

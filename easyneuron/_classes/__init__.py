@@ -12,4 +12,5 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
-from easyneuron._classes._models import Model
+
+from easyneuron._classes.models import Model

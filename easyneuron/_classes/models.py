@@ -12,22 +12,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
-from random import normalvariate
-from secrets import randbelow
-from typing import Tuple
 
-from numpy import array, ndarray
+from __future__ import annotations
+
+from abc import ABC, abstractmethod
+from typing import Any
 
 
-def gen_stairs(classes: int, features: int, samples: int = 10000, sd: float = 0.3, factor: float = 3) -> Tuple[ndarray, ndarray]:
-    X = []
-    y = []
+class Model(ABC):
+	@abstractmethod
+	def fit(self, X,*args, **kwargs) -> Model: ...
 
-    for _ in range(samples):
-        label = randbelow(classes)*factor
-        to_append = [normalvariate(label, sd) for _ in range(features)]
-
-        X.append(to_append)
-        y.append(label)
-
-    return array(X), array(y)
+	@abstractmethod
+	def predict(self, X, *args, **kwargs) -> Any: ...

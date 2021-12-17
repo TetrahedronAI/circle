@@ -63,7 +63,7 @@ Please refer to the following documents for code styles.
 As to ensure that it is clear that all files are covered under the correct license (Apache 2.0), please make sure that the files (any new ones you create) begin with the following message. Please fill in the sections marked with the `<>` tags. Use the template below that is appropriate for each language.
 
 ## Python Message
-Use for Python scripts.
+Use for Python scripts. There is a `license` snippet that'll work in Python scripts.
 
 ```python
 # Copyright <YEAR OF FILE CREATION> Neuron-AI GitHub Authors. All Rights Reserved.

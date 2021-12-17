@@ -20,7 +20,7 @@ from easyneuron._classes import Model
 from easyneuron.math.distance.distance import distance_functions, euclidean_distance, manhattan_distance
 from easyneuron.neighbours._classes import _KNN
 from easyneuron.types import X_Data
-from easyneuron.types.types import Distance, Int, Numerical
+from easyneuron.types.types import Distance, Numerical
 from numpy import array
 
 
@@ -30,12 +30,12 @@ class KNNClassifier(_KNN):
     KNN Classifier is the K-Nearest Neighbours algorithm for classification, implemented in Python.
     """
 
-    def __init__(self, K: Int =  7, distance: Distance = "euclidean") -> None:
+    def __init__(self, K: int =  7, distance: Distance = "euclidean") -> None:
         """Create an instance of the K-Nearest-Neighbours classifier
 
         Parameters
         ----------
-        K : Int
+        K : int
             The K-Value for the model, by default 7
         distance : Distance[str], optional
             The distance function to use ("euclidean" or "manhattan"), by default "euclidean"
@@ -47,7 +47,7 @@ class KNNClassifier(_KNN):
         self.K: Numerical = K
         self.distance: Callable = distance_functions[distance]
 
-    def fit(self, X: X_Data, y: Sequence[Any]) -> Model:
+    def fit(self, X: X_Data, y: Sequence) -> Model:
 
         """Train (fit the model) to the given data.
 
@@ -55,7 +55,7 @@ class KNNClassifier(_KNN):
         ----------
         X : X_Data
                 The samples' data/features
-        y : Sequence[Any]
+        y : Sequence
                 The labels for each sample
 
         Returns
@@ -85,7 +85,7 @@ class KNNClassifier(_KNN):
 
         return self
 
-    def predict(self, X: X_Data) -> Sequence[Any]:
+    def predict(self, X: X_Data) -> Sequence:
         """Generate predictions from the kNN model.
 
         Parameters
@@ -95,7 +95,7 @@ class KNNClassifier(_KNN):
 
         Returns
         -------
-        Sequence[Any]
+        Sequence
             The predicted labels.
 
         Raises
@@ -110,12 +110,12 @@ class KNNClassifier(_KNN):
 
         return [self._choose_label(sample) for sample in X]
 
-    def _choose_label(self, sample: Sequence[Any]) -> Any:
+    def _choose_label(self, sample: Sequence) -> Any:
         """Choose the label from a sample.
 
         Parameters
         ----------
-        sample : Sequence[Any]
+        sample : Sequence
             The sample to use.
 
         Returns

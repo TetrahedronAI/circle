@@ -13,12 +13,4 @@
 # limitations under the License.
 # ==============================================================================
 
-from abc import ABC, abstractmethod
-from typing import Any
-
-class Model(ABC):
-	@abstractmethod
-	def fit(self, X,*args, **kwargs) -> Any: ...
-
-	@abstractmethod
-	def predict(self, X, *args, **kwargs) -> Any: ...
+from easyneuron.genetic.genomes.genome import Genome

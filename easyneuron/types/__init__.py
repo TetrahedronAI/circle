@@ -23,5 +23,5 @@ Distance - the name of a distance function given by this module
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
-from easyneuron.types.types import (Distance, Int, Numerical, NumpyFloat,
-                                    NumpyInt, X_Data)
+from easyneuron.types.types import (Distance, Numerical, NumpyFloat, NumpyInt,
+                                    X_Data)

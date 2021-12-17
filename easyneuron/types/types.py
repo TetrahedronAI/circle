@@ -1,4 +1,4 @@
-from typing import Literal, Sequence, SupportsFloat, SupportsInt, Union
+from typing import Literal, Sequence, SupportsFloat, SupportsIndex, SupportsInt, Union
 
 from numpy import (float16, float32, float64, int0, int8, int16, int32, int64,
                    ndarray)
@@ -12,8 +12,6 @@ BuiltinNumbers = Union[int, float]  # Builtin number types
 
 # Any numerical, or numpy numerical types
 Numerical = Union[BuiltinNumbers, NumpyFloat, NumpyInt, SupportsInt, SupportsFloat]
-Int = Union[NumpyInt, int]
-
 
 # External types for set-like objects
 ExternalSets = Union[DataFrame, Series, ndarray]

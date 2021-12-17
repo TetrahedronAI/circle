@@ -1,3 +1,11 @@
+"""easyneuron.exceptions provides all of the necessary exceptions for this package and any other ML packages you may wish to create.
+
+Errors
+------
+
+DimensionsError
+"""
+
 # Copyright 2021 Neuron-AI GitHub Authors. All Rights Reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,3 +20,5 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
+
+from easyneuron.exceptions.exceptions import DimensionsError
