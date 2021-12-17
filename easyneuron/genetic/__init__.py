@@ -20,4 +20,4 @@ Tools include...
 # limitations under the License.
 # ==============================================================================
 
-from easyneuron.genetic.genomes import Genome
+from easyneuron.genetic.genomes import Genome, child_of

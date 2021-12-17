@@ -32,6 +32,11 @@ class TestKNNClassifier(unittest.TestCase):
 		self.assertRaises(ValueError, test.predict, [1, 2, 3])
 
 	@log_errors
+	def test_ordering(self):
+		self.assertLess(KNNClassifier(2), KNNClassifier(4))
+		self.assertLess(KNNClassifier(20), KNNClassifier(324))
+
+	@log_errors
 	def test_warns(self):
 		self.assertWarns(FutureWarning, KNNClassifier, K=1)
 

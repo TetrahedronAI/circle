@@ -13,4 +13,4 @@
 # limitations under the License.
 # ==============================================================================
 
-from easyneuron.genetic.genomes.genome import Genome
+from easyneuron.genetic.genomes.genome import Genome, child_of

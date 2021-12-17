@@ -1,4 +1,4 @@
-from typing import Literal, Sequence, SupportsFloat, SupportsInt, Union
+from typing import Callable, Literal, Sequence, SupportsFloat, SupportsInt, Union
 
 from numpy import (float16, float32, float64, int0, int8, int16, int32, int64,
                    ndarray)
@@ -18,10 +18,9 @@ ExternalSets = Union[DataFrame, Series, ndarray]
 BuiltinSets = Union[list, tuple, set]  # Builtin set-like types
 SequentialObject = Union[ExternalSets, BuiltinSets]  # All set-like objects
 
+Data = Union[SequentialObject, Numerical] # A Union of sequences that can be used alonside numerical values
+X_Data = Sequence[Sequence[Numerical]] # 2D Arrays
 
-# A Union of sequences that can be used alonside numerical values
-Data = Union[SequentialObject, Numerical]
-X_Data = Sequence[Sequence[Numerical]]
-
-# Maths Types
+# Literal Types
 Distance = Literal["euclidean", "manhattan"]  # Distance function names
+Loss = Union[Literal["mse", "mae", "mean_squared_error", "mean_absolute_error"], Callable] # Types of losses

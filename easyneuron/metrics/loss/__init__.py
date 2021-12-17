@@ -12,3 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
+
+from easyneuron.metrics.loss.meanerrors import mean_absolute_error, mean_squared_error
+
+losses = {
+	"mse": mean_squared_error,
+	"mae": mean_absolute_error,
+	"mean_squared_error": mean_squared_error,
+	"mean_absolute": mean_squared_error
+}

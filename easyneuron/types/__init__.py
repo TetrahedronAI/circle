@@ -6,7 +6,10 @@ NumpyFloat - any float from Numpy
 NumpyInt - any integer from Numpy
 Numerical - any value that is or can be converted into a number
 
-Distance - the name of a distance function given by this module
+Distance - the name of a distance function given by this package
+Loss - the name of a loss function given by this package
+
+X_Data - any sequence or number
 """
 
 # Copyright 2021 Neuron-AI GitHub Authors. All Rights Reserved.
@@ -23,5 +26,5 @@ Distance - the name of a distance function given by this module
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
-from easyneuron.types.types import (Distance, Numerical, NumpyFloat, NumpyInt,
-                                    X_Data)
+from easyneuron.types.types import (Distance, Loss, Numerical,
+                                    NumpyFloat, NumpyInt, X_Data)

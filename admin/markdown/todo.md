@@ -9,6 +9,11 @@
 	- ❌ Neural Networks<!-- TODO:   Neural Networks -->
 - ❌ Submodules<!-- TODO:   Submodules -->
     - ❌ Genetic Algorithms<!-- TODO:       Genetic Algorithms -->
+      - ❌ Optimisers<!-- TODO:         Optimisers -->
+    - ❌ Neural Networks<!-- TODO:       Neural Networks -->
+      - ❌ Dense Layers<!-- TODO:         Dense Layers -->
+      - ❌ LSTMs<!-- TODO:         LSTMs -->
+      - ❌ GRUs<!-- TODO:         GRUs -->
     - ❌ Auto Analysis<!-- TODO:       Auto Analysis -->
     - ❌ Maths Tools<!-- TODO:       Maths Tools -->
     - ❌ Logging Tools<!-- TODO:       Logging Tools -->
