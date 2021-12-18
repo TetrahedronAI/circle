@@ -1,11 +1,3 @@
-"""easyneuron.exceptions provides all of the necessary exceptions for this package and any other ML packages you may wish to create.
-
-Errors
-------
-
-DimensionsError
-"""
-
 # Copyright 2021 Neuron-AI GitHub Authors. All Rights Reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -21,4 +13,13 @@ DimensionsError
 # limitations under the License.
 # ==============================================================================
 
-from easyneuron.exceptions.exceptions import DimensionsError, UntrainedModelError
+from typing import Iterable, Sequence
+
+from easyneuron.exceptions import DimensionsError
+
+
+def accuracy(predictions: Iterable, targets: Iterable) -> Sequence:
+	if len(predictions) != len(targets):
+		raise DimensionsError(f"the predictions and targets should have equal lengths. Not {len(predictions)} and {len(targets)}.")
+
+	return sum(i == j for i, j in zip(predictions, targets)) / len(predictions)

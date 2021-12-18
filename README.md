@@ -21,6 +21,8 @@
 
 easyNeuron is the new, easy way to create, analyze and program machine learning 🧠 models.
 
+With ML algorithms like K-Nearest-Neighbours, Linear Regression, tools to create complex functions like genetic algorithms and frequent updates and improvements, what's not to love about easyNeuron!
+
 </section>
 
 <br>

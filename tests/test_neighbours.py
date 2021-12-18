@@ -2,6 +2,7 @@ import unittest
 
 from easyneuron._testutils import log_errors
 from easyneuron.data import gen_stairs
+from easyneuron.metrics.accuracy.accuracy import accuracy
 from easyneuron.neighbours import KNNClassifier
 
 
@@ -52,3 +53,11 @@ class TestKNNClassifier(unittest.TestCase):
 
 			test = KNNClassifier(K=k, distance=l)
 			test.fit(X_train, y_train)
+
+	def test_predict(self):
+		X, y = gen_stairs(3, 2, sd=0.1, samples=1000)
+
+		model = KNNClassifier()
+		model.fit(X[:900], y[:900])
+		preds = model.predict(X[900:])
+		self.assertGreaterEqual(accuracy(preds, y[900:]), 0.7)

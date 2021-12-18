@@ -1,9 +1,8 @@
-"""easyneuron.exceptions provides all of the necessary exceptions for this package and any other ML packages you may wish to create.
+"""easyneuron.metrics.accuracy provides all of the necessary metrics to accurately evaluate your models' accuracy.
 
-Errors
-------
-
-DimensionsError
+Functions
+---------
+accuracy - returns the accuracy
 """
 
 # Copyright 2021 Neuron-AI GitHub Authors. All Rights Reserved.
@@ -21,4 +20,4 @@ DimensionsError
 # limitations under the License.
 # ==============================================================================
 
-from easyneuron.exceptions.exceptions import DimensionsError, UntrainedModelError
+from easyneuron.metrics.accuracy.accuracy import accuracy

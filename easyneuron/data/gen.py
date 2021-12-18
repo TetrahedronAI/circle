@@ -19,13 +19,13 @@ from typing import Tuple
 from numpy import array, ndarray
 
 
-def gen_stairs(classes: int, features: int, samples: int = 10000, sd: float = 0.3, factor: float = 3) -> Tuple[ndarray, ndarray]:
+def gen_stairs(classes: int, features: int, samples: int = 1000, sd: float = 0.3, factor: float = 3) -> Tuple[ndarray, ndarray]:
     X = []
     y = []
 
     for _ in range(samples):
-        label = randbelow(classes)*factor
-        to_append = [normalvariate(label, sd) for _ in range(features)]
+        label = randbelow(classes)
+        to_append = [normalvariate(label, sd) * factor for _ in range(features)]
 
         X.append(to_append)
         y.append(label)

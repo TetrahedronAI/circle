@@ -13,4 +13,6 @@
 # limitations under the License.
 # ==============================================================================
 
-from easyneuron.metrics.loss import mean_absolute_error, mean_squared_error, losses
+from easyneuron.metrics.accuracy import accuracy
+from easyneuron.metrics.loss import (losses, mean_absolute_error,
+                                     mean_squared_error)
