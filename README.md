@@ -50,7 +50,7 @@ With ML algorithms like K-Nearest-Neighbours, Linear Regression, tools to create
 	- ❌ Decision Trees
 	- ❌ Random Forest
 	- ❌ Adaboost
-	- ❌ K-Nearest Neighbours
+	- ✔ K-Nearest Neighbours
 	- ❌ K-Means Clustering
 	- ❌ Neural Networks
 - ❌ Submodules
