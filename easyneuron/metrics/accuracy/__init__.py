@@ -1,3 +1,10 @@
+"""easyneuron.metrics.accuracy provides all of the necessary metrics to accurately evaluate your models' accuracy.
+
+Functions
+---------
+accuracy - returns the accuracy
+"""
+
 # Copyright 2021 Neuron-AI GitHub Authors. All Rights Reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,6 +20,4 @@
 # limitations under the License.
 # ==============================================================================
 
-from easyneuron.metrics.accuracy import accuracy
-from easyneuron.metrics.loss import (losses, mean_absolute_error,
-                                     mean_squared_error)
+from easyneuron.metrics.accuracy.accuracy import accuracy

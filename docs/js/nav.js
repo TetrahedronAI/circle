@@ -5,9 +5,9 @@ document.write(`
 		<h1>easyNeuron</h1>
 	</a>
 	<div>
-		<a href="/">Home</a>
-		<a href="/">Docs</a>
-		<a href="/">Support Us</a>
+		<a href="/easyneuron/">Home</a>
+		<a href="/easyneuron/docs/">Docs</a>
+		<a href="/support/">Support Us</a>
 	</div>
 </nav>
 `);
