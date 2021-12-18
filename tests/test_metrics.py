@@ -12,7 +12,7 @@ class TestMeanErrors(unittest.TestCase):
 		self.assertEqual(mean_squared_error([1, 2, 3], [2, 3, 4]), 1)
 		self.assertEqual(mean_squared_error([1, 2, 3], [3, 4, 5]), 4)
 		self.assertEqual(mean_squared_error([[1, 2, 3], [0, -1, -2]], [[2, 3, 4], [-1, -2, -3]]), 1)
-	
+
 	@log_errors
 	def test_mae(self):
 		self.assertEqual(mean_absolute_error([1, 2, 3], [2, 3, 4]), 1)

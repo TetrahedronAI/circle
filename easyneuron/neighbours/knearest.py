@@ -18,7 +18,7 @@ from warnings import warn
 
 from easyneuron._classes import Model
 from easyneuron.exceptions.exceptions import UntrainedModelError
-from easyneuron.math.distance.distance import distance_functions, euclidean_distance
+from easyneuron.math.distance.distance import distance_functions
 from easyneuron.neighbours._classes import _KNN
 from easyneuron.types import X_Data
 from easyneuron.types.types import Distance, Numerical
@@ -149,7 +149,7 @@ class KNNClassifier(_KNN):
 				votes[i] += 1
 			else:
 				votes[i] = 1
-		
+
 		choices = []
 
 		m_votes = 0
@@ -159,9 +159,9 @@ class KNNClassifier(_KNN):
 				choices = [i]
 			elif j == m_votes:
 				choices.append(i)
-		
+
 		if len(choices) > 1:
 			return self._choose_label(sample, K - 1)
-		
+
 		return choices[0]
 
