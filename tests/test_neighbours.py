@@ -4,7 +4,6 @@ from easyneuron._testutils import log_errors
 from easyneuron.data import gen_stairs
 from easyneuron.metrics.accuracy.accuracy import accuracy
 from easyneuron.neighbours import KNNClassifier
-from easyneuron.metrics import mean_absolute_error
 
 
 class TestKNNClassifier(unittest.TestCase):
@@ -56,19 +55,9 @@ class TestKNNClassifier(unittest.TestCase):
 			test.fit(X_train, y_train)
 
 	def test_predict(self):
+		X, y = gen_stairs(3, 2, sd=0.1, samples=1000)
+
 		model = KNNClassifier()
-		X, y = gen_stairs(3, 3, sd=0.05)
-
-		model.fit(X[:8000], y[:8000])
-		preds = model.predict(X[8000:])
-
-		self.assertLessEqual(
-			mean_absolute_error(
-				preds, y[8000:]
-			), 3
-		)
-		self.assertGreaterEqual(
-			accuracy(
-				preds, y[8000:]
-			), 0.7
-		)
+		model.fit(X[:900], y[:900])
+		preds = model.predict(X[900:])
+		self.assertGreaterEqual(accuracy(preds, y[900:]), 0.7)
