@@ -13,11 +13,12 @@
 # limitations under the License.
 # ==============================================================================
 from dataclasses import dataclass
-from typing import Any, Callable, Dict, Sequence
+from typing import Any, Callable, Optional, Sequence
 from warnings import warn
 
 from easyneuron._classes import Model
-from easyneuron.math.distance.distance import distance_functions, euclidean_distance, manhattan_distance
+from easyneuron.exceptions.exceptions import UntrainedModelError
+from easyneuron.math.distance.distance import distance_functions, euclidean_distance
 from easyneuron.neighbours._classes import _KNN
 from easyneuron.types import X_Data
 from easyneuron.types.types import Distance, Numerical
@@ -26,129 +27,141 @@ from numpy import array
 
 @dataclass(init=True, repr=True, unsafe_hash=True, eq=True)
 class KNNClassifier(_KNN):
-    """
-    KNN Classifier is the K-Nearest Neighbours algorithm for classification, implemented in Python.
-    """
+	"""
+	KNN Classifier is the K-Nearest Neighbours algorithm for classification, implemented in Python.
+	"""
 
-    def __init__(self, K: int =  7, distance: Distance = "euclidean") -> None:
-        """Create an instance of the K-Nearest-Neighbours classifier
+	def __init__(self, K: int = 7, distance: Distance = "euclidean") -> None:
+		"""Create an instance of the K-Nearest-Neighbours classifier
 
-        Parameters
-        ----------
-        K : int
-            The K-Value for the model, by default 7
-        distance : Distance[str], optional
-            The distance function to use ("euclidean" or "manhattan"), by default "euclidean"
-        """
-        if K == 1:
-            warn(FutureWarning(
-                "setting K to 1 can result in bad quality predictions later.")) # This is since it'd only analyse the closest one
+		Parameters
+		----------
+		K : int
+				The K-Value for the model, by default 7
+		distance : Distance[str], optional
+				The distance function to use ("euclidean" or "manhattan"), by default "euclidean"
+		"""
+		if K == 1:
+			warn(FutureWarning(
+				"setting K to 1 can result in bad quality predictions later."))  # This is since it'd only analyse the closest one
 
-        self.K: Numerical = K
-        self.distance: Callable = distance_functions[distance]
+		self.K: Numerical = K
+		self._X: Optional[Sequence] = None
 
-    def fit(self, X: X_Data, y: Sequence) -> Model:
+		if distance_functions.get(distance) is None:
+			raise ValueError(
+				f"the distance function {distance} is not a valid distance. Please use euclidean or manhattan.")
 
-        """Train (fit the model) to the given data.
+		self.distance: Callable = distance_functions[distance]
 
-        Parameters
-        ----------
-        X : X_Data
-                The samples' data/features
-        y : Sequence
-                The labels for each sample
+	def fit(self, X: X_Data, y: Sequence) -> Model:
+		"""Train (fit the model) to the given data.
 
-        Returns
-        -------
-        Model
-                The trained model
+		Parameters
+		----------
+		X : X_Data
+						The samples' data/features
+		y : Sequence
+						The labels for each sample
 
-        Raises
-        ------
-        ValueError
-                If X has a different number of samples to y. They must have equivalent lengths.
-        ValueError
-                If the data for X has less than 2 dimensions.
-        """
-        if len(X) != len(y):
-            raise ValueError(
-                f"parameters X and y should have the same length.\nNot...\n\tX: {len(X)}\n\ty: {len(y)}.") # So that samples align with labels
+		Returns
+		-------
+		Model
+						The trained model
 
-        X = array(X)
-        y = array(y)
+		Raises
+		------
+		ValueError
+						If X has a different number of samples to y. They must have equivalent lengths.
+		ValueError
+						If the data for X has less than 2 dimensions.
+		"""
+		if len(X) != len(y):
+			raise ValueError(
+				f"parameters X and y should have the same length.\nNot...\n\tX: {len(X)}\n\ty: {len(y)}.")  # So that samples align with labels
 
-        if len(X.shape) < 2:
-            raise ValueError(
-                f"the parameter passed for X should have 2 or more dimensions, not {len(X.shape)} dimensions.\nUsing <arrayName>.reshape(-1, 1) on your X parameter may solve this.") # Ensuring that the following algorithms work
+		X = array(X)
+		y = array(y)
 
-        self._samples = {s: X[sI] for sI, s in enumerate(y)}
+		if len(X.shape) < 2:
+			raise ValueError(
+				f"the parameter passed for X should have 2 or more dimensions, not {len(X.shape)} dimensions.\nUsing <arrayName>.reshape(-1, 1) on your X parameter may solve this.")  # Ensuring that the following algorithms work
 
-        return self
+		self._X = [(s, X[sI]) for sI, s in enumerate(y)]
 
-    def predict(self, X: X_Data) -> Sequence:
-        """Generate predictions from the kNN model.
+		return self
 
-        Parameters
-        ----------
-        X : X_Data
-            The samples to predict from.
+	def predict(self, X: X_Data) -> Sequence:
+		"""Generate predictions from the kNN model.
 
-        Returns
-        -------
-        Sequence
-            The predicted labels.
+		Parameters
+		----------
+		X : X_Data
+				The samples to predict from.
 
-        Raises
-        ------
-        ValueError
-            If the X shape has less than 2 dimensions.
-        """
-        X = array(X)
-        if len(X.shape) < 2:
-            raise ValueError(
-                f"the parameter passed for X should have 2 or more dimensions, not {len(X.shape)} dimensions.\nUsing <arrayName>.reshape(-1, 1) on your X parameter may solve this.")
+		Returns
+		-------
+		Sequence
+				The predicted labels.
 
-        return [self._choose_label(sample) for sample in X]
+		Raises
+		------
+		ValueError
+				If the X shape has less than 2 dimensions.
+		"""
+		X = array(X)
+		if len(X.shape) < 2:
+			raise ValueError(
+				f"the parameter passed for X should have 2 or more dimensions, not {len(X.shape)} dimensions.\nUsing <arrayName>.reshape(-1, 1) on your X parameter may solve this.")
 
-    def _choose_label(self, sample: Sequence) -> Any:
-        """Choose the label from a sample.
+		return [self._choose_label(sample, self.K) for sample in X]
 
-        Parameters
-        ----------
-        sample : Sequence
-            The sample to use.
+	def _choose_label(self, sample: Sequence, K: int) -> Any:
+		# sourcery skip: remove-dict-keys, use-dict-items
+		"""Choose the label from a sample.
 
-        Returns
-        -------
-        Any
-            The label (of any type).
-        """
-        # Calculate all of the distances
-        distances_k = {sK: self.distance(sample, s) for sK, s in self._samples.items()}
-        distances_k = self._get_k_distances(distances_k)
+		Parameters
+		----------
+		sample : Sequence
+				The sample to use.
 
-        # Vote on all of the choices (by how many of the K are of each)
-        choices = self._vote(distances_k)
+		Returns
+		-------
+		Any
+				The label (of any type).
+		"""
+		if self._X is None:
+			raise UntrainedModelError("model is not trained.")
 
-        # No tie
-        if len(choices) <= 1:
-            return choices[0]
+		distances = sorted(
+			[
+				(self.distance(sample, i), label) # distance, label
+				for label, i in self._X
+			],
+			key=lambda item: item[0]
+		)[:K]
 
-        # Recursively search for ties
-        self.K -= 1
-        return self._choose_label(sample)
+		votes = {}
+		for i in [
+			j[1] for j in distances
+		]:
+			if i in votes: # checks if in the keys
+				votes[i] += 1
+			else:
+				votes[i] = 1
+		
+		choices = []
 
-    def _vote(self, distances_k):
-        votes = {}
-        for label in distances_k.keys():
-            if label not in list(votes.keys()):
-                votes[label] = 1
-            else:
-                votes[label] += 1
+		m_votes = 0
+		for i, j in votes.items():
+			if j > m_votes:
+				m_votes = i
+				choices = [i]
+			elif j == m_votes:
+				choices.append(i)
+		
+		if len(choices) > 1:
+			return self._choose_label(sample, K - 1)
+		
+		return choices[0]
 
-        most_votes = max(list(votes.keys()))
-        return [j for i, j in votes.items() if i == most_votes]
-
-    def _get_k_distances(self, distances) -> Dict[Numerical, Any]:
-        # Returns items 0, 1 ... K values of a dictionary of the distances
-        return dict(list(sorted(distances.items(), key=lambda x:x[1]))[:self.K])

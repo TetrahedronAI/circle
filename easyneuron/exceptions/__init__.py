@@ -21,4 +21,4 @@ DimensionsError
 # limitations under the License.
 # ==============================================================================
 
-from easyneuron.exceptions.exceptions import DimensionsError
+from easyneuron.exceptions.exceptions import DimensionsError, UntrainedModelError
