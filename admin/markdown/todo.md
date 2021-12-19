@@ -4,7 +4,6 @@
 	- ❌ Decision Trees<!-- TODO:   Decision Trees -->
 	- ❌ Random Forest<!-- TODO:   Random Forest -->
 	- ❌ Adaboost<!-- TODO:   Adaboost -->
-	- ❌ K-Nearest Neighbours<!-- TODO:   KNearest Neighbours -->
 	- ❌ K-Means Clustering<!-- TODO:   KMeans Clustering -->
 	- ❌ Neural Networks<!-- TODO:   Neural Networks -->
 - ❌ Submodules<!-- TODO:   Submodules -->
