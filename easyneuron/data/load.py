@@ -52,7 +52,7 @@ def load_random_humans(filename: Optional[str] = None) -> ndarray:
     """
     if filename:
         write_cloud_data(
-            "https://raw.githubusercontent.com/neuron-ai/easyneuron-datasets/main/humans_random_numbers/random_humans.csv", filename)
+            "https://raw.githubusercontent.com/neuron-ai/datasets/main/humans_random_numbers/random_humans.csv", filename)
     return cloud_csv_to_np_array(
-        "https://raw.githubusercontent.com/neuron-ai/easyneuron-datasets/main/humans_random_numbers/random_humans.csv"
+        "https://raw.githubusercontent.com/neuron-ai/datasets/main/humans_random_numbers/random_humans.csv"
     )
