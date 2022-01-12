@@ -51,7 +51,7 @@ class BasicOptimiser(object):
 			if sort_by_loss:
 				population = self._sort_genomes(X, y, population) # sort by losses
 
-			if (len(population) % 2) != 0:
+			if ((len(population) % 2) != 0) and (len(population) != 1):
 				population.pop() # to ensure that there are no extras at the end of pairing up
 
 			population = array(population).reshape((-1, 2)).tolist() # turn into pairs
