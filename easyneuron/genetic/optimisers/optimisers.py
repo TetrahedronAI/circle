@@ -40,7 +40,7 @@ class BasicOptimiser(object):
 		losses = [losses[key] for key in sorted(list(losses.keys()))] # get the genomes from the losses sorted by key
 		return losses
 
-	def optimise(self, X: X_Data, y: Sequence, child_loss: Loss = "mse", child_max_loss: float = 0.1, mutation_rate: float = 0.1, mutation_magnitude: float = 1, **kwargs):
+	def optimise(self, X: X_Data, y: Sequence, child_loss: Loss = "mae", child_max_loss: float = 0.1, mutation_rate: float = 0.1, mutation_magnitude: float = 1, **kwargs):
 		sort_by_loss = kwargs.get("sort_by_loss") if kwargs.get("sort_by_loss") is not None else True
 
 		population = [Genome(
