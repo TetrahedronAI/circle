@@ -3,7 +3,7 @@ import unittest
 
 from easyneuron._testutils import log_errors
 from easyneuron._testutils.gh_actions import notRunningInGitHubActions
-from easyneuron.data import gen_stairs, load_random_humans
+from easyneuron.data import make_stairs, load_random_humans
 
 
 class TestDataLoading(unittest.TestCase):
@@ -21,4 +21,4 @@ class TestDataGen(unittest.TestCase):
 
 	@log_errors
 	def test_gen_stairs(self):
-		gen_stairs(3, 2) # just try to run it to check for errors
+		make_stairs(3, 2) # just try to run it to check for errors

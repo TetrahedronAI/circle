@@ -1,8 +1,8 @@
-from easyneuron.data.gen import gen_stairs
+from easyneuron.data.gen import make_stairs
 from easyneuron.neighbours import KNNClassifier
 from easyneuron.metrics import accuracy
 
-X, y = gen_stairs(3, 2, sd=0.1, samples=1000)
+X, y = make_stairs(3, 2, sd=0.1, samples=1000)
 
 model = KNNClassifier()
 model.fit(X[:900], y[:900])

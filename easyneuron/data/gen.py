@@ -19,7 +19,7 @@ from typing import Tuple
 from numpy import array, ndarray
 
 
-def gen_stairs(classes: int, features: int, samples: int = 1000, sd: float = 0.3, factor: float = 3) -> Tuple[ndarray, ndarray]:
+def make_stairs(classes: int, features: int, samples: int = 1000, sd: float = 0.3, factor: float = 3) -> Tuple[ndarray, ndarray]:
     X = []
     y = []
 

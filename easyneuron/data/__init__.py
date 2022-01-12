@@ -13,4 +13,4 @@
 # limitations under the License.
 # ==============================================================================
 from easyneuron.data.load import load_random_humans
-from easyneuron.data.gen import gen_stairs
+from easyneuron.data.gen import make_stairs
