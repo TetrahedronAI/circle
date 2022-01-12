@@ -45,7 +45,7 @@ def mean_squared_error(x: Sequence, y: Sequence) -> float:
 
 	if x.shape != y.shape:
 		raise DimensionsError(
-			"x and y must have the same number of items in it.")
+			f"x and y must have the same number of items in it, not {len(x.shape)} and {len(y.shape)}.")
 
 	return sum((i - j)**2 for i, j in zip(x, y)) / len(x)
 

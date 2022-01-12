@@ -1,7 +1,7 @@
 import unittest
 
 from easyneuron._testutils import log_errors
-from easyneuron.data import gen_stairs
+from easyneuron.data import make_stairs
 from easyneuron.metrics.accuracy.accuracy import accuracy
 from easyneuron.neighbours import KNNClassifier
 
@@ -49,13 +49,13 @@ class TestKNNClassifier(unittest.TestCase):
 				[2, 3, 4, 5, 6, 7],
 				["euclidean", "manhattan"] * 3
 		):
-			X_train, y_train = gen_stairs(i, j)
+			X_train, y_train = make_stairs(i, j)
 
 			test = KNNClassifier(K=k, distance=l)
 			test.fit(X_train, y_train)
 
 	def test_predict(self):
-		X, y = gen_stairs(3, 2, sd=0.1, samples=1000)
+		X, y = make_stairs(3, 2, sd=0.1, samples=1000)
 
 		model = KNNClassifier()
 		model.fit(X[:900], y[:900])

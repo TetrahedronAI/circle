@@ -2,7 +2,6 @@ from typing import Callable, Literal, Sequence, SupportsFloat, SupportsInt, Unio
 
 from numpy import (float16, float32, float64, int0, int8, int16, int32, int64,
                    ndarray)
-from pandas import DataFrame, Series
 
 # Numerical
 NumpyFloat = Union[float64, float32, float16]  # Numpy Float types
@@ -14,7 +13,7 @@ BuiltinNumbers = Union[int, float]  # Builtin number types
 Numerical = Union[BuiltinNumbers, NumpyFloat, NumpyInt, SupportsInt, SupportsFloat]
 
 # External types for set-like objects
-ExternalSets = Union[DataFrame, Series, ndarray]
+ExternalSets = ndarray
 BuiltinSets = Union[list, tuple, set]  # Builtin set-like types
 SequentialObject = Union[ExternalSets, BuiltinSets]  # All set-like objects
 
