@@ -26,6 +26,7 @@ from numpy.core import array
 class BasicOptimiser(object):
 	def __init__(self, loss: Callable[[X_Data, Sequence, Sequence], float], population_size: int = 1000, genome_shape: Tuple[int] = (1,), **kwargs) -> None:
 		warn(FutureWarning("genetic optimisers run, and work, but convergence is presently difficult. Use at your own risk."))
+
 		self.population_size = population_size
 		self._loss = loss
 
@@ -53,6 +54,8 @@ class BasicOptimiser(object):
 
 			if ((len(population) % 2) != 0) and (len(population) != 1):
 				population.pop() # to ensure that there are no extras at the end of pairing up
+			elif len(population) == 1:
+				break
 
 			population = array(population).reshape((-1, 2)).tolist() # turn into pairs
 			population = [
