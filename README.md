@@ -42,6 +42,9 @@ With ML algorithms like K-Nearest-Neighbours, Linear Regression, tools to create
 
 <br>
 
+<details>
+<summary>Features ✔</summary>
+
 ## Features ✔
 
 - ❌ Models
@@ -53,18 +56,29 @@ With ML algorithms like K-Nearest-Neighbours, Linear Regression, tools to create
 	- ✔ K-Nearest Neighbours
 	- ❌ K-Means Clustering
 	- ❌ Neural Networks
+	- ❌ Epsilon Greed Q-Learning
 - ❌ Submodules
-    - ❌ Genetic Algorithms
+    - ✔ Genetic Algorithms
       - ✔ Genomes
-      - ❌ Optimisers
+      - ✔ Optimisers
     - ❌ Neural Networks
       - ❌ Dense Layers
       - ❌ LSTMs
       - ❌ GRUs
+    - ❌ Reinforcement Learning
+      - ❌ Epsilon Greed Q-Learning
+      - ✔ Environments
     - ❌ Auto Analysis
     - ❌ Maths Tools
+	  - ✔ Distance Functions
+    	- ✔ Eucledian
+    	- ✔ Manhattan
+	  - ✔ Random Numbers
+    	- ✔ Random range with float step
     - ❌ Logging Tools
     - ✔ Types
+
+</details>
 
 <br> <!-- Don't delete this BR newline tag, since it is used with a Python Script (scripts/update_todo.py) -->
 
