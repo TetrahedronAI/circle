@@ -49,4 +49,3 @@ class TestBasicOptimiser(unittest.TestCase):
 
 		opt = BasicOptimiser(loss_fn, 100000, genome_shape=(2, 2), lower_bound=1, upper_bound=4)
 		solution = opt.optimise([], [], "mae", child_max_loss=0.1, mutation_rate=1, mutation_magnitude=10, fill_value=2)
-		print(solution)

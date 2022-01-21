@@ -6,13 +6,14 @@
 	- ❌ Adaboost<!-- TODO:   Adaboost -->
 	- ❌ K-Means Clustering<!-- TODO:   KMeans Clustering -->
 	- ❌ Neural Networks<!-- TODO:   Neural Networks -->
+	- ❌ Epsilon Greed Q-Learning<!-- TODO:   Epsilon Greed QLearning -->
 - ❌ Submodules<!-- TODO:   Submodules -->
-    - ❌ Genetic Algorithms<!-- TODO:       Genetic Algorithms -->
-      - ❌ Optimisers<!-- TODO:         Optimisers -->
     - ❌ Neural Networks<!-- TODO:       Neural Networks -->
       - ❌ Dense Layers<!-- TODO:         Dense Layers -->
       - ❌ LSTMs<!-- TODO:         LSTMs -->
       - ❌ GRUs<!-- TODO:         GRUs -->
+    - ❌ Reinforcement Learning<!-- TODO:       Reinforcement Learning -->
+      - ❌ Epsilon Greed Q-Learning<!-- TODO:         Epsilon Greed QLearning -->
     - ❌ Auto Analysis<!-- TODO:       Auto Analysis -->
     - ❌ Maths Tools<!-- TODO:       Maths Tools -->
     - ❌ Logging Tools<!-- TODO:       Logging Tools -->
