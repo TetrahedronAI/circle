@@ -70,4 +70,3 @@ class BasicOptimiser(object):
 			] # generate children
 
 		return population[0]
-
