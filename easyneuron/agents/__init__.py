@@ -3,6 +3,9 @@
 Current Tools Available
 -----------------------
 
+Environments
+	+ Environment - an abstract base class for environments
+	+ SimpleLateralMover - a test environment for debugging. Get your agent to go right (constant policy).
 """
 # Copyright 2022 Neuron-AI GitHub Authors. All Rights Reserved.
 #

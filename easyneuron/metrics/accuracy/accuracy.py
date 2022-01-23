@@ -22,4 +22,6 @@ def accuracy(predictions: Iterable, targets: Iterable) -> Sequence:
 	if len(predictions) != len(targets):
 		raise DimensionsError(f"the predictions and targets should have equal lengths. Not {len(predictions)} and {len(targets)}.")
 
-	return sum(i == j for i, j in zip(predictions, targets)) / len(predictions)
+	return sum(
+		i == j for i, j in zip(predictions, targets)
+	) / len(predictions)
