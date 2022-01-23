@@ -21,3 +21,4 @@ Tools include...
 # ==============================================================================
 
 from easyneuron.genetic.genomes import Genome, child_of
+from easyneuron.genetic.optimisers.optimisers import BasicOptimiser

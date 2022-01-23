@@ -12,4 +12,4 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
-from easyneuron.math.random.random import secure_random
+from easyneuron.math.random.random import secure_random, random_with_float_step

@@ -20,6 +20,26 @@ from numpy import array, ndarray
 
 
 def make_stairs(classes: int, features: int, samples: int = 1000, sd: float = 0.3, factor: float = 3) -> Tuple[ndarray, ndarray]:
+    """Makes a dataset that contain clusters ascending on the line x=y
+
+    Parameters
+    ----------
+    classes : int
+        The number of classes
+    features : int
+        The number of features
+    samples : int, optional
+        The number of samples, by default 1000
+    sd : float, optional
+        The standard deviation, by default 0.3
+    factor : float, optional
+        How large each cluster should spread, to increase overlapping for noiser data, by default 3
+
+    Returns
+    -------
+    Tuple[ndarray, ndarray]
+        A tuple - (X, y): X is the training samples, y are the targets aka. labels
+    """
     X = []
     y = []
 

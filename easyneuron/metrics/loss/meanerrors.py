@@ -76,7 +76,10 @@ def mean_squared_log_error(x: Sequence, y: Sequence) -> float:
 		raise DimensionsError(
 			"x and y must have the same number of items in it.")
 
-	return sum((log1p(i) - log1p(j))**2 for i, j in zip(x, y)) / len(x)
+	return sum(
+		(log1p(i) - log1p(j))**2 # log error squared
+		for i, j in zip(x, y)
+	) / len(x)
 
 def root_mean_squared_log_error(x: Sequence, y: Sequence) -> float:
 	"""Returns the root mean squared logarithmic error between x and y.
@@ -98,7 +101,7 @@ def root_mean_squared_log_error(x: Sequence, y: Sequence) -> float:
 	DimensionsError
 		If the total number of items in x and y differ.
 	"""
-	return sqrt(mean_squared_log_error(x, y))
+	return sqrt(mean_squared_log_error(x, y)) # guard clauses in method call, none needed here
 	
 
 def mean_absolute_error(x: Sequence, y: Sequence) -> float:

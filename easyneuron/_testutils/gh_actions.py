@@ -22,4 +22,4 @@ def notRunningInGitHubActions() -> bool:
 	bool
 		True if running locally, False if in a GitHub action
 	"""
-	return environ.get("GITHUB_ACTIONS") not in ["true", "True", "TRUE", True]
+	return environ.get("GITHUB_ACTIONS") not in ["true", "True", "TRUE", True] # I was not sure if the environment variable would be which of these
