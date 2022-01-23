@@ -19,7 +19,7 @@ from easyneuron.metrics.loss.meanerrors import (mean_absolute_error,
                                                 root_mean_squared_error,
                                                 root_mean_squared_log_error)
 
-losses = {
+losses = { # for names as strings
 	"mse": mean_squared_error,
 	"rmse": root_mean_squared_error,
 	"msle": mean_squared_log_error,

@@ -12,32 +12,74 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
-from typing import Optional
-import requests
 from io import StringIO
+from typing import Optional
+
+import requests
+from easyneuron.types.types import BufferedWriter, WritableFile
 from numpy import array, loadtxt, ndarray
 
 
-def get_cloud_data(url, *, encoding: str = "utf-8") -> str:
-    return requests.get(url).content.decode(encoding)
+def get_cloud_data(url: str, *, encoding: str = "utf-8") -> str:
+    """Returns a string of the request from the specified url.
+
+    Parameters
+    ----------
+    url : str
+        The url to request from.
+    encoding : str, optional
+        The encoding to decode the response with, by default "utf-8"
+
+    Returns
+    -------
+    str
+        The response decoded.
+    """
+    return requests.get(url).content.decode(encoding, "ignore")
 
 
-def write_cloud_data(url, filename) -> None:
-    with open(filename, "w") as file:
+def write_cloud_data(url: str, file: WritableFile) -> None:
+    """Write cloud data to a file.
+
+    Parameters
+    ----------
+    url : str
+        The URL to get it from
+    file : WritableFile
+        The file to write it to
+    """
+    if isinstance(file, BufferedWriter):
         file.write(get_cloud_data(url))
+    else:
+        with open(file, "w") as file:
+            file.write(get_cloud_data(url))
 
 
-def cloud_csv_to_np_array(url):
+def cloud_csv_to_np_array(url: str, **kwargs) -> ndarray:
+    """Returns the CSV data from the URL as a numpy ndarray.
+
+    Pass delimiter to the function to use a custom delimeter.
+
+    Parameters
+    ----------
+    url : str
+        The URL to get data from
+
+    Returns
+    -------
+    ndarray
+        The array of the CSV data
+    """
     return array(
         loadtxt(
             StringIO(get_cloud_data(url)),
             dtype=object,
-            delimiter=","
+            delimiter=kwargs.get("delimiter") or ","
         )
     )
 
 
-def load_random_humans(filename: Optional[str] = None) -> ndarray:
+def load_random_humans(filename: Optional[str] = ...) -> ndarray:
     """Get the random_humans dataset (random numbers chosen by people).
 
     Parameters
@@ -50,7 +92,7 @@ def load_random_humans(filename: Optional[str] = None) -> ndarray:
     ndarray
             The dataset as a numpy array.
     """
-    if filename:
+    if filename != ...:
         write_cloud_data(
             "https://raw.githubusercontent.com/neuron-ai/datasets/main/humans_random_numbers/random_humans.csv", filename)
     return cloud_csv_to_np_array(

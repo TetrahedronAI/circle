@@ -1,4 +1,6 @@
-from typing import Callable, Literal, Sequence, SupportsFloat, SupportsInt, Union
+from io import BufferedWriter
+from typing import (Callable, Literal, Sequence, SupportsFloat, SupportsInt,
+                    Union)
 
 from numpy import (float16, float32, float64, int0, int8, int16, int32, int64,
                    ndarray)
@@ -23,3 +25,6 @@ X_Data = Sequence[Sequence[Numerical]] # 2D Arrays
 # Literal Types
 Distance = Literal["euclidean", "manhattan"]  # Distance function names
 Loss = Union[Literal["mse", "mae", "mean_squared_error", "mean_absolute_error"], Callable] # Types of losses
+
+# Files
+WritableFile = Union[str, BufferedWriter]

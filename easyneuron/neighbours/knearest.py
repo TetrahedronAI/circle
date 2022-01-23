@@ -117,7 +117,6 @@ class KNNClassifier(_KNN):
 		return [self._choose_label(sample, self.K) for sample in X]
 
 	def _choose_label(self, sample: Sequence, K: int) -> Any:
-		# sourcery skip: remove-dict-keys, use-dict-items
 		"""Choose the label from a sample.
 
 		Parameters
@@ -133,6 +132,7 @@ class KNNClassifier(_KNN):
 		if self._X is None:
 			raise UntrainedModelError("model is not trained.")
 
+		# sort distances for each sample from smallest to largest
 		distances = sorted(
 			[
 				(self.distance(sample, i), label) # distance, label
@@ -142,26 +142,23 @@ class KNNClassifier(_KNN):
 		)[:K]
 
 		votes = {}
-		for i in [
-			j[1] for j in distances
-		]:
+		for i in [j[1] for j in distances]: # iterate over the labels in the sorted distances
 			if i in votes: # checks if in the keys
 				votes[i] += 1
 			else:
-				votes[i] = 1
+				votes[i] = 1 # adds as new key
 
-		choices = []
+		choices = [] # values with the most votes
 
 		m_votes = 0
 		for i, j in votes.items():
 			if j > m_votes:
 				m_votes = i
-				choices = [i]
+				choices = [i] # this has more votes than any other, so no ties yet - replace whole list
 			elif j == m_votes:
-				choices.append(i)
+				choices.append(i) # tie. add to the list, rather than replace it
 
 		if len(choices) > 1:
-			return self._choose_label(sample, K - 1)
+			return self._choose_label(sample, K - 1) # recursively avoid ties by decrementing K
 
 		return choices[0]
-

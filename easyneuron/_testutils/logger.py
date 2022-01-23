@@ -12,15 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
-import os
-
 from easyneuron.logging import get_logger
-
+from easyneuron._testutils.gh_actions import notRunningInGitHubActions
 
 def log_errors(func):
     def wrapper(*args, **kwargs):
-        if os.environ.get("GITHUB_ACTIONS") not in ["true", "True", "TRUE", True]:
-            logger = get_logger("logs/" + func.__module__ + ".log")
+        if notRunningInGitHubActions():
+            logger = get_logger("logs/" + func.__module__ + ".log") # log file, not shown in git(ignored)
 
             try:
                 func(*args, **kwargs)

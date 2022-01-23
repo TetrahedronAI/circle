@@ -12,11 +12,29 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
-from numpy import array, sqrt
+from typing import Iterable
 from warnings import warn
 
-def euclidean_distance(x, y, **kwargs):
-	x = array(x).reshape(1, -1)
+from numpy import array, sqrt
+
+
+def euclidean_distance(x: Iterable, y: Iterable, **kwargs) -> float:
+	"""Euclidean distance function, returns the distance between x and y
+	Pass "supress_warnings=True" to the function to avoid warnings when x and y have different lengths.
+
+	Parameters
+	----------
+	x : Iterable
+		The first item to be calucated with
+	y : Iterable
+		The second item to be calucated with
+
+	Returns
+	-------
+	float
+		The euclidean distance
+	"""
+	x = array(x).reshape(1, -1) # to make them 1D
 	y = array(y).reshape(1, -1)
 
 	if x.shape != y.shape and kwargs.get("suppress_warnings") != True:
@@ -25,6 +43,21 @@ def euclidean_distance(x, y, **kwargs):
 	return sqrt(sum((x - y)**2 for x, y in zip(x[0], y[0])))
 
 def manhattan_distance(x, y, **kwargs):
+	"""Manhattan distance function, returns the manhattan distance between x and y
+	Pass "supress_warnings=True" to the function to avoid warnings when x and y have different lengths.
+
+	Parameters
+	----------
+	x : Iterable
+		The first item to be calucated with
+	y : Iterable
+		The second item to be calucated with
+
+	Returns
+	-------
+	float
+		The manhattan distance
+	"""
 	x = array(x).reshape(1, -1)
 	y = array(y).reshape(1, -1)
 
