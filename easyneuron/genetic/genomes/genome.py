@@ -17,7 +17,7 @@ from __future__ import annotations
 
 from copy import copy
 from dataclasses import dataclass
-from typing import SupportsIndex
+from typing import SupportsIndex, get_args
 
 from easyneuron.exceptions import DimensionsError
 from easyneuron.metrics import losses
@@ -131,7 +131,7 @@ def child_of(g1: Genome, g2: Genome, method: Loss = "mse", max_loss: float = 0.1
 
     fill_value = kwargs.get("fill_value") or kwargs.get("fill_value_factory") or 0 # the fill value to use if the 2 parents are too different on an attribute
     def fill():
-        return fill_value if isinstance(Numerical, fill_value) else fill_value() # in case the fill value is callable
+        return fill_value if isinstance(fill_value, get_args(Numerical)) else fill_value() # in case the fill value is callable
 
     # reshape for compatability
     g1 = g1.genome.reshape(1, -1).tolist()[0]
