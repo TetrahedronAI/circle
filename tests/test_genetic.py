@@ -47,5 +47,5 @@ class TestBasicOptimiser(unittest.TestCase):
 		def loss_fn(X, y, genome):
 			return mean_squared_error([[1, 2], [3, 4]], genome)
 
-		opt = BasicOptimiser(loss_fn, 50000, genome_shape=(2, 2), lower_bound=1, upper_bound=4)
+		opt = BasicOptimiser(loss_fn, 1000, genome_shape=(2, 2), lower_bound=1, upper_bound=4) # using low population size to reduce test time
 		_ = opt.optimise([], [], "mae", child_max_loss=0.1, mutation_rate=1, mutation_magnitude=10, fill_value=2)

@@ -5,10 +5,6 @@ from easyneuron.agents.envs.examples import SimpleLateralMover
 
 
 class TestEnvironments(unittest.TestCase):
-    def test_env_instancing(self):
-        def error_test():
-            _ = Environment()
-        self.assertRaises(TypeError, error_test)
 
     def test_env_tester_lateralmover(self):
         env = SimpleLateralMover()

@@ -48,7 +48,7 @@ class BasicOptimiser(object):
 						kwargs.get("upper_bound") or 5)
 
 	# returns the genomes sorted by their losses
-	def _sort_genomes(self, X: X_Data, y: Sequence, population: Sequence[Genome]) -> List[Genome]:
+	def __sort_genomes(self, X: X_Data, y: Sequence, population: Sequence[Genome]) -> List[Genome]:
 		losses = {self._loss(X, y, genome.genome): genome for genome in population} # create a dict with loss:genome
 		losses = [losses[key] for key in sorted(list(losses.keys()))] # get the genomes from the losses sorted by key
 		return losses
@@ -85,7 +85,7 @@ class BasicOptimiser(object):
 
 		while len(population) > 1:
 			if sort_by_loss:
-				population = self._sort_genomes(X, y, population) # sort by losses
+				population = self.__sort_genomes(X, y, population) # sort by losses
 
 			if ((len(population) % 2) != 0) and (len(population) != 1):
 				population.pop() # to ensure that there are no extras at the end of pairing up

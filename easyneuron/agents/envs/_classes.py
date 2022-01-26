@@ -22,7 +22,7 @@ class Environment(ABC):
 		"""Create an instance of the environment.
 		"""
 		self.reset(*args, **kwargs)
-        
+
 	def reset(self, *args, **kwargs) -> None:
 		"""Reset the environment to its original state.
 		"""

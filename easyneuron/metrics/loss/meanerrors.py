@@ -102,7 +102,7 @@ def root_mean_squared_log_error(x: Sequence, y: Sequence) -> float:
 		If the total number of items in x and y differ.
 	"""
 	return sqrt(mean_squared_log_error(x, y)) # guard clauses in method call, none needed here
-	
+
 
 def mean_absolute_error(x: Sequence, y: Sequence) -> float:
 	"""Returns the mean absolute error between x and y.

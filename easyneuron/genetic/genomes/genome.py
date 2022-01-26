@@ -40,7 +40,7 @@ class Genome(object):
         """
 
         self.genome = genome
-    
+
     def __repr__(self) -> str:
         return f"Genome({self.genome.tolist()})"
 
