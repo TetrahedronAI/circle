@@ -5,3 +5,8 @@
 .coverage
 coverage.json
 logs/
+
+# C++
+*.o
+*.exe
+c_cpp_properties.json
