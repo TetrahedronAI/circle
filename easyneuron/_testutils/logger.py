@@ -15,18 +15,26 @@
 from easyneuron.logging import get_logger
 from easyneuron._testutils.gh_actions import notRunningInGitHubActions
 
+
 def log_errors(func):
     def wrapper(*args, **kwargs):
         if notRunningInGitHubActions():
-            logger = get_logger("logs/" + func.__module__ + ".log") # log file, not shown in git(ignored)
+            logger = get_logger(
+                "logs/" + func.__module__ + ".log"
+            )  # log file, not shown in git(ignored)
 
             try:
                 func(*args, **kwargs)
                 logger.info(f"{func.__qualname__} - Test Success")
             except Exception as e:
-                message = " ".join(str(i) for i in e.args).replace("\n", " ").replace("  ", "")
+                message = (
+                    " ".join(str(i) for i in e.args)
+                    .replace("\n", " ")
+                    .replace("  ", "")
+                )
                 logger.error(
-                    f"\"{str(type(e))[8:-2]}\" @ {func.__qualname__} - {message}")
+                    f'"{str(type(e))[8:-2]}" @ {func.__qualname__} - {message}'
+                )
                 raise e
         else:
             func(*args, **kwargs)

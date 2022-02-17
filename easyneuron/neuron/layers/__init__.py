@@ -1,4 +1,12 @@
-# Copyright 2021 Neuron-AI GitHub Authors. All Rights Reserved.
+"""easyneuron.neuron.layers provides multiple neural network layers types.
+
+Layers
+------
+
+Dense
+"""
+
+# Copyright 2022 Neuron-AI GitHub Authors. All Rights Reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,15 +21,4 @@
 # limitations under the License.
 # ==============================================================================
 
-from typing import Iterable, Sequence
-
-from easyneuron.exceptions import DimensionsError
-
-
-def accuracy(predictions: Iterable, targets: Iterable) -> Sequence:
-    if len(predictions) != len(targets):
-        raise DimensionsError(
-            f"the predictions and targets should have equal lengths. Not {len(predictions)} and {len(targets)}."
-        )
-
-    return sum(i == j for i, j in zip(predictions, targets)) / len(predictions)
+from easyneuron.neuron.layers.dense import Dense

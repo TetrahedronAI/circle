@@ -1,4 +1,4 @@
-# Copyright 2021 Neuron-AI GitHub Authors. All Rights Reserved.
+# Copyright 2022 Neuron-AI GitHub Authors. All Rights Reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,28 +13,39 @@
 # limitations under the License.
 # ==============================================================================
 
-from __future__ import annotations
-
 from abc import ABC, abstractmethod
-from functools import total_ordering
-from typing import Any, Sequence
-
-from easyneuron._classes import Model
-from easyneuron.types import X_Data
+from typing import Any
 
 
-@total_ordering
-class _KNN(Model, ABC):
-    __slots__ = "K"
-    K: int
-
-    def __lt__(self, other: _KNN) -> Any:
-        return self.K < other.K
-
+class Layer(ABC):
     @abstractmethod
-    def fit(self, X: X_Data, y: Sequence, *args, **kwargs) -> Model:
+    def forward(self, X) -> Any:
+        """Run the forward pass on the layer.
+
+        Parameters
+        ----------
+        X : Any
+                The data to pass forward.
+
+        Returns
+        -------
+        Any
+                The output when run forward.
+        """
         ...
 
     @abstractmethod
-    def predict(self, X: X_Data, *args, **kwargs) -> Sequence:
+    def backward(self, X) -> Any:
+        """Run the backward pass on the layer.
+
+        Parameters
+        ----------
+        X : Any
+                The backward output from the next layer forwards.
+
+        Returns
+        -------
+        Any
+                The backwards run outputs (derivatives with respect to all weights).
+        """
         ...

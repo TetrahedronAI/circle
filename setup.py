@@ -10,7 +10,7 @@ with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
     long_description = "\n" + fh.read()
 
 with open("info.json", "r") as file:
-	info_json = json.loads(file.read())
+    info_json = json.loads(file.read())
 
 # Setting up
 setup(
@@ -24,5 +24,5 @@ setup(
     py_version=info_json.get("py_version"),
     packages=find_packages(),
     keywords=info_json.get("keywords"),
-    classifiers=info_json.get("classifiers")
+    classifiers=info_json.get("classifiers"),
 )

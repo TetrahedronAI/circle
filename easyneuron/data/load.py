@@ -74,7 +74,7 @@ def cloud_csv_to_np_array(url: str, **kwargs) -> ndarray:
         loadtxt(
             StringIO(get_cloud_data(url)),
             dtype=object,
-            delimiter=kwargs.get("delimiter") or ","
+            delimiter=kwargs.get("delimiter") or ",",
         )
     )
 
@@ -94,7 +94,9 @@ def load_random_humans(filename: Optional[str] = ...) -> ndarray:
     """
     if filename != ...:
         write_cloud_data(
-            "https://raw.githubusercontent.com/neuron-ai/datasets/main/humans-random-numbers/random_humans.csv", filename)
+            "https://raw.githubusercontent.com/neuron-ai/datasets/main/humans-random-numbers/random_humans.csv",
+            filename,
+        )
     return cloud_csv_to_np_array(
         "https://raw.githubusercontent.com/neuron-ai/datasets/main/humans-random-numbers/random_humans.csv"
     )

@@ -5,7 +5,6 @@ from easyneuron.agents.envs.examples import SimpleLateralMover
 
 
 class TestEnvironments(unittest.TestCase):
-
     def test_env_tester_lateralmover(self):
         env = SimpleLateralMover()
         env.reset()

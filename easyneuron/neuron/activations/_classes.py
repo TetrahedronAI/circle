@@ -1,4 +1,4 @@
-# Copyright 2021 Neuron-AI GitHub Authors. All Rights Reserved.
+# Copyright 2022 Neuron-AI GitHub Authors. All Rights Reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,43 +13,40 @@
 # limitations under the License.
 # ==============================================================================
 
-from __future__ import (
-    annotations,
-)  # stops errors around the returning of a Model from a Model subclass instance
-
 from abc import ABC, abstractmethod
+
 from typing import Any
 
 
-class Model(ABC):
+class Activation(ABC):
     @abstractmethod
-    def fit(self, X, *args, **kwargs) -> Model:
-        """Fit the model. This must be overwritten by the subclass.
+    def forward(self, X) -> Any:
+        """Run the forward pass on the activation.
 
         Parameters
         ----------
         X : Any
-                The data samples
-
-        Returns
-        -------
-        Model
-                The fitted version of itself.
-        """
-        ...
-
-    @abstractmethod
-    def predict(self, X, *args, **kwargs) -> Any:
-        """Predict from given data X. This must be overwritten by the subclass
-
-        Parameters
-        ----------
-        X : Any
-                The data samples
+                The data to pass forward.
 
         Returns
         -------
         Any
-                The predictions of the model.
+                The output when run forward.
+        """
+        ...
+
+    @abstractmethod
+    def backward(self, X) -> Any:
+        """Run the backward pass on the activation.
+
+        Parameters
+        ----------
+        X : Any
+                The backward output from the next layer forwards.
+
+        Returns
+        -------
+        Any
+                The backwards run outputs (derivatives with respect to all weights).
         """
         ...

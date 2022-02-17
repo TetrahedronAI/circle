@@ -66,5 +66,5 @@ or
 
 </li>
 
-<li>Please use **autopep8** for formatting. This is set as default in the vscode workspace config.</li>
+<li>Please use black for formatting. This is set as default in the vscode workspace config.</li>
 </ol>

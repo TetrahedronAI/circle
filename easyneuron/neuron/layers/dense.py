@@ -1,12 +1,3 @@
-"""easyneuron.agents is a suite of reinforcement learning tools for quick development, production and research.
-
-Current Tools Available
------------------------
-
-Environments
-	+ Environment - an abstract base class for environments
-	+ SimpleLateralMover - a test environment for debugging. Get your agent to go right (constant policy).
-"""
 # Copyright 2022 Neuron-AI GitHub Authors. All Rights Reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -22,5 +13,27 @@ Environments
 # limitations under the License.
 # ==============================================================================
 
-from easyneuron.agents.envs._classes import Environment
-from easyneuron.agents.envs.examples import SimpleLateralMover
+from typing import Any
+
+from easyneuron._classes import Layer
+from numpy import dot, ones, zeros
+
+
+class Dense(Layer):
+    def __init__(
+        self, neurons: int, inputs: int = 1, activation: str = "linear"
+    ) -> None:
+        self.weights = ones((neurons,))
+        self.biases = zeros(neurons)
+        self.activation = activation
+
+    def forward(self, X) -> Any:
+        dot_products = [
+            dot(X, neurons_weights) + self.biases[i]
+            for i, neurons_weights in enumerate(self.weights)
+        ]
+
+        print(dot_products)
+
+    def backward(self, X) -> Any:
+        ...
