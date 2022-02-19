@@ -23,11 +23,11 @@ class Dense(Layer):
     def __init__(
         self, neurons: int, inputs: int = 1, activation: str = "linear"
     ) -> None:
-        self.weights = ones((neurons,))
+        self.weights = ones((neurons, inputs))
         self.biases = zeros(neurons)
         self.activation = activation
 
-    def forward(self, X) -> Any:
+    def forward(self, X: Any) -> Any:
         dot_products = [
             dot(X, neurons_weights) + self.biases[i]
             for i, neurons_weights in enumerate(self.weights)
