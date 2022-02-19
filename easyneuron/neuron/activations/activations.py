@@ -12,3 +12,131 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
+
+from numpy import exp, square, tanh
+from typing import Any
+
+from easyneuron.neuron.activations._classes import Activation
+
+
+class Sigmoid(Activation):
+    """The sigmoid activation function."""
+
+    def forward(self, X: Any) -> Any:
+        """Returns the sigmoid, element wise, of the iterable inputted.
+
+        Parameters
+        ----------
+        X : Any
+                        The iterable of floats to input.
+
+        Returns
+        -------
+        Any
+                        The iterable of results after calculating the sigmoid function on all of the inputs.
+        """
+
+        return [self.__forward(i) for i in X]
+
+    def backward(self, X: Any) -> Any:
+        """Returns the derivative of the sigmoid element wise, of the iterable inputted.
+
+        Parameters
+        ----------
+        X : Any
+                        The iterable of floats to input.
+
+        Returns
+        -------
+        Any
+                        The iterable of results after calculating the sigmoid function on all of the inputs.
+        """
+        return [self.__backward(i) for i in X]
+
+    def __forward(self, value: float) -> float:
+        return 1 / (1 + exp(-value))
+
+    def __backward(self, value: float) -> float:
+        return self.__forward(value) * (1 - self.__forward(value))
+
+
+class Tanh(Activation):
+    """The tanh activation function."""
+
+    def forward(self, X: Any) -> Any:
+        """Returns the hyperbolic tangent element wise, of the iterable inputted.
+
+        Parameters
+        ----------
+        X : Any
+                        The iterable of floats to input.
+
+        Returns
+        -------
+        Any
+                        The iterable of results after calculating the tanh function on all of the inputs.
+        """
+
+        return [self.__forward(i) for i in X]
+
+    def backward(self, X: Any) -> Any:
+        """Returns the derivative of the hyperbolic tangent element wise, of the iterable inputted.
+
+        Parameters
+        ----------
+        X : Any
+                        The iterable of floats to input.
+
+        Returns
+        -------
+        Any
+                        The iterable of results after calculating the tanh function on all of the inputs.
+        """
+        return [self.__backward(i) for i in X]
+
+    def __forward(self, value: float) -> float:
+        return tanh(value)
+
+    def __backward(self, value: float) -> float:
+        return 1 - square(tanh(value))
+
+
+class ReLU(Activation):
+    """The ReLU activation function."""
+
+    def forward(self, X: Any) -> Any:
+        """Returns the ReLU activation element wise, of the iterable inputted.
+
+        Parameters
+        ----------
+        X : Any
+                        The iterable of floats to input.
+
+        Returns
+        -------
+        Any
+                        The iterable of results after calculating the ReLU function on all of the inputs.
+        """
+
+        return [self.__forward(i) for i in X]
+
+    def backward(self, X: Any) -> Any:
+        """Returns the derivative of the ReLU element wise, of the iterable inputted.
+
+        Parameters
+        ----------
+        X : Any
+                        The iterable of floats to input.
+
+        Returns
+        -------
+        Any
+                        The iterable of results after calculating the ReLU function on all of the inputs.
+        """
+        return [self.__backward(i) for i in X]
+
+    def __forward(self, value: float) -> float:
+        return max(value, 0)
+
+    def __backward(self, value: float) -> float:
+        return 0 if value < 0 else 1

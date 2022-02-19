@@ -47,6 +47,12 @@
 			"problemMatcher": []
 		},
 		{
+			"label": "MyPy: Clear .mypy_cache",
+			"type": "shell",
+			"command": "rmdir /S /Q .mypy_cache",
+			"problemMatcher": []
+		},
+		{
 			"label": "MyPy: Check Types of Whole File Tree",
 			"type": "shell",
 			"command": "mypy easyneuron/",

@@ -1,5 +1,6 @@
 # General Testing
 .mypy_cache/
+.devconfig.json
 
 # Temporary Files
 **/__pycache__/

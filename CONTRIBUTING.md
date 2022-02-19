@@ -35,6 +35,14 @@ Aside from an editor (preferably VS Code), Git and Python, that is all you reall
 - *Please test before commit.*
 - *Please use tabs, not spaces.*
 
+To configure things like disabling logging when testing, create a `.devconfig.json` file. The options are...
+
+```json
+{
+	"log_errors": false // disables logging of errors
+}
+```
+
 ### Concerning VS Code Users
 
 If you are a user of Visual Studio Code, you'll find a VS Code configuration with tasks for setup and testing. Please use these, and, if you don't, please do not delete or edit them directly.

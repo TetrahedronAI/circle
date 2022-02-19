@@ -20,7 +20,7 @@ from typing import Any
 
 class Activation(ABC):
     @abstractmethod
-    def forward(self, X) -> Any:
+    def forward(self, X: Any) -> Any:
         """Run the forward pass on the activation.
 
         Parameters
@@ -36,7 +36,7 @@ class Activation(ABC):
         ...
 
     @abstractmethod
-    def backward(self, X) -> Any:
+    def backward(self, X: Any) -> Any:
         """Run the backward pass on the activation.
 
         Parameters
