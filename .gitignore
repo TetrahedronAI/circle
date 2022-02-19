@@ -1,4 +1,7 @@
 # General Testing
+.mypy_cache/
+
+# Temporary Files
 **/__pycache__/
 
 # Logs and coverage

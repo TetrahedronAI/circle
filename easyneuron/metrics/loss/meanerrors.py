@@ -14,20 +14,21 @@
 # ==============================================================================
 
 from math import log1p
-from typing import Sequence
 
 from easyneuron.exceptions.exceptions import DimensionsError
 from numpy import array, sqrt
 
+from easyneuron.types.types import ArrayLike
 
-def mean_squared_error(x: Sequence, y: Sequence) -> float:
+
+def mean_squared_error(x: ArrayLike, y: ArrayLike) -> float:
     """Returns the mean squared error between x and y.
 
     Parameters
     ----------
-    x : Sequence
+    x : ArrayLike
             Any sequence, with equivalent total number of items to y
-    y : Sequence
+    y : ArrayLike
             Any sequence, with equivalent total number of items to x
 
     Returns
@@ -51,14 +52,14 @@ def mean_squared_error(x: Sequence, y: Sequence) -> float:
     return sum((i - j) ** 2 for i, j in zip(x, y)) / len(x)
 
 
-def mean_squared_log_error(x: Sequence, y: Sequence) -> float:
+def mean_squared_log_error(x: ArrayLike, y: ArrayLike) -> float:
     """Returns the mean squared logarithmic error between x and y.
 
     Parameters
     ----------
-    x : Sequence
+    x : ArrayLike
             Any sequence, with equivalent total number of items to y
-    y : Sequence
+    y : ArrayLike
             Any sequence, with equivalent total number of items to x
 
     Returns
@@ -82,14 +83,14 @@ def mean_squared_log_error(x: Sequence, y: Sequence) -> float:
     ) / len(x)
 
 
-def root_mean_squared_log_error(x: Sequence, y: Sequence) -> float:
+def root_mean_squared_log_error(x: ArrayLike, y: ArrayLike) -> float:
     """Returns the root mean squared logarithmic error between x and y.
 
     Parameters
     ----------
-    x : Sequence
+    x : ArrayLike
             Any sequence, with equivalent total number of items to y
-    y : Sequence
+    y : ArrayLike
             Any sequence, with equivalent total number of items to x
 
     Returns
@@ -107,14 +108,14 @@ def root_mean_squared_log_error(x: Sequence, y: Sequence) -> float:
     )  # guard clauses in method call, none needed here
 
 
-def mean_absolute_error(x: Sequence, y: Sequence) -> float:
+def mean_absolute_error(x: ArrayLike, y: ArrayLike) -> float:
     """Returns the mean absolute error between x and y.
 
     Parameters
     ----------
-    x : Sequence
+    x : ArrayLike
             Any sequence, with equivalent total number of items to y
-    y : Sequence
+    y : ArrayLike
             Any sequence, with equivalent total number of items to x
 
     Returns
@@ -136,14 +137,14 @@ def mean_absolute_error(x: Sequence, y: Sequence) -> float:
     return sum(abs(i - j) for i, j in zip(x, y)) / len(x)
 
 
-def root_mean_squared_error(x: Sequence, y: Sequence) -> float:
+def root_mean_squared_error(x: ArrayLike, y: ArrayLike) -> float:
     """Returns the root mean squared error between x and y.
 
     Parameters
     ----------
-    x : Sequence
+    x : ArrayLike
             Any sequence, with equivalent total number of items to y
-    y : Sequence
+    y : ArrayLike
             Any sequence, with equivalent total number of items to x
 
     Returns

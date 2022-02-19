@@ -13,12 +13,12 @@
 # limitations under the License.
 # ==============================================================================
 
-from typing import Iterable, Sequence
+from typing import Any, Sequence, Union
 
 from easyneuron.exceptions import DimensionsError
 
 
-def accuracy(predictions: Iterable, targets: Iterable) -> Sequence:
+def accuracy(predictions: Sequence, targets: Sequence) -> Union[Any, float]:
     if len(predictions) != len(targets):
         raise DimensionsError(
             f"the predictions and targets should have equal lengths. Not {len(predictions)} and {len(targets)}."

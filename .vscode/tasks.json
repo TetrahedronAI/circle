@@ -6,49 +6,74 @@
 		{
 			"label": "Admin: New User",
 			"type": "shell",
-			"command": "py \"admin/scripts/new_here.py\"",
+			"command": "python \"admin/scripts/new_here.py\"",
+			"detail": "If setting up to develop this, run this task.",
+			"problemMatcher": []
+		},
+		{
+			"label": "Admin: Install Requirements",
+			"type": "shell",
+			"command": "python -m pip install -r requirements.txt",
 			"problemMatcher": []
 		},
 		{
 			"label": "Formatting: Format Whole File Tree",
 			"type": "shell",
-			"command": "py -m black .",
+			"command": "python -m black .",
 			"problemMatcher": []
 		},
 		{
 			"label": "Formatting: Format Current File",
 			"type": "shell",
-			"command": "py -m black ${file}",
+			"command": "python -m black ${file}",
 			"problemMatcher": []
 		},
 		{
 			"label": "Linting: Lint Whole File Tree",
 			"type": "shell",
-			"command": "py -m flake8",
+			"command": "python -m flake8",
 			"problemMatcher": []
 		},
 		{
 			"label": "Linting: Lint Current File",
 			"type": "shell",
-			"command": "py -m flake8 ${file}",
+			"command": "python -m flake8 ${file}",
 			"problemMatcher": []
 		},
 		{
 			"label": "Logs: Clear Logs",
 			"type": "shell",
-			"command": "py \"admin/scripts/clear_logs.py\"",
+			"command": "python \"admin/scripts/clear_logs.py\"",
+			"problemMatcher": []
+		},
+		{
+			"label": "MyPy: Check Types of Whole File Tree",
+			"type": "shell",
+			"command": "mypy easyneuron/",
+			"problemMatcher": []
+		},
+		{
+			"label": "MyPy: Check Types of Current File",
+			"type": "shell",
+			"command": "mypy \"${file}\"",
+			"problemMatcher": []
+		},
+		{
+			"label": "MyPy: Install Missing Type Packages",
+			"type": "shell",
+			"command": "mypy --install-types",
 			"problemMatcher": []
 		},
 		{
 			"label": "Testing: Get Coverage",
 			"type": "shell",
-			"command": "py \"admin/scripts/coverage.py\"",
+			"command": "python \"admin/scripts/coverage.py\"",
 			"problemMatcher": []
 		},
 		{
 			"label": "Testing: Run Tests in Command Line",
 			"type": "shell",
-			"command": "py -m unittest discover ./tests/",
+			"command": "python -m unittest discover ./tests/",
 			"problemMatcher": []
 		}
 	]

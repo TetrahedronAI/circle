@@ -32,7 +32,7 @@ class SimpleLateralMover(Environment):
         self.agent_loc = 50
         self.env = [0 for _ in range(100)]
 
-    def get_all_actions(self) -> List[int]:
+    def get_all_actions(self, *args, **kwargs) -> Sequence:
         """Returns all of the actions possible in this environment.
 
         Returns
@@ -42,7 +42,7 @@ class SimpleLateralMover(Environment):
         """
         return [-1, 0, 1]
 
-    def get_obs_shape(self) -> Tuple[int]:
+    def get_obs_shape(self, *args, **kwargs) -> Sequence:
         """Returns an example observation.
 
         Returns

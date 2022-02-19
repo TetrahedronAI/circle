@@ -33,4 +33,5 @@ from easyneuron.types.types import (
     NumpyFloat,
     NumpyInt,
     X_Data,
+    ArrayLike
 )
