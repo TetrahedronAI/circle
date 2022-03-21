@@ -18,7 +18,7 @@ class TestKNNClassifier(unittest.TestCase):
 			test = KNNClassifier(K=i, distance=j)
 
 			self.assertEqual(test.K, i)
-			self.assertEqual(test.distance.__name__, j + "_distance")
+			self.assertEqual(test.distance.__name__, f'{j}_distance')
 
 	@log_errors
 	def test_raises(self):

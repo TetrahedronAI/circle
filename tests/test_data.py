@@ -13,9 +13,9 @@ class TestDataLoading(unittest.TestCase):
 		load_random_humans() # just try to run it to check for errors
 
 		if notRunningInGitHubActions():
-			load_random_humans(filename="logs/temp/" + self.__module__ + ".csv")
+			load_random_humans(filename=f"logs/temp/{self.__module__}.csv")
 
-			os.remove("logs/temp/" + self.__module__ + ".csv") # remove file from storage
+			os.remove(f"logs/temp/{self.__module__}.csv")
 
 class TestDataGen(unittest.TestCase):
 

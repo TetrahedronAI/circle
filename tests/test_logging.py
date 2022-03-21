@@ -7,5 +7,5 @@ class TestLogging(unittest.TestCase):
 	@log_errors
 	def test_get_logger(self):
 		if notRunningInGitHubActions():
-			logger = get_logger("logs/tests/" + self.__module__ + ".log")
+			logger = get_logger(f"logs/tests/{self.__module__}.log")
 			logger.info("Test complete and working.")

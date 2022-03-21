@@ -18,7 +18,7 @@ from easyneuron._testutils.gh_actions import notRunningInGitHubActions
 def log_errors(func):
     def wrapper(*args, **kwargs):
         if notRunningInGitHubActions():
-            logger = get_logger("logs/" + func.__module__ + ".log") # log file, not shown in git(ignored)
+            logger = get_logger(f"logs/{func.__module__}.log")
 
             try:
                 func(*args, **kwargs)
