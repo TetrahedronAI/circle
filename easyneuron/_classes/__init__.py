@@ -14,4 +14,3 @@
 # ==============================================================================
 
 from easyneuron._classes.models import Model
-from easyneuron._classes.layers import Layer
