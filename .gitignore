@@ -5,6 +5,7 @@
 .coverage
 coverage.json
 logs/
+.devconfig.json
 
 # C++
 *.o
