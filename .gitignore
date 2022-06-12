@@ -1,12 +1,11 @@
 # General Testing
+.mypy_cache/
+.devconfig.json
+
+# Temporary Files
 **/__pycache__/
 
 # Logs and coverage
 .coverage
 coverage.json
 logs/
-
-# C++
-*.o
-*.exe
-.vscode/c_cpp_properties.json

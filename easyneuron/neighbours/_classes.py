@@ -25,14 +25,16 @@ from easyneuron.types import X_Data
 
 @total_ordering
 class _KNN(Model, ABC):
-	__slots__ = "K"
-	K: int
+    __slots__ = "K"
+    K: int
 
-	def __lt__(self, other: _KNN) -> Any:
-		return self.K < other.K
+    def __lt__(self, other: _KNN) -> Any:
+        return self.K < other.K
 
-	@abstractmethod
-	def fit(self, X: X_Data, y: Sequence, *args, **kwargs) -> Model: ...
+    @abstractmethod
+    def fit(self, X: X_Data, y: Sequence, *args, **kwargs) -> Model:
+        ...
 
-	@abstractmethod
-	def predict(self, X: X_Data, *args, **kwargs) -> Sequence: ...
+    @abstractmethod
+    def predict(self, X: X_Data, *args, **kwargs) -> Sequence:
+        ...

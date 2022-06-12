@@ -14,3 +14,4 @@
 # ==============================================================================
 from easyneuron._testutils.logger import log_errors
 from easyneuron._testutils.gh_actions import notRunningInGitHubActions
+

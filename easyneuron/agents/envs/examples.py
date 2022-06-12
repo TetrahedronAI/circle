@@ -26,13 +26,13 @@ class SimpleLateralMover(Environment):
     The aim is to always output 1 and then stay at agent location 99 (move to the right and stop once reached end).
     This just incentivises the agent to climb towards the right.
     """
+
     def reset(self, *args, **kwargs) -> None:
-        """Sets all of the default variables and starts the environment.
-        """
+        """Sets all of the default variables and starts the environment."""
         self.agent_loc = 50
         self.env = [0 for _ in range(100)]
 
-    def get_all_actions(self) -> List[int]:
+    def get_all_actions(self, *args, **kwargs) -> Sequence:
         """Returns all of the actions possible in this environment.
 
         Returns
@@ -42,7 +42,7 @@ class SimpleLateralMover(Environment):
         """
         return [-1, 0, 1]
 
-    def get_obs_shape(self) -> Tuple[int]:
+    def get_obs_shape(self, *args, **kwargs) -> Sequence:
         """Returns an example observation.
 
         Returns
@@ -76,7 +76,8 @@ class SimpleLateralMover(Environment):
             return [0, 1]
         elif self.agent_loc == 99:
             return [-1, 0]
-        else: return [-1, 0, 1]
+        else:
+            return [-1, 0, 1]
 
     def get_obs(self, *args, **kwargs) -> List[int]:
         """Returns the observation of the environment state.

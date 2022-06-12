@@ -15,40 +15,42 @@
 
 import secrets
 
+
 def secure_random(low: int, high: int) -> int:
-	"""Generates a random number from low (inclusive) to high (inclusive) using the secrets module.
+    """Generates a random number from low (inclusive) to high (inclusive) using the secrets module.
 
-	DISCLAIMER: we are not security experts this may not be at all secure.
+    DISCLAIMER: we are not security experts this may not be at all secure.
 
-	Parameters
-	----------
-	low : int
-		The inclusive lower bound
-	high : int
-		The inclusive upper bound
+    Parameters
+    ----------
+    low : int
+            The inclusive lower bound
+    high : int
+            The inclusive upper bound
 
-	Returns
-	-------
-	int
-		The generated number
-	"""
-	return secrets.randbelow(high) + low
+    Returns
+    -------
+    int
+            The generated number
+    """
+    return secrets.randbelow(high) + low
+
 
 def random_with_float_step(start: int, stop: int, step: float) -> float:
-	"""Generates a random number between a range with a float step.
+    """Generates a random number between a range with a float step.
 
-	Parameters
-	----------
-	start : int
-		The inclusive lower bound
-	stop : int
-		The inclusive upper bound
-	step : float
-		The step of the range
+    Parameters
+    ----------
+    start : int
+            The inclusive lower bound
+    stop : int
+            The inclusive upper bound
+    step : float
+            The step of the range
 
-	Returns
-	-------
-	float
-		The generated float
-	"""
-	return secrets.randbelow(int((stop - start) / step)) * step + start
+    Returns
+    -------
+    float
+            The generated float
+    """
+    return secrets.randbelow(int((stop - start) / step)) * step + start
