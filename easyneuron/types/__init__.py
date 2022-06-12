@@ -26,5 +26,12 @@ X_Data - any sequence or number
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
-from easyneuron.types.types import (Distance, Loss, Numerical,
-                                    NumpyFloat, NumpyInt, X_Data)
+from easyneuron.types.types import (
+    Distance,
+    Loss,
+    Numerical,
+    NumpyFloat,
+    NumpyInt,
+    X_Data,
+    ArrayLike
+)

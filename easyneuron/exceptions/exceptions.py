@@ -13,10 +13,14 @@
 # limitations under the License.
 # ==============================================================================
 
+
 class DimensionsError(Exception):
-	"""Raised when wrong dimensions appear in data."""
-	...
+    """Raised when wrong dimensions appear in data."""
+
+    ...
+
 
 class UntrainedModelError(Exception):
-	"""Raised when model has model.predict() called but has not yet been trained with model.fit()."""
-	...
+    """Raised when model has model.predict() called but has not yet been trained with model.fit()."""
+
+    ...

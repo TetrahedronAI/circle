@@ -21,3 +21,6 @@ Environments
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
+
+from easyneuron.agents.envs._classes import Environment
+from easyneuron.agents.envs.examples import SimpleLateralMover

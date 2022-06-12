@@ -16,80 +16,80 @@
 from abc import ABC, abstractmethod
 from typing import Any, Sequence, Union
 
+
 class Environment(ABC):
-	"""Base class for RL environments."""
-	def __init__(self, *args, **kwargs) -> None:
-		"""Create an instance of the environment.
-		"""
-		self.reset(*args, **kwargs)
+    """Base class for RL environments."""
 
-	def reset(self, *args, **kwargs) -> None:
-		"""Reset the environment to its original state.
-		"""
-		...
+    def __init__(self, *args, **kwargs) -> None:
+        """Create an instance of the environment."""
+        self.reset(*args, **kwargs)
 
-	@abstractmethod
-	def get_obs(self, *args, **kwargs) -> Sequence:
-		"""Get the observation of the environment.
+    def reset(self, *args, **kwargs) -> None:
+        """Reset the environment to its original state."""
+        ...
 
-		Returns
-		-------
-		Sequence
-			The environment, as a sequence
-		"""
-		return []
+    @abstractmethod
+    def get_obs(self, *args, **kwargs) -> Sequence:
+        """Get the observation of the environment.
 
-	@abstractmethod
-	def get_obs_shape(self, *args, **kwargs) -> Sequence:
-		"""Returns the shape of the observation array. e.g. (100,)
+        Returns
+        -------
+        Sequence
+                The environment, as a sequence
+        """
+        return []
 
-		Returns
-		-------
-		Sequence
-			The observation's shape.
-		"""
-		return []
+    @abstractmethod
+    def get_obs_shape(self, *args, **kwargs) -> Sequence:
+        """Returns the shape of the observation array. e.g. (100,)
 
-	@abstractmethod
-	def get_all_actions(self, *args, **kwargs) -> Sequence:
-		"""Get all of the possible actions. We recommend that you use this as returning a sequence of integers.
+        Returns
+        -------
+        Sequence
+                The observation's shape.
+        """
+        return []
 
-		Returns
-		-------
-		Sequence
-			The list of possible actions
-		"""
-		return []
+    @abstractmethod
+    def get_all_actions(self, *args, **kwargs) -> Sequence:
+        """Get all of the possible actions. We recommend that you use this as returning a sequence of integers.
 
-	@abstractmethod
-	def get_actions(self, *args, **kwargs) -> Sequence:
-		"""Get the actions possible at this timestep. We recommend that you use this as returning a sequence of integers.
+        Returns
+        -------
+        Sequence
+                The list of possible actions
+        """
+        return []
 
-		Returns
-		-------
-		Sequence
-			The possible actions.
-		"""
-		return []
+    @abstractmethod
+    def get_actions(self, *args, **kwargs) -> Sequence:
+        """Get the actions possible at this timestep. We recommend that you use this as returning a sequence of integers.
 
-	@abstractmethod
-	def get_reward(self, *args, **kwargs) -> Union[Sequence, float]:
-		"""Get the reward at the current timestep.
+        Returns
+        -------
+        Sequence
+                The possible actions.
+        """
+        return []
 
-		Returns
-		-------
-		Sequence | float
-			The reward at the specified timestep. Typically a float but can be a sequence
-		"""
-		return []
+    @abstractmethod
+    def get_reward(self, *args, **kwargs) -> Union[Sequence, float]:
+        """Get the reward at the current timestep.
 
-	@abstractmethod
-	def step(self, action: Any, *args, **kwargs) -> None:
-		"""Increments the timestep and state of the environment.
+        Returns
+        -------
+        Sequence | float
+                The reward at the specified timestep. Typically a float but can be a sequence
+        """
+        return []
 
-		Parameters
-		----------
-		action : Any
-			The action taken just before initialization of this timestep.
-		"""
-		...
+    @abstractmethod
+    def step(self, action: Any, *args, **kwargs) -> None:
+        """Increments the timestep and state of the environment.
+
+        Parameters
+        ----------
+        action : Any
+                The action taken just before initialization of this timestep.
+        """
+        ...

@@ -13,25 +13,24 @@
 # limitations under the License.
 # ==============================================================================
 
-from easyneuron.metrics.loss.meanerrors import (mean_absolute_error,
-                                                mean_squared_error,
-                                                mean_squared_log_error,
-                                                root_mean_squared_error,
-                                                root_mean_squared_log_error)
+from easyneuron.metrics.loss.meanerrors import (
+    mean_absolute_error,
+    mean_squared_error,
+    mean_squared_log_error,
+    root_mean_squared_error,
+    root_mean_squared_log_error,
+)
 
-losses = { # for names as strings
-	"mse": mean_squared_error,
-	"rmse": root_mean_squared_error,
-	"msle": mean_squared_log_error,
-	"rmsle": root_mean_squared_log_error,
-	"mae": mean_absolute_error,
-
-	"mean_squared_error": mean_squared_error,
-	"root_mean_squared_error": root_mean_squared_error,
-
-	"mean_squared_log_error": mean_squared_log_error,
-	"mean_squared_logarithmic_error": mean_squared_log_error,
-
-	"root_mean_log_error": root_mean_squared_log_error,
-	"mean_absolute": mean_squared_error
+losses = {  # for names as strings
+    "mse": mean_squared_error,
+    "rmse": root_mean_squared_error,
+    "msle": mean_squared_log_error,
+    "rmsle": root_mean_squared_log_error,
+    "mae": mean_absolute_error,
+    "mean_squared_error": mean_squared_error,
+    "root_mean_squared_error": root_mean_squared_error,
+    "mean_squared_log_error": mean_squared_log_error,
+    "mean_squared_logarithmic_error": mean_squared_log_error,
+    "root_mean_log_error": root_mean_squared_log_error,
+    "mean_absolute": mean_squared_error,
 }

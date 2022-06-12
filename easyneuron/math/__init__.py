@@ -17,5 +17,9 @@ To suggest more to be added, please add an issue on the GitHub repo.
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
-from easyneuron.math.distance import euclidean_distance, manhattan_distance, distance_functions
+from easyneuron.math.distance import (
+    euclidean_distance,
+    manhattan_distance,
+    distance_functions,
+)
 from easyneuron.math.random import secure_random, random_with_float_step

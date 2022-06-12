@@ -13,41 +13,43 @@
 # limitations under the License.
 # ==============================================================================
 
-from __future__ import annotations # stops errors around the returning of a Model from a Model subclass instance
+from __future__ import (
+    annotations,
+)  # stops errors around the returning of a Model from a Model subclass instance
 
 from abc import ABC, abstractmethod
 from typing import Any
 
 
 class Model(ABC):
-	@abstractmethod
-	def fit(self, X, *args, **kwargs) -> Model:
-		"""Fit the model. This must be overwritten by the subclass.
+    @abstractmethod
+    def fit(self, X, *args, **kwargs) -> Model:
+        """Fit the model. This must be overwritten by the subclass.
 
-		Parameters
-		----------
-		X : Any
-			The data samples
+        Parameters
+        ----------
+        X : Any
+                The data samples
 
-		Returns
-		-------
-		Model
-			The fitted version of itself.
-		"""
-		...
+        Returns
+        -------
+        Model
+                The fitted version of itself.
+        """
+        ...
 
-	@abstractmethod
-	def predict(self, X, *args, **kwargs) -> Any:
-		"""Predict from given data X. This must be overwritten by the subclass
+    @abstractmethod
+    def predict(self, X, *args, **kwargs) -> Any:
+        """Predict from given data X. This must be overwritten by the subclass
 
-		Parameters
-		----------
-		X : Any
-			The data samples
+        Parameters
+        ----------
+        X : Any
+                The data samples
 
-		Returns
-		-------
-		Any
-			The predictions of the model.
-		"""
-		...
+        Returns
+        -------
+        Any
+                The predictions of the model.
+        """
+        ...

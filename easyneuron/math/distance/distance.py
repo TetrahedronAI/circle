@@ -19,54 +19,61 @@ from numpy import array, sqrt
 
 
 def euclidean_distance(x: Iterable, y: Iterable, **kwargs) -> float:
-	"""Euclidean distance function, returns the distance between x and y
-	Pass "supress_warnings=True" to the function to avoid warnings when x and y have different lengths.
+    """Euclidean distance function, returns the distance between x and y
+    Pass "supress_warnings=True" to the function to avoid warnings when x and y have different lengths.
 
-	Parameters
-	----------
-	x : Iterable
-		The first item to be calucated with
-	y : Iterable
-		The second item to be calucated with
+    Parameters
+    ----------
+    x : Iterable
+            The first item to be calucated with
+    y : Iterable
+            The second item to be calucated with
 
-	Returns
-	-------
-	float
-		The euclidean distance
-	"""
-	x = array(x).reshape(1, -1) # to make them 1D
-	y = array(y).reshape(1, -1)
+    Returns
+    -------
+    float
+            The euclidean distance
+    """
+    x = array(x).reshape(1, -1)  # to make them 1D
+    y = array(y).reshape(1, -1)
 
-	if x.shape != y.shape and kwargs.get("suppress_warnings") != True:
-		warn(UserWarning("using sequences which do not contain equivalent numbers of items can result in unexpected results."))
+    if x.shape != y.shape and kwargs.get("suppress_warnings") != True:
+        warn(
+            UserWarning(
+                "using sequences which do not contain equivalent numbers of items can result in unexpected results."
+            )
+        )
 
-	return sqrt(sum((x - y)**2 for x, y in zip(x[0], y[0])))
+    return sqrt(sum((x - y) ** 2 for x, y in zip(x[0], y[0])))
+
 
 def manhattan_distance(x, y, **kwargs):
-	"""Manhattan distance function, returns the manhattan distance between x and y
-	Pass "supress_warnings=True" to the function to avoid warnings when x and y have different lengths.
+    """Manhattan distance function, returns the manhattan distance between x and y
+    Pass "supress_warnings=True" to the function to avoid warnings when x and y have different lengths.
 
-	Parameters
-	----------
-	x : Iterable
-		The first item to be calucated with
-	y : Iterable
-		The second item to be calucated with
+    Parameters
+    ----------
+    x : Iterable
+            The first item to be calucated with
+    y : Iterable
+            The second item to be calucated with
 
-	Returns
-	-------
-	float
-		The manhattan distance
-	"""
-	x = array(x).reshape(1, -1)
-	y = array(y).reshape(1, -1)
+    Returns
+    -------
+    float
+            The manhattan distance
+    """
+    x = array(x).reshape(1, -1)
+    y = array(y).reshape(1, -1)
 
-	if x.shape != y.shape and kwargs.get("suppress_warnings") != True:
-		warn(UserWarning("using sequences which do not contain equivalent numbers of items can result in unexpected results."))
+    if x.shape != y.shape and kwargs.get("suppress_warnings") != True:
+        warn(
+            UserWarning(
+                "using sequences which do not contain equivalent numbers of items can result in unexpected results."
+            )
+        )
 
-	return sum(abs((x - y)) for x, y in zip(x[0], y[0]))
+    return sum(abs((x - y)) for x, y in zip(x[0], y[0]))
 
-distance_functions = {
-    "euclidean": euclidean_distance,
-    "manhattan": manhattan_distance
-}
+
+distance_functions = {"euclidean": euclidean_distance, "manhattan": manhattan_distance}
