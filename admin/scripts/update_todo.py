@@ -12,3 +12,4 @@ output = "".join(
 
 with open("admin/markdown/todo.md", "w", encoding="utf-8") as file:
     file.write(output)
+
