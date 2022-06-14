@@ -66,7 +66,11 @@ With ML algorithms like K-Nearest-Neighbours, Linear Regression, tools to create
       - ❌ LSTMs
       - ❌ GRUs
     - ❌ Reinforcement Learning
-      - ❌ Epsilon Greed Q-Learning
+      - ❌ Q-Learning
+        - ❌ Greedy
+        - ❌ Epsilon Greedy
+        - ❌ UCB (Upper Confidence Bounds)
+        - ✔ Q-Tables
       - ✔ Environments
     - ❌ Auto Analysis
     - ❌ Maths Tools

@@ -22,6 +22,7 @@ setup(
     long_description_content_type="text/markdown",
     long_description=info_json.get("long_description"),
     py_version=info_json.get("py_version"),
+    packages=find_packages(),
     keywords=info_json.get("keywords"),
     license="OSI Approved :: Apache Software License",
     classifiers=info_json.get("classifiers"),

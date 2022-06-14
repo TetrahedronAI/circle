@@ -1,5 +1,5 @@
 from io import BufferedReader, BufferedWriter
-from typing import (Any, Callable, Iterable, List, Literal, Sequence, Set,
+from typing import (Any, Iterable, List, Sequence, Set,
                     Sized, SupportsFloat, SupportsInt, Tuple, Union)
 
 from numpy import (float16, float32, float64, int0, int8, int16, int32, int64,
@@ -25,11 +25,6 @@ Data = Union[
 X_Data = Sequence[Sequence[Numerical]]  # 2D Arrays
 ArrayLike = Union[SequentialObject, Iterable, Sequence, Sized, Any]
 
-# Literal Types
-Distance = Literal["euclidean", "manhattan"]  # Distance function names
-Loss = Union[
-    Literal["mse", "mae", "mean_squared_error", "mean_absolute_error"], Callable
-]  # Types of losses
 
 # Files
 WritableFile = Union[str, BufferedWriter]

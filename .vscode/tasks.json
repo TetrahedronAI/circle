@@ -7,7 +7,6 @@
 			"label": "Admin: New User",
 			"type": "shell",
 			"command": "python \"admin/scripts/new_here.py\"",
-			"detail": "If setting up to develop this, run this task.",
 			"problemMatcher": []
 		},
 		{
@@ -19,13 +18,13 @@
 		{
 			"label": "Formatting: Format Whole File Tree",
 			"type": "shell",
-			"command": "python -m black .",
+			"command": "python -m black . --tabs",
 			"problemMatcher": []
 		},
 		{
 			"label": "Formatting: Format Current File",
 			"type": "shell",
-			"command": "python -m black ${file}",
+			"command": "python -m black ${file} --tabs",
 			"problemMatcher": []
 		},
 		{
@@ -80,7 +79,11 @@
 			"label": "Testing: Run Tests in Command Line",
 			"type": "shell",
 			"command": "python -m unittest discover ./tests/",
-			"problemMatcher": []
+			"problemMatcher": [],
+			"group": {
+				"kind": "test",
+				"isDefault": true
+			}
 		}
 	]
 }

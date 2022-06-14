@@ -13,13 +13,13 @@
 # limitations under the License.
 # ==============================================================================
 
-from easyneuron.metrics.loss.meanerrors import (
-    mean_absolute_error,
-    mean_squared_error,
-    mean_squared_log_error,
-    root_mean_squared_error,
-    root_mean_squared_log_error,
-)
+from typing import Callable, Literal, Union
+
+from easyneuron.metrics.loss.meanerrors import (mean_absolute_error,
+                                                mean_squared_error,
+                                                mean_squared_log_error,
+                                                root_mean_squared_error,
+                                                root_mean_squared_log_error)
 
 losses = {  # for names as strings
     "mse": mean_squared_error,
@@ -34,3 +34,8 @@ losses = {  # for names as strings
     "root_mean_log_error": root_mean_squared_log_error,
     "mean_absolute": mean_squared_error,
 }
+
+Loss = Union[
+    Literal["mse", "mae", "mean_squared_error",
+            "mean_absolute_error"], Callable
+]
