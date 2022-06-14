@@ -13,7 +13,10 @@
       - ❌ LSTMs<!-- TODO:         LSTMs -->
       - ❌ GRUs<!-- TODO:         GRUs -->
     - ❌ Reinforcement Learning<!-- TODO:       Reinforcement Learning -->
-      - ❌ Epsilon Greed Q-Learning<!-- TODO:         Epsilon Greed QLearning -->
+      - ❌ Q-Learning<!-- TODO:         QLearning -->
+        - ❌ Greedy<!-- TODO:           Greedy -->
+        - ❌ Epsilon Greedy<!-- TODO:           Epsilon Greedy -->
+        - ❌ UCB (Upper Confidence Bounds)<!-- TODO:           UCB (Upper Confidence Bounds) -->
     - ❌ Auto Analysis<!-- TODO:       Auto Analysis -->
     - ❌ Maths Tools<!-- TODO:       Maths Tools -->
     - ❌ Logging Tools<!-- TODO:       Logging Tools -->
