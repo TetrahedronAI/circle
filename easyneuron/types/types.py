@@ -1,5 +1,5 @@
 from io import BufferedReader, BufferedWriter
-from typing import (Any, Callable, Iterable, List, Literal, Sequence, Set,
+from typing import (Any, Iterable, List, Sequence, Set,
                     Sized, SupportsFloat, SupportsInt, Tuple, Union)
 
 from numpy import (float16, float32, float64, int0, int8, int16, int32, int64,

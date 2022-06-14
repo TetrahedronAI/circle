@@ -25,7 +25,7 @@ class TestQTable(unittest.TestCase):
         qtable = QTable(3)
         self.assertEqual(qtable.actions, [0, 1, 2])
         self.assertEqual(qtable.states, [])
-    
+
     def test_qtable_add_state(self):
         qtable = QTable(3)
         qtable.add_state(0)

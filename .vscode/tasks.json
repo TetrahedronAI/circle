@@ -18,13 +18,13 @@
 		{
 			"label": "Formatting: Format Whole File Tree",
 			"type": "shell",
-			"command": "python -m black .",
+			"command": "python -m black . --tabs",
 			"problemMatcher": []
 		},
 		{
 			"label": "Formatting: Format Current File",
 			"type": "shell",
-			"command": "python -m black ${file}",
+			"command": "python -m black ${file} --tabs",
 			"problemMatcher": []
 		},
 		{

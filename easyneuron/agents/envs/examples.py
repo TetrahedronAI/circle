@@ -14,7 +14,7 @@
 # ==============================================================================
 
 from dataclasses import dataclass
-from typing import Any, List, Sequence, Tuple
+from typing import Any, List, Sequence
 
 from easyneuron.agents.envs._classes import Environment
 

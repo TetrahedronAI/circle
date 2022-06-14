@@ -37,9 +37,9 @@ class KNNClassifier(_KNN):
 		Parameters
 		----------
 		K : int
-						The K-Value for the model, by default 7
+			The K-Value for the model, by default 7
 		distance : Distance[str], optional
-						The distance function to use ("euclidean" or "manhattan"), by default "euclidean"
+			The distance function to use ("euclidean" or "manhattan"), by default "euclidean"
 		"""
 		if K == 1:
 			warn(
@@ -64,21 +64,21 @@ class KNNClassifier(_KNN):
 		Parameters
 		----------
 		X : X_Data
-			The samples' data/features
+				The samples' data/features
 		y : Sequence
-			The labels for each sample
+				The labels for each sample
 
 		Returns
 		-------
 		Model
-			The trained model
+				The trained model
 
 		Raises
 		------
 		ValueError
-			If X has a different number of samples to y. They must have equivalent lengths.
+				If X has a different number of samples to y. They must have equivalent lengths.
 		ValueError
-			If the data for X has less than 2 dimensions.
+				If the data for X has less than 2 dimensions.
 		"""
 		if len(X) != len(y):
 			raise ValueError(
@@ -103,17 +103,17 @@ class KNNClassifier(_KNN):
 		Parameters
 		----------
 		X : X_Data
-						The samples to predict from.
+			The samples to predict from.
 
 		Returns
 		-------
 		Sequence
-						The predicted labels.
+			The predicted labels.
 
 		Raises
 		------
 		ValueError
-						If the X shape has less than 2 dimensions.
+			If the X shape has less than 2 dimensions.
 		"""
 		X = array(X)
 		if len(X.shape) < 2:
@@ -129,28 +129,22 @@ class KNNClassifier(_KNN):
 		Parameters
 		----------
 		sample : Sequence
-						The sample to use.
+			The sample to use.
 
 		Returns
 		-------
 		Any
-						The label (of any type).
+			The label (of any type).
 		"""
 		if self._X is None:
 			raise UntrainedModelError("model is not trained.")
 
 		# sort distances for each sample from smallest to largest
-		distances = sorted(
-			[
-				(self.distance(sample, i), label)  # distance, label
-				for label, i in self._X
-			],
-			key=lambda item: item[0],
-		)[:K]
+		distances = self.new_method(sample, K)
 
 		votes = {}
 		for i in [
-			j[1] for j in distances
+				j[1] for j in distances
 		]:  # iterate over the labels in the sorted distances
 			if i in votes:  # checks if in the keys
 				votes[i] += 1
@@ -176,3 +170,9 @@ class KNNClassifier(_KNN):
 			)  # recursively avoid ties by decrementing K
 
 		return choices[0]
+
+	def new_method(self, sample, K):
+		return sorted(
+		    [(self.distance(sample, i), label) for label, i in self._X],
+		    key=lambda item: item[0],
+		)[:K]  # distance, label

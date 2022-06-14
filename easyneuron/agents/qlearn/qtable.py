@@ -29,19 +29,19 @@ class QTable(object):
 		self.table: np.ndarray = np.zeros((0, n_actions))
 
 		self.__updater_function = updater
-	
+
 	@functools.singledispatchmethod
 	def __getitem__(self, index) -> np.ndarray:
 		return self.table[index]
-	
+
 	@__getitem__.register(list)
 	def _(self, index: list) -> Union[np.ndarray, float]:
 		return self.table[index]
-	
+
 	@__getitem__.register(int)
 	def _(self, index: int) -> np.ndarray:
 		return self.table[index]
-	
+
 	def add_state(self, state: Any) -> None:
 		self.states.append(state)
 		self.table = np.vstack((self.table, np.zeros(len(self.actions))))
