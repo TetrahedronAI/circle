@@ -11,6 +11,7 @@
 	"python.testing.unittestEnabled": true,
 	"python.formatting.provider": "autopep8",
 	"autoDocstring.docstringFormat": "numpy",
+    "testing.followRunningTest": false,
 	"todo-tree.filtering.excludeGlobs": [
 		"**/admin/scripts/update_todo.py"
 	],
@@ -79,5 +80,27 @@
             "italic": false
         }
     ],
-    "editor.tabSize": 4
+    "editor.tabSize": 4,
+    "taskExplorer.exclude": [
+        "**/.vscode-test/**",
+        "**/bin/**",
+        "**/build/**",
+        "**/CompiledOutput/**",
+        "**/dist/**",
+        "**/doc/**",
+        "**/ext/**",
+        "**/out/**",
+        "**/output/**",
+        "**/packages/**",
+        "**/release/**",
+        "**/releases/**",
+        "**/samples/**",
+        "**/sdks/**",
+        "**/static/**",
+        "**/target/**",
+        "**/test/**",
+        "**/third_party/**",
+        "**/vendor/**",
+        "**/work/**",
+    ]
 }

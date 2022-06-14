@@ -7,7 +7,6 @@
 			"label": "Admin: New User",
 			"type": "shell",
 			"command": "python \"admin/scripts/new_here.py\"",
-			"detail": "If setting up to develop this, run this task.",
 			"problemMatcher": []
 		},
 		{
