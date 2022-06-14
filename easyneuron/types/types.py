@@ -25,11 +25,6 @@ Data = Union[
 X_Data = Sequence[Sequence[Numerical]]  # 2D Arrays
 ArrayLike = Union[SequentialObject, Iterable, Sequence, Sized, Any]
 
-# Literal Types
-Distance = Literal["euclidean", "manhattan"]  # Distance function names
-Loss = Union[
-    Literal["mse", "mae", "mean_squared_error", "mean_absolute_error"], Callable
-]  # Types of losses
 
 # Files
 WritableFile = Union[str, BufferedWriter]

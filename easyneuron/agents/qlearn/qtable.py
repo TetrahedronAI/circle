@@ -2,16 +2,19 @@ import functools
 from typing import Any, Callable, List, Union
 
 import numpy as np
-from numpy import array
+from easyneuron.agents.qlearn.value import QTableUpdaterFunction, bellman_updater
 
 
 class QTable(object):
+	"""A Q Table object for organising the states, action and values."""
 	__slots__ = "actions", "states", "table"
 
-	def __init__(self, n_actions: int) -> None:
+	def __init__(self, n_actions: int, updater: QTableUpdaterFunction = bellman_updater) -> None:
 		self.actions: List[int] = list(range(n_actions))
 		self.states: List[Any] = []
 		self.table: np.ndarray = np.zeros((0, n_actions))
+
+		self.__updater_function = updater
 	
 	@functools.singledispatchmethod
 	def __getitem__(self, index) -> np.ndarray:
@@ -29,8 +32,8 @@ class QTable(object):
 		self.states.append(state)
 		self.table = np.vstack((self.table, np.zeros(len(self.actions))))
 
-	def update(self, state: Any, action: int, reward: float, updater_function: Callable[[int]] = None):
+	def update(self, state: Any, action: int, reward: float):
 		if updater_function is None:
 			updater_function = lambda x: x
 
-		self.table[self.states.index(state)][self.actions.index(action)] += updater_function(reward)
+		self.table[self.states.index(state)][self.actions.index(action)] += self.__updater_function(reward)

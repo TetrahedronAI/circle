@@ -80,7 +80,11 @@
 			"label": "Testing: Run Tests in Command Line",
 			"type": "shell",
 			"command": "python -m unittest discover ./tests/",
-			"problemMatcher": []
+			"problemMatcher": [],
+			"group": {
+				"kind": "test",
+				"isDefault": true
+			}
 		}
 	]
 }

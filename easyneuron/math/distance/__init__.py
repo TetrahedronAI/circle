@@ -12,8 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
+from typing import Literal
 from easyneuron.math.distance.distance import (
     euclidean_distance,
     manhattan_distance,
     distance_functions,
 )
+
+Distance = Literal["euclidean", "manhattan"]
