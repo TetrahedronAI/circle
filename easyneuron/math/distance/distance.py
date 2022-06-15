@@ -28,7 +28,7 @@ def _check_distance_params(x, y, kwargs):
                 "using sequences which do not contain equivalent numbers of items can result in unexpected results."
             )
         )
-        
+
     return x,y
 
 def euclidean_distance(x: Iterable, y: Iterable, **kwargs) -> float:
