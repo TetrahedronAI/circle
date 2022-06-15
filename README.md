@@ -111,7 +111,7 @@ Thanks to all who have already contributed...
 
 <details>
 
-<h2>History ⌛</h2>
+<summary><h2>History ⌛</h2></summary>
 
 easyNeuron was created in 2021 by @Neuron-AI, aiming to create an easy experience for all ML engineers, with any and all of the newly developed algorithms from Neuron AI.
 
