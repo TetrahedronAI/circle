@@ -29,7 +29,6 @@ jobs:
           pip install -r requirements.txt
           pip install coverage
 
-      - name: Get Coverage
       - shell: bash
         env:
           CODACY_PROJECT_TOKEN: ${{ secrets.CODACY_PROJECT_API_TOKEN }}
