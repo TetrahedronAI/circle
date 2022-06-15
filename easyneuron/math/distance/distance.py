@@ -68,17 +68,9 @@ def manhattan_distance(x, y, **kwargs):
     float
             The manhattan distance
     """
-    x = array(x).reshape(1, -1)
-    y = array(y).reshape(1, -1)
+    x, y = _check_distance_params(x, y, kwargs)
 
-    if x.shape != y.shape and kwargs.get("suppress_warnings") != True:
-        warn(
-            UserWarning(
-                "using sequences which do not contain equivalent numbers of items can result in unexpected results."
-            )
-        )
-
-    return sum(abs((x - y)) for x, y in zip(x[0], y[0]))
+    return sum(abs(x - y) for x, y in zip(x[0], y[0]))
 
 
 distance_functions = {"euclidean": euclidean_distance, "manhattan": manhattan_distance}

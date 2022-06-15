@@ -30,10 +30,10 @@ With ML algorithms like K-Nearest-Neighbours, Linear Regression, tools to create
 ## Table of Contents 📝
 
 - [Table of Contents 📝](#table-of-contents-)
-- [History ⌛](#history-)
-	- [Naming Conventions 🧾](#naming-conventions-)
 - [Contributing ➕](#contributing-)
 - [Project Stats 📈](#project-stats-)
+- [Other Notes 📝](#other-notes-)
+  - [Naming Conventions 🧾](#naming-conventions-)
 
 <br>
 
@@ -81,21 +81,6 @@ With ML algorithms like K-Nearest-Neighbours, Linear Regression, tools to create
 </details>
 
 <br> <!-- Don't delete this BR newline tag, since it is used with a Python Script (scripts/update_todo.py) -->
-
-## History ⌛
-
-easyNeuron was created in 2021 by @Neuron-AI, aiming to create an easy experience for all ML engineers, with any and all of the newly developed algorithms from Neuron AI.
-
-<br>
-
-### Naming Conventions 🧾
-
-Mostly, the names of modules are universal, but, there was some choice of the _maths_ section of the module. In the end, the maths section is known as `easyneuron.math` rather than `easyneuron.maths` (as we are a British group), since there is such a large population who'll use this knowing American English, and it is quicker to type the American version anyway.
-
-<br>
-<hr>
-<br>
-
 ## Contributing ➕
 
 Like 👍 this project? Want to contribute to it? Why not put up a pull request with your code changes on it.
@@ -121,3 +106,23 @@ Thanks to all who have already contributed...
 | Issues                | <img alt="GitHub issues" src="https://img.shields.io/github/issues/neuron-ai/easyneuron?style=flat"><br><img src="https://img.shields.io/github/issues/neuron-ai/easyneuron/feature-request.svg?style=flat"><br><img src="https://img.shields.io/github/issues/neuron-ai/easyneuron/bug-report.svg?style=flat">                                                          |
 | Size                  | <img src="https://img.shields.io/github/languages/code-size/neuron-ai/easyneuron?style=flat"><br><img src="https://img.shields.io/github/repo-size/neuron-ai/easyneuron?style=flat"><br><img alt="Lines of code" src="https://img.shields.io/tokei/lines/github/neuron-ai/easyneuron?style=flat"><br>                                                                    |
 | Releases              | <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/neuron-ai/easyneuron?style=flat"><br><img alt="GitHub all releases" src="https://img.shields.io/github/downloads/neuron-ai/easyneuron/total?style=flat"><br><img alt="GitHub Release Date" src="https://img.shields.io/github/release-date/neuron-ai/easyneuron?style=flat">     |
+
+## Other Notes 📝
+
+<details>
+
+<h2>History ⌛</h2>
+
+easyNeuron was created in 2021 by @Neuron-AI, aiming to create an easy experience for all ML engineers, with any and all of the newly developed algorithms from Neuron AI.
+
+<br>
+
+### Naming Conventions 🧾
+
+Mostly, the names of modules are universal, but, there was some choice of the _maths_ section of the module. In the end, the maths section is known as `easyneuron.math` rather than `easyneuron.maths` (as we are a British group), since there is such a large population who'll use this knowing American English, and it is quicker to type the American version anyway.
+
+</details>
+
+<br>
+<hr>
+<br>
