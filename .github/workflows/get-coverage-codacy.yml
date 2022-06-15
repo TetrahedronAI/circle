@@ -30,6 +30,9 @@ jobs:
           pip install coverage
 
       - name: Get Coverage
+      - shell: bash
+        env:
+          CODACY_PROJECT_TOKEN: ${{ secrets.CODACY_PROJECT_API_TOKEN }}
         run: |
           coverage run -m unittest discover
           coverage report -m
