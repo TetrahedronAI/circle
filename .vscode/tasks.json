@@ -72,7 +72,7 @@
 		{
 			"label": "Testing: Get Coverage",
 			"type": "shell",
-			"command": "python \"admin/scripts/coverage.py\"",
+			"command": "coverage run -m unittest discover && coverage report",
 			"problemMatcher": []
 		},
 		{

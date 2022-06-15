@@ -18,6 +18,19 @@ from warnings import warn
 from numpy import array, sqrt
 
 
+def _check_distance_params(x, y, kwargs):
+    x = array(x).reshape(1, -1)  # to make them 1D
+    y = array(y).reshape(1, -1)
+
+    if x.shape != y.shape and kwargs.get("suppress_warnings") != True:
+        warn(
+            UserWarning(
+                "using sequences which do not contain equivalent numbers of items can result in unexpected results."
+            )
+        )
+        
+    return x,y
+
 def euclidean_distance(x: Iterable, y: Iterable, **kwargs) -> float:
     """Euclidean distance function, returns the distance between x and y
     Pass "supress_warnings=True" to the function to avoid warnings when x and y have different lengths.
@@ -34,15 +47,7 @@ def euclidean_distance(x: Iterable, y: Iterable, **kwargs) -> float:
     float
             The euclidean distance
     """
-    x = array(x).reshape(1, -1)  # to make them 1D
-    y = array(y).reshape(1, -1)
-
-    if x.shape != y.shape and kwargs.get("suppress_warnings") != True:
-        warn(
-            UserWarning(
-                "using sequences which do not contain equivalent numbers of items can result in unexpected results."
-            )
-        )
+    x, y = _check_distance_params(x, y, kwargs)
 
     return sqrt(sum((x - y) ** 2 for x, y in zip(x[0], y[0])))
 

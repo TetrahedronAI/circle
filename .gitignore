@@ -3,6 +3,7 @@
 
 # Logs and coverage
 .coverage
+coverage.xml
 coverage.json
 logs/
 .devconfig.json
