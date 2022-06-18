@@ -3,7 +3,6 @@ from functools import total_ordering
 from typing import List, Optional, Union, overload
 
 from sandboxai.exceptions.exceptions import EmptyDataError
-from sandboxai.genetic.genome.mutate import GenomeMutatorFunc, mutate
 
 @dataclass(unsafe_hash=True, eq=True, repr=True)
 @total_ordering
@@ -32,10 +31,10 @@ class BaseGenome:
 
 	def __gt__(self, other):
 		return self.fitness > other.fitness
-	
+
 	@overload
 	def fitness(self):
-		"""Returns the fitness.""" 
+		"""Returns the fitness."""
 
 	@overload
 	def fitness(self, fitness: float):

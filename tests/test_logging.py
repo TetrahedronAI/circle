@@ -13,3 +13,4 @@ class TestLogging(unittest.TestCase):
                 logger.info("Test complete and working.")
             except FileNotFoundError as e:
                 raise FileNotFoundError("could not find logs/temp/ folder. Please create it in the workspace. It will be gitignored automatically.") from e
+        get_logger(f"logs/temp/{self.__module__}.log")
