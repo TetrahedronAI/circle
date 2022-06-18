@@ -1,7 +1,7 @@
 import unittest
 
-from easyneuron._testutils import log_errors
-from easyneuron.math import euclidean_distance, manhattan_distance
+from sandboxai._testutils import log_errors
+from sandboxai.math import euclidean_distance, manhattan_distance
 
 
 class TestDistance(unittest.TestCase):

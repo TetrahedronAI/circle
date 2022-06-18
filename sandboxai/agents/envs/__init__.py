@@ -1,4 +1,4 @@
-"""easyneuron.agents.envs is a suite of reinforcement learning environments for quick development, production and research.
+"""sandboxai.agents.envs is a suite of reinforcement learning environments for quick development, production and research.
 
 Current Environments Available
 ------------------------------

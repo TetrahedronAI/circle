@@ -1,8 +1,8 @@
 import unittest
 
-from easyneuron.agents.envs import Environment
-from easyneuron.agents.envs.examples import SimpleLateralMover
-from easyneuron.agents.qlearn import QTable
+from sandboxai.agents.envs import Environment
+from sandboxai.agents.envs.examples import SimpleLateralMover
+from sandboxai.agents.qlearn import QTable
 
 # Environments
 class TestEnvironment(unittest.TestCase):

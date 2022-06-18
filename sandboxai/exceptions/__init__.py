@@ -1,4 +1,4 @@
-"""easyneuron.exceptions provides all of the necessary exceptions for this package and any other ML packages you may wish to create.
+"""sandboxai.exceptions provides all of the necessary exceptions for this package and any other ML packages you may wish to create.
 
 Errors
 ------

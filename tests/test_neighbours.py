@@ -1,9 +1,9 @@
 import unittest
 
-from easyneuron._testutils import log_errors
-from easyneuron.data import make_stairs
-from easyneuron.metrics.accuracy.accuracy import accuracy
-from easyneuron.neighbours import KNNClassifier
+from sandboxai._testutils import log_errors
+from sandboxai.data import make_stairs
+from sandboxai.metrics.accuracy.accuracy import accuracy
+from sandboxai.neighbours import KNNClassifier
 
 
 class TestKNNClassifier(unittest.TestCase):

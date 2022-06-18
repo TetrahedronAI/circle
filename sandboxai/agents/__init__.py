@@ -1,4 +1,4 @@
-"""easyneuron.agents is a suite of reinforcement learning tools for quick development, production and research.
+"""sandboxai.agents is a suite of reinforcement learning tools for quick development, production and research.
 
 Current Tools Available
 -----------------------

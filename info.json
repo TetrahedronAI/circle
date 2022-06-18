@@ -1,10 +1,10 @@
 {
-	"name": "easyNeuron",
+	"name": "Sandbox AI",
 	"version": "0.0.1",
 	"author": "Neuron-AI",
 	"email": "user@example.com",
-	"description": "easyNeuron is the next, easy-to-use and learn machine learning framework.",
-	"long_description": "easyNeuron is a lightweight machine learning framework that is easy to use and simple to understand.",
+	"description": "Sandbox AI is the next, easy-to-use and learn machine learning framework.",
+	"long_description": "Sandbox AI is a lightweight machine learning framework that is easy to use and simple to understand.",
 	"keywords": [
 		"python",
 		"neural",
@@ -14,13 +14,13 @@
 		"machine learning",
 		"easy",
 		"neuron",
-		"easyneuron",
-		"easyNeuron"
+		"Sandbox AI",
+		"Sandbox AI"
 	],
 	"py_version": ">=3.8",
 	"project_urls": {
-		"Documentation": "https://neuron-ai.github.io/easyneuron/docs/",
-		"Source": "https://github.com/neuron-ai/easyneuron/",
+		"Documentation": "https://neuron-ai.github.io/Sandbox AI/docs/",
+		"Source": "https://github.com/neuron-ai/Sandbox AI/",
 		"Tracker": "https://github.com/pypa/neuron-ai/issues",
 		"Changelog": "https://github.com/pypa/neuron-ai/commits"
 	},

@@ -2,11 +2,11 @@
 document.write(`
 <nav id="nav">
 	<a href="">
-		<h1>easyNeuron</h1>
+		<h1>py-sandbox</h1>
 	</a>
 	<div>
-		<a href="/easyneuron/">Home</a>
-		<a href="/easyneuron/docs/">Docs</a>
+		<a href="/py-sandbox/">Home</a>
+		<a href="/py-sandbox/docs/">Docs</a>
 		<a href="/support/">Support Us</a>
 	</div>
 </nav>

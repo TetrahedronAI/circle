@@ -1,9 +1,9 @@
 import os
 import unittest
 
-from easyneuron._testutils import log_errors
-from easyneuron._testutils.gh_actions import notRunningInGitHubActions
-from easyneuron.data import make_stairs, load_random_humans
+from sandboxai._testutils import log_errors
+from sandboxai._testutils.gh_actions import notRunningInGitHubActions
+from sandboxai.data import make_stairs, load_random_humans
 
 
 class TestDataLoading(unittest.TestCase):

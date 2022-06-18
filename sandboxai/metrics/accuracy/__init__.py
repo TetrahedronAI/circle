@@ -1,4 +1,4 @@
-"""easyneuron.metrics.accuracy provides all of the necessary metrics to accurately evaluate your models' accuracy.
+"""sandboxai.metrics.accuracy provides all of the necessary metrics to accurately evaluate your models' accuracy.
 
 Functions
 ---------

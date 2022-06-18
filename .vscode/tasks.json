@@ -54,7 +54,7 @@
 		{
 			"label": "MyPy: Check Types of Whole File Tree",
 			"type": "shell",
-			"command": "mypy easyneuron/",
+			"command": "mypy sandboxai/",
 			"problemMatcher": []
 		},
 		{

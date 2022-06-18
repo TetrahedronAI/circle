@@ -13,8 +13,8 @@
     "scope": "python"
   },
 
-  // easyNeuron Python Snippets
-  "easyNeuron Python Test Function": {
+  // Sandbox AI Python Snippets
+  "Sandbox AI Python Test Function": {
     "prefix": "test function",
     "body": "@log_errors\ndef test_${1:name}(self):\n\t$0"
   }

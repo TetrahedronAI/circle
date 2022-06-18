@@ -1,8 +1,8 @@
 import unittest
 
-from easyneuron._testutils import log_errors
-from easyneuron.exceptions import DimensionsError
-from easyneuron.metrics import accuracy, mean_absolute_error, mean_squared_error
+from sandboxai._testutils import log_errors
+from sandboxai.exceptions import DimensionsError
+from sandboxai.metrics import accuracy, mean_absolute_error, mean_squared_error
 
 
 class TestMeanErrors(unittest.TestCase):

@@ -2,4 +2,4 @@
 
 [run]
 omit = # Ignore these files
-	easyneuron/_testutils/*
+	sandboxai/_testutils/*

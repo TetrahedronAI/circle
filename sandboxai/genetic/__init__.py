@@ -1,4 +1,4 @@
-"""easyneuron.genetic is a module for creating genetic algorithms and optimizers."""
+"""sandboxai.genetic is a module for creating genetic algorithms and optimizers."""
 # Copyright 2022 Neuron-AI GitHub Authors. All Rights Reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");

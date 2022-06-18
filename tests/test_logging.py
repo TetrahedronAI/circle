@@ -1,7 +1,7 @@
 import unittest
 
-from easyneuron.logging.logging import get_logger
-from easyneuron._testutils import log_errors, notRunningInGitHubActions
+from sandboxai.logging.logging import get_logger
+from sandboxai._testutils import log_errors, notRunningInGitHubActions
 
 
 class TestLogging(unittest.TestCase):

@@ -1,11 +1,11 @@
-"""easyNeuron is the simplest way to design, build and test machine learnng models.
+"""sandboxai is the simplest way to design, build and test machine learnng models.
 
 Submodules
 ----------
 
-easyneuron.math			- The math tools needed for the module
-easyneuron.neighbours	- KNearest and other neighbourb based ML models
-easyneuron.types		- The custom types for the module
+sandboxai.math			- The math tools needed for the module
+sandboxai.neighbours	- KNearest and other neighbourb based ML models
+sandboxai.types		- The custom types for the module
 """
 
 # Copyright 2021 Neuron-AI GitHub Authors. All Rights Reserved.

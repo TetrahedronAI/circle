@@ -1,4 +1,4 @@
-"""easyneuron.neighbours offers a variety of tools to accellerate the development and usage of neighbour-based ML algorithms.
+"""sandboxai.neighbours offers a variety of tools to accellerate the development and usage of neighbour-based ML algorithms.
 
 Classes
 -------

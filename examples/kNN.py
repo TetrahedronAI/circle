@@ -15,9 +15,9 @@
 
 from pprint import pformat
 
-from easyneuron.data.gen import make_stairs
-from easyneuron.metrics import accuracy
-from easyneuron.neighbours import KNNClassifier
+from sandboxai.data.gen import make_stairs
+from sandboxai.metrics import accuracy
+from sandboxai.neighbours import KNNClassifier
 
 print("Generating clustered data...".ljust(100), end="\r")
 X, y = make_stairs(3, 2, sd=0.1, samples=1000)

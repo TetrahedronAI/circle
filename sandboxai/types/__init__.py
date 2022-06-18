@@ -1,4 +1,4 @@
-"""easyneuron.types provides custom types to be used for machine learning models.
+"""sandboxai.types provides custom types to be used for machine learning models.
 
 Types
 -----
