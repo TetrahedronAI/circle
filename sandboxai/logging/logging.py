@@ -21,7 +21,7 @@ def get_logger(filename: str, log_format: Optional[str] = None):
     filepath =os.path.join(".", "/".join(filename.split("/")[:-1]))
     if not os.path.exists(filepath):
         os.makedirs(filepath)
-        
+
     if log_format is None:
         log_format = "%(asctime)s \t [%(levelname)s] \t %(message)s"
 

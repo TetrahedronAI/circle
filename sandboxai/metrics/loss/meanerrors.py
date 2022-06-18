@@ -29,7 +29,7 @@ def _check_loss_params(x, y):
 		raise DimensionsError(
 			f"x and y must have the same number of items in it, not {len(x.shape)} and {len(y.shape)}."
 		)
-		
+
 	return x,y
 
 def mean_squared_error(x: ArrayLike, y: ArrayLike) -> float:

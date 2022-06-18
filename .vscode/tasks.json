@@ -18,7 +18,7 @@
 		{
 			"label": "Formatting: Format Whole File Tree",
 			"type": "shell",
-			"command": "python -m black . --tabs",
+			"command": "python -m black .",
 			"problemMatcher": []
 		},
 		{

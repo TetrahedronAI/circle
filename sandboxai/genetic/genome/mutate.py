@@ -79,12 +79,12 @@ def normal_mutate_selective(genome: BaseGenome, selection: GenomeMutatorSelectio
 		selector = selection
 	else:
 		raise ValueError("The selection method must be a float, iterable, or callable.")
-	
+
 	mutated_genes = [i + np.random.normal(mean, stddev) if selector(i) else i for i in range(len(genome.genes))]
 
 	if inplace:
 		genome.genes = mutated_genes
-	
+
 	return BaseGenome(genes=mutated_genes)
 
 mutator_functions = {
