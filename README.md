@@ -1,9 +1,6 @@
-<center>
 <img src="assets/logo.svg" alt="CircleAI Logo" />
 
 # CircleAI
-
-</center>
 
 CircleAI is a Python framework designed to speed up your machine learning workflows.
 
