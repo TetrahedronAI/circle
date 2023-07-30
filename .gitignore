@@ -1,2 +1,2 @@
-**/circleai.egg-info/**
+**/*.egg-info/**
 dist/**
