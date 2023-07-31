@@ -9,7 +9,7 @@ from ..core import euclidean_distance
 from ..core.base.abcs import ModelABC
 
 
-class KNN(ModelABC):
+class KNNCla(ModelABC):
     """K-Nearest Neighbors Classifier."""
 
     def __init__(self, k: int=3, distance_func: Callable[[Sized], float]=euclidean_distance) -> None:
@@ -22,7 +22,7 @@ class KNN(ModelABC):
         self.k: int = k
         self.dist: Callable[[Sized], float] = distance_func
 
-    def fit(self, X: Sized, y: Sized[int], verbose: bool=False) -> KNN:
+    def fit(self, X: Sized, y: Sized[int]) -> KNNCla:
         """Fit the model to the data.
 
         Args:

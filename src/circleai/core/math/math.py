@@ -1,5 +1,6 @@
 import numpy as np
 from numpy import linalg
+from ...log import check_err
 
 def euclidean_distance(x1: np.ndarray, x2: np.ndarray) -> float:
     """Returns the euclidean distance between two vectors.
@@ -35,4 +36,5 @@ def hamming_distance(x1: np.ndarray, x2: np.ndarray) -> float:
     Returns:
         float: Hamming distance between x1 and x2
     """
+    check_err(isinstance(x1, np.ndarray) and isinstance(x2, np.ndarray), "Values must be numpy arrays", TypeError)
     return np.sum(x1 != x2)

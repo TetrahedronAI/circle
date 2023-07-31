@@ -1,12 +1,13 @@
 from .logger import (
     check,
+    check_err,
     create_logger,
     debug,
     error,
     handle,
     info,
-    log_error_override,
-    set_log_error_override,
+    log_override,
+    set_log_override,
     success,
     warn,
 )

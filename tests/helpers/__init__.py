@@ -1,3 +1,3 @@
-from src.circleai.log import set_log_error_override
+from src.circleai.log import set_log_override
 
-set_log_error_override(True)
+set_log_override(True)
