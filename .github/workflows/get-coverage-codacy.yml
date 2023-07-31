@@ -28,7 +28,7 @@ jobs:
         env:
           CODACY_PROJECT_TOKEN: ${{ secrets.CODACY_PROJECT_API_TOKEN }}
         run: |
-          coverage run -m unittest discover
+          coverage run -m unittest discover tests
           coverage report -m
           coverage xml
           export CODACY_ORGANIZATION_PROVIDER=gh
