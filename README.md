@@ -1,4 +1,4 @@
-<center>
+<div align="center">
 
 ![CircleML Logo](assets/logo.svg)
 
@@ -11,7 +11,7 @@
 ![GitHub](https://img.shields.io/github/license/tetrahedronai/circle?style=for-the-badge)
 ![GitLab stars](https://img.shields.io/github/stars/tetrahedronai/circle?style=for-the-badge)
 
-</center>
+</div>
 
 CircleML is a Python framework designed to speed up your machine learning workflows. It's **PyPy compatible**, for JIT-compilation-accelerated performance.
 
