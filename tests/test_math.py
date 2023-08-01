@@ -1,7 +1,7 @@
 import unittest
 import tests.helpers
 import numpy as np
-import src.circleai.core.math as math
+import src.circleml.core.math as math
 
 
 class TestDistances(unittest.TestCase):

@@ -32,6 +32,6 @@ jobs:
           coverage report -m
           coverage xml
           export CODACY_ORGANIZATION_PROVIDER=gh
-          export CODACY_USERNAME=neuron-ai
-          export CODACY_PROJECT_NAME=py-sandbox
+          export CODACY_USERNAME=tetrahedronai
+          export CODACY_PROJECT_NAME=circle
           bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r coverage.xml

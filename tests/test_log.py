@@ -1,6 +1,6 @@
 import unittest
 import tests.helpers
-import src.circleai.log as log
+import src.circleml.log as log
 
 class TestLogs(unittest.TestCase):
     def test_logggers(self) -> None:

@@ -1,8 +1,8 @@
 <center>
 
-![CircleAI Logo](assets/logo.svg)
+![CircleML Logo](assets/logo.svg)
 
-# CircleAI
+# Circle ML
 
 ![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/tetrahedronai/circle/tests.yml?style=for-the-badge)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/tetrahedronai/circle?style=for-the-badge)
@@ -13,10 +13,10 @@
 
 </center>
 
-CircleAI is a Python framework designed to speed up your machine learning workflows. It's **PyPy compatible**, for JIT-compilation-accelerated performance.
+CircleML is a Python framework designed to speed up your machine learning workflows. It's **PyPy compatible**, for JIT-compilation-accelerated performance.
 
 ## Contents
-- [CircleAI](#circleai)
+- [Circle ML](#circle-ml)
   - [Contents](#contents)
 - [Installation](#installation)
 
@@ -25,7 +25,7 @@ CircleAI is a Python framework designed to speed up your machine learning workfl
 Run one of the following commands in your terminal.
 
 ```shell
-pip install circleai
-py -m pip install circleai # windows
-python3 -m pip install circleai # if the above don't work
+pip install circleml
+py -m pip install circleml # windows
+python3 -m pip install circleml # if the above don't work
 ```
