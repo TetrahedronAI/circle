@@ -4,12 +4,15 @@
 
 # Circle ML
 
-![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/tetrahedronai/circle/tests.yml?style=for-the-badge)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/tetrahedronai/circle?style=for-the-badge)
-![Codacy grade](https://img.shields.io/codacy/grade/81d90174a73440b2910a64b2b4794535?style=for-the-badge)
-![Codacy coverage](https://img.shields.io/codacy/coverage/81d90174a73440b2910a64b2b4794535?style=for-the-badge)
-![GitHub](https://img.shields.io/github/license/tetrahedronai/circle?style=for-the-badge)
-![GitLab stars](https://img.shields.io/github/stars/tetrahedronai/circle?style=for-the-badge)
+[![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/tetrahedronai/circle/tests.yml?style=for-the-badge)](https://github.com/TetrahedronAI/circle/actions/)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/tetrahedronai/circle?style=for-the-badge)](https://github.com/TetrahedronAI/circle/pulls)
+[![GitHub issues](https://img.shields.io/github/issues/tetrahedronai/circle?style=for-the-badge)](https://github.com/TetrahedronAI/circle/issues)
+[![Codacy grade](https://img.shields.io/codacy/grade/81d90174a73440b2910a64b2b4794535?style=for-the-badge)](https://app.codacy.com/gh/TetrahedronAI/circle/dashboard)
+[![Codacy coverage](https://img.shields.io/codacy/coverage/81d90174a73440b2910a64b2b4794535?style=for-the-badge)](https://app.codacy.com/gh/TetrahedronAI/circle/coverage/dashboard)
+[![GitHub](https://img.shields.io/github/license/tetrahedronai/circle?style=for-the-badge)](https://github.com/TetrahedronAI/circle/blob/master/LICENSE)
+[![PyPyCompatible](https://img.shields.io/badge/PyPy-Compatible-efdf00?style=for-the-badge)](https://www.pypy.org/)
+[![GitHub stars](https://img.shields.io/github/stars/tetrahedronai/circle?style=for-the-badge)](https://github.com/TetrahedronAI/circle/stargazers)
+[![Ask a Question](https://img.shields.io/badge/Chat-Github_Discussions-8000FF?style=for-the-badge)](https://github.com/TetrahedronAI/circle/discussions)
 
 </div>
 
