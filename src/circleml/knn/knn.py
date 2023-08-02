@@ -32,11 +32,11 @@ class KNNCla(ModelABC):
         Args:
             k (int, optional): K-value (number of neighbours to "vote"). Defaults to 3.
             distance_func (Callable[[Sized], float], optional): Distance function. Defaults to euclidean_distance.
-        """        
+        """
         self.k: int = k
         self.dist: Callable[[Sized], float] = distance_func
 
-    def fit(self, X: Sized, y: Sized[int]) -> KNNCla:
+    def fit(self, X: Sized, y: Sized[int], verbose: bool = False) -> KNNCla:
         """Fit the model to the data.
 
         Args:

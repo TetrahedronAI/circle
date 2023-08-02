@@ -1,5 +1,5 @@
 import unittest
-import tests.helpers
+import tests.helpers as _
 import src.circleml.log as log
 
 class TestLogs(unittest.TestCase):

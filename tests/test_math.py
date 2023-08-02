@@ -1,5 +1,5 @@
 import unittest
-import tests.helpers
+import tests.helpers as _
 import numpy as np
 import src.circleml.core.math as math
 
