@@ -59,7 +59,7 @@ class TestMAE(unittest.TestCase):
         with self.subTest("All Different"):
             y_true = [0, 1, 2, 3, 4]
             y_pred = [5, 5, 5, 5, 5]
-            self.assertEqual(metrics.mae(y_true, y_pred), 5)
+            self.assertEqual(metrics.mae(y_true, y_pred), 3)
 
         with self.subTest("Fraction"):
             y_true = [0, 1, 2, 3, 4]
