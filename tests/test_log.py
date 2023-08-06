@@ -27,3 +27,10 @@ class TestLogs(unittest.TestCase):
 
         with self.assertRaises(TypeError):
             log.check_err(False, "error", TypeError)
+    
+    def test_handle_error(self) -> None:
+        with self.assertRaises(SystemExit):
+            try:
+                raise Exception("error")
+            except Exception:
+                log.handle("Expecting Exception.")
