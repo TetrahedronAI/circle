@@ -1,0 +1,6 @@
+# for the sandcastle build tool (https://github.com/sam-the-programmer/sandcastle) 
+tasks:
+  lint:
+    - isort .
+    - black .
+    - pylint --rcfile=.pylintrc ./src

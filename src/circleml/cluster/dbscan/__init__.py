@@ -13,13 +13,10 @@
 # limitations under the License.
 # ==============================================================================
 
-"""Errors and checkers for use in ML algorithms.
+"""Implementation of the DBScan algorithm.
 
-# Errors
-- ShapeError: raised when the shape of a numpy array is incorrect
-
-# Checkers
-- check_len: checks the length of a list or numpy array are equal, else, raises error
+# Classes
+- DBScanCla
 """
 
-from .errors import ShapeError, check_len
+from .dbscan import DBScanCla

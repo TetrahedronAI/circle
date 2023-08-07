@@ -12,9 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
+
+"""Internal math module. Use circleml.core.math instead."""
+
 import numpy as np
 from numpy import linalg
+
 from ...log import check_err
+
 
 def euclidean_distance(x1: np.ndarray, x2: np.ndarray) -> float:
     """Returns the euclidean distance between two vectors.
@@ -28,6 +33,7 @@ def euclidean_distance(x1: np.ndarray, x2: np.ndarray) -> float:
     """
     return linalg.norm(x1 - x2)
 
+
 def manhattan_distance(x1: np.ndarray, x2: np.ndarray) -> float:
     """Returns the manhattan distance between two vectors.
 
@@ -40,6 +46,7 @@ def manhattan_distance(x1: np.ndarray, x2: np.ndarray) -> float:
     """
     return np.sum(np.abs(x1 - x2))
 
+
 def hamming_distance(x1: np.ndarray, x2: np.ndarray) -> float:
     """Returns the hamming distance between two vectors.
 
@@ -50,5 +57,9 @@ def hamming_distance(x1: np.ndarray, x2: np.ndarray) -> float:
     Returns:
         float: Hamming distance between x1 and x2
     """
-    check_err(isinstance(x1, np.ndarray) and isinstance(x2, np.ndarray), "Values must be numpy arrays", TypeError)
+    check_err(
+        isinstance(x1, np.ndarray) and isinstance(x2, np.ndarray),
+        "Values must be numpy arrays",
+        TypeError,
+    )
     return np.sum(x1 != x2)

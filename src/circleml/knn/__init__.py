@@ -12,5 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
+
+"""Implementation of the K-Nearest-Neighbours algorithm.
+
+# Classes
+- KNNCla - KNN Classifier
+"""
+
+from ..core.math import euclidean_distance, hamming_distance, manhattan_distance
 from .knn import KNNCla
-from ..core.math import euclidean_distance, manhattan_distance, hamming_distance

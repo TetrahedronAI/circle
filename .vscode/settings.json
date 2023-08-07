@@ -8,7 +8,9 @@
     ],
     "python.testing.pytestEnabled": false,
     "python.testing.unittestEnabled": true,
-    "python.linting.enabled": true,
+    "pylint.args": [
+        "--rcfile=.pylintrc"
+    ],
     "files.exclude": {
         "**/__pycache__": true,
     }

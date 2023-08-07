@@ -13,13 +13,6 @@
 # limitations under the License.
 # ==============================================================================
 
-"""Errors and checkers for use in ML algorithms.
+"""Generate and load datasets."""
 
-# Errors
-- ShapeError: raised when the shape of a numpy array is incorrect
-
-# Checkers
-- check_len: checks the length of a list or numpy array are equal, else, raises error
-"""
-
-from .errors import ShapeError, check_len
+from .make import make_clusters

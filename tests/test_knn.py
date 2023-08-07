@@ -1,6 +1,8 @@
 import unittest
-import tests.helpers as _
+
 import src.circleml.knn as knn
+import tests.helpers as _
+
 
 class TestKNNClassifier(unittest.TestCase):
     def test_tie(self) -> None:

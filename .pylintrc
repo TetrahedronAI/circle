@@ -1,0 +1,15 @@
+[MESSAGES CONTROL]
+disable =
+    too-few-public-methods,
+    relative-beyond-top-level,
+    invalid-name,
+    too-many-arguments
+
+[REPORTS]
+output-format = colorized
+
+[FORMAT]
+max-line-length=120
+
+[MASTER]
+ignore-patterns=test*

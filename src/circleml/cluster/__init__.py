@@ -13,13 +13,10 @@
 # limitations under the License.
 # ==============================================================================
 
-"""Errors and checkers for use in ML algorithms.
+"""Implementations of clustering algorithms for unsupervised classification.
 
-# Errors
-- ShapeError: raised when the shape of a numpy array is incorrect
-
-# Checkers
-- check_len: checks the length of a list or numpy array are equal, else, raises error
+Submodules:
+    - dbscan: DBScan algorithm
 """
 
-from .errors import ShapeError, check_len
+from .dbscan.dbscan import DBScanCla

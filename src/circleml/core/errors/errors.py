@@ -12,9 +12,28 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
+
+"""Internal error module. Use circleml.core.errors instead."""
+
+import typing as t
+
 from ...log import check_err
+
 
 class ShapeError(ValueError):
     """The given shape is invalid or mismatched."""
 
-check_len = lambda x, y: check_err(len(x) == len(y), "y_true and y_pred must have the same length", ShapeError)
+
+def check_len(x: t.Sized, y: t.Sized) -> None:
+    """Check that two objects have the same length.
+
+    Args:
+        x (t.Sized): first object
+        y (t.Sized): second object
+
+    Raises:
+        ShapeError: if the lengths are not equal
+    """
+    check_err(
+        len(x) == len(y), "y_true and y_pred must have the same length", ShapeError
+    )

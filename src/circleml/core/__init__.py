@@ -12,5 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
+
+"""Core functions and tools, including errors, shape-checkers and mathematical functions."""
+
 from .errors import ShapeError, check_len
 from .math import euclidean_distance, hamming_distance, manhattan_distance

@@ -1,6 +1,8 @@
 import unittest
-import tests.helpers as _
+
 import src.circleml.log as log
+import tests.helpers as _
+
 
 class TestLogs(unittest.TestCase):
     def test_logggers(self) -> None:
@@ -27,7 +29,7 @@ class TestLogs(unittest.TestCase):
 
         with self.assertRaises(TypeError):
             log.check_err(False, "error", TypeError)
-    
+
     def test_handle_error(self) -> None:
         try:
             raise SystemExit("error")

@@ -12,6 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
+
+"""CircleML is a machine learning library for Python that's fully PyPy compatible.
+
+Submodules:
+    - cluster: clustering algorithms
+    - core: core functions and classes
+    - knn: k-nearest-neighbours algorithm
+    - log: logging
+    - metrics: metrics
+"""
+
 from .core.errors import ShapeError, check_len
 from .core.math import euclidean_distance, hamming_distance, manhattan_distance
 from .log import *

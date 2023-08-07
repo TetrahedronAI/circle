@@ -12,4 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
-from .math import euclidean_distance, manhattan_distance, hamming_distance
+
+"""Mathematical functions.
+
+# Functions
+## Distance functions
+
+- euclidean_distance: Euclidean distance between two vectors
+- manhattan_distance: Manhattan distance between two vectors
+- hamming_distance: Hamming distance between two vectors
+"""
+
+from .math import euclidean_distance, hamming_distance, manhattan_distance

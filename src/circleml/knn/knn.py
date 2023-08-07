@@ -12,21 +12,26 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
-from __future__ import annotations
 
-from typing import Callable, List, Sized
+"""Internal KNN module. Use circleml.knn instead."""
+
+import typing as t
 
 import numpy as np
 
 from .. import log
 from ..core import euclidean_distance
-from ..core.base.abcs import ModelABC
+from ..core.base.abcs import SupervisedModelABC
 
 
-class KNNCla(ModelABC):
+class KNNCla(SupervisedModelABC):
     """K-Nearest Neighbors Classifier."""
 
-    def __init__(self, k: int=3, distance_func: Callable[[Sized], float]=euclidean_distance) -> None:
+    def __init__(
+        self,
+        k: int = 3,
+        distance_func: t.Callable[[t.Sized], float] = euclidean_distance,
+    ) -> None:
         """Creates a new KNN instance.
 
         Args:
@@ -34,25 +39,34 @@ class KNNCla(ModelABC):
             distance_func (Callable[[Sized], float], optional): Distance function. Defaults to euclidean_distance.
         """
         self.k: int = k
-        self.dist: Callable[[Sized], float] = distance_func
+        self.dist: t.Callable[[t.Sized], float] = distance_func
+        self.__train: t.Sized = []
+        self.__labels: t.Sized = []
 
-    def fit(self, X: Sized, y: Sized[int], verbose: bool = False) -> KNNCla:
+    def fit(self, X: t.Sized, y: t.Sized, verbose: bool = False) -> "KNNCla":
         """Fit the model to the data.
 
         Args:
             X (Sized): the samples
-            y (Sized[int]): the target labels, encoded as integers
+            y (Sized): the target labels, encoded as integers
             verbose (bool, optional): whehter to log info. Defaults to False.
 
         Returns:
             KNN: trained model
         """
-        log.check(len(X) == len(y), f"X and y must have the same length,\n\tnot X: {len(X)} and y: {len(y)}")
-        self.__train: Sized = X
-        self.__labels: Sized = y
+        log.check(
+            len(X) == len(y),
+            f"X and y must have the same length,\n\tnot X: {len(X)} and y: {len(y)}",
+        )
+
+        logger = log.create_logger(log.info, verbose=verbose)
+        logger(f"Saving {len(X)} samples to memory")
+        self.__train: t.Sized = X
+        self.__labels: t.Sized = y
+        logger("Training complete")
         return self
 
-    def predict(self, X: Sized, verbose: bool=False) -> np.ndarray:
+    def predict(self, X: t.Sized, verbose: bool = False) -> np.ndarray:
         """Predict the class of the data.
 
         Args:
@@ -63,10 +77,10 @@ class KNNCla(ModelABC):
             np.ndarray: An array of the predicted classes with shape (-1,)
         """
         logger = log.create_logger(log.debug, verbose=verbose)
-        y_pred: List[None] = [self._predict(i, self.k, logger) for i in X]
+        y_pred: t.List[None] = [self._predict(i, self.k, logger) for i in X]
         return np.array(y_pred)
 
-    def _predict(self, x: Sized, k: int, logger: Callable) -> None:
+    def _predict(self, x: t.Sized, k: int, logger: t.Callable) -> None:
         """Predict for a single sample. Used recursively in predict(). Not intended to be used by end-users."""
         dists: np.ndarray = np.zeros(len(self.__train))
 
@@ -74,7 +88,7 @@ class KNNCla(ModelABC):
             dists[i] = self.dist(np.array(x), np.array(sample))
 
         k_idx: np.ndarray = np.argsort(dists)[:k]
-        k_neighbor_labels: List[int] = [self.__labels[i] for i in k_idx]
+        k_neighbor_labels: t.List[int] = [self.__labels[i] for i in k_idx]
 
         counts = {
             label: k_neighbor_labels.count(label) for label in set(k_neighbor_labels)

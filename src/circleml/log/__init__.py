@@ -12,6 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
+
+"""Logging utils for making your terminal output more colourful and clearer to read."""
+
 from .logger import (
     check,
     check_err,
