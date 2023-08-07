@@ -21,3 +21,7 @@ class TestKNNClassifier(unittest.TestCase):
         model = knn.KNNCla()
         with self.assertRaises(SystemExit):
             model.fit([[1]], [0, 1])
+
+    def test_call(self) -> None:
+        model = knn.KNNCla()
+        model([[1, 2], [3, 4]], [0, 1])

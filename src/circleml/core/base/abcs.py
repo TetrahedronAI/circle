@@ -30,7 +30,7 @@ class Module(ABC):
 
     @abstractmethod
     def __call__(self, X: Any) -> Any:
-        return X
+        """Takes in data and returns transformed data."""
 
 
 class SupervisedModelABC(Module):

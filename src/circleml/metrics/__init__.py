@@ -12,4 +12,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
-from .metrics import accuracy, mse, mae, rmse, ssr
+
+"""Model evaluation metrics, such as accuracy and loss functions.
+
+# Metrics
+- accuracy
+- cluster_accuracy
+- mse
+- mae
+- rmse
+- ssr
+"""
+
+from .metrics import accuracy, cluster_accuracy, mae, mse, rmse, ssr
