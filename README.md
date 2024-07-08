@@ -1,4 +1,4 @@
-> **WARNING: Work in Process**
+> **WARNING: Work in Progress**
 <div align="center">
 
 ![CircleML Logo](assets/logo.svg)
